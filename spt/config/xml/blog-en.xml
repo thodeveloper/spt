@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Blog EN</title>
+	<atom:link href="http://www.prestashop.com/blog/en/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.prestashop.com/blog/en</link>
+	<description></description>
+	<lastBuildDate>Wed, 20 Aug 2014 15:30:26 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.4</generator>
+		<item>
+		<title>Why Bootstrap Has Matched the Hype</title>
+		<link>http://www.prestashop.com/blog/en/why-bootstrap-has-matched-the-hype/</link>
+		<comments>http://www.prestashop.com/blog/en/why-bootstrap-has-matched-the-hype/#comments</comments>
+		<pubDate>Wed, 20 Aug 2014 15:19:53 +0000</pubDate>
+		<dc:creator>Benjamin Utterback</dc:creator>
+				<category><![CDATA[Best Development Practices]]></category>
+		<category><![CDATA[Ecommerce Tips and Advice]]></category>
+		<category><![CDATA[Ecommerce Trends]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18245</guid>
+		<description><![CDATA[Bootstrap is no longer a buzzword in web-design. It has become a full-fledged action verb. “Are you having trouble starting your web-design project? Just Bootstrap it.” When a brand name like Twitter Bootstrap becomes an informal everyday word, you know &#8230; <a href="http://www.prestashop.com/blog/en/why-bootstrap-has-matched-the-hype/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p style="text-align: left;" align="center">Bootstrap is no longer a buzzword in web-design. It has become a full-fledged action verb. “Are you having trouble starting your web-design project? Just Bootstrap it.” When a brand name like Twitter Bootstrap becomes an informal everyday word, you know that people like it and that people use it, a lot.</p>
+<p style="text-align: left;" align="center">In the likes Xerox for photocopying, and Google for online searching, Bootstrap has essentially become the go-to framework for designing websites. That may be a bit of a bold statement given the number of competitors in the market, but hear me out. In my previous post, I gave <a href="http://www.prestashop.com/blog/en/what-is-bootstrap/">a brief history of the unlikely birth and explosive hype</a> surrounding the Twitter Bootstrap framework.</p>
+<p>Now, let’s look into 5 reasons why Bootstrap has matched the hype.</p>
+<p><img class="alignleft size-full wp-image-18251" title="img-02" src="http://www.prestashop.com/blog/en/files/2014/08/img-02.png" alt="" width="500" height="150" /><span id="more-18245"></span></p>
+<h4>1. Time Saver:</h4>
+<p>Bootstrap comes equipped with pre-made grids, patterns, and ready-to-go CSS and HTML style elements like tables, forms, buttons, icons etc. What does this mean for the busy web-designer? It means that you literally have everything you need to create a professional looking website from scratch, all with one package of Bootstrap. Gone are the days where you have to style and code every element of your webpage, just Bootstrap it.</p>
+<h4>2. Fully Responsive:</h4>
+<p>Nearly all websites need to be mobile ready and responsive, especially ecommerce websites. You want your visitors to be able to browse products on a desktop at home, add products on their tablet while waiting to board a plane, and complete checkout on their smartphone after landing. It happens more and more each day as the power of mobile design and mobile payments evolve. Bootstrap comes ready with a variety of responsive grids to service every level of mobile ready design.</p>
+<h4>3. Active Community:</h4>
+<p>To date, <a href="https://github.com/twbs/bootstrap">Bootstrap’s GitHub repository</a> has 70,000 stars (which equate to Facebook likes, or Google +1’s). It also has nearly 600 contributors making it one of the most popular repositories on GitHub. You can be sure that if you ever have a problem, concern or question, simply post the question on GitHub Bootstrap threads and interact with the experts. Chances are, your question has been answered already. It’s good to know the community has got your back.</p>
+<h4>4. JavaScript Plugin Bundles:</h4>
+<p>One of Bootstrap’s greatest features is that it comes pre-bundled with a variety of useful JavaScript plugins. Every designer knows the headache that can come with compatibility between JavaScript functions and your web-design. Fortunately, all of Bootstraps pre-bundled JS plugins work flawlessly. Do you need animated tabs, moving sliders and collapsible menus? Just Bootstrap it.</p>
+<h4>5. Docs. Docs. Docs:</h4>
+<p>One can never underestimate the power of good documentation. Bootstrap is heralded around the web-design world for having extensive, helpful and easy-to-read documentation. They provide examples of nearly every element. I can’t forget to mention that it also includes a demo that makes it even more accessible for the beginner web-designer. From the easiest functions to the most complex elements, the Bootstrap documentation covers all bases.</p>
+<p>&#8212;&#8211;</p>
+<p>Bootstrap exploded through the web-design scene and it’s no surprise why. The combination of ready-made elements, bundled animations, extensive documentation and a passionate community make the Twitter Bootstrap framework an attractive solution for all levels of web-design. That’s not to say you’ll have your dream website in a snap, you still must have a pretty good knowledge of HTML and CSS to really get started. If you haven’t seen it already, we were fortunate enough to interview the creator of Bootstrap, Mark Otto. You can <a href="http://www.prestashop.com/blog/en/creator-of-bootstrap-mark-otto-speaks-to-attendees-at-prestashop-barcamp-2013/">check out the full video here</a>.</p>
+<p>Thanks for reading all about this awesome Framework, be sure to comment below. Finally, I’ll leave you with one question. Do you Bootstrap?</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/why-bootstrap-has-matched-the-hype/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>The Anatomy of Ecommerce Return Policies</title>
+		<link>http://www.prestashop.com/blog/en/the-anatomy-of-ecommerce-return-policies/</link>
+		<comments>http://www.prestashop.com/blog/en/the-anatomy-of-ecommerce-return-policies/#comments</comments>
+		<pubDate>Tue, 19 Aug 2014 16:06:39 +0000</pubDate>
+		<dc:creator>Julie Liu</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18224</guid>
+		<description><![CDATA[A clear and comprehensive return policy reinforces credibility and is crucial for building customer trust. As an online merchant, a return policy helps you reduce the time spent on refunds, address customer concerns and increase profitability. So what should it &#8230; <a href="http://www.prestashop.com/blog/en/the-anatomy-of-ecommerce-return-policies/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>A clear and comprehensive return policy reinforces credibility and is crucial for building customer trust. As an online merchant, a return policy helps you reduce the time spent on refunds, address customer concerns and increase profitability. So what should it include and where should you start? We’ll help you get going by exploring the anatomy of ecommerce return policies.</p>
+<p><img class="aligncenter size-full wp-image-18240" src="http://www.prestashop.com/blog/en/files/2014/08/Return-Policies.jpg" alt="" width="600" height="315" /></p>
+<h2><span id="more-18224"></span><span style="color: #ff7d2f;font-weight: bold">What can be returned?</span></h2>
+<p>The first decision you have to make is whether or not you want to accept returns or exchanges. Not sure? Here are 5 product categories that are generally not accepted for returns according to the <a href="http://www.dca.ca.gov/publications/legal_guides/s-6.shtml" target="_blank">California Legal Guide.</a> Your local government should have similar documents available.</p>
+<ol>
+<li>Food, plants, flowers, and other perishable goods</li>
+<li>Customized goods received as ordered</li>
+<li>Goods which cannot be resold due to health considerations</li>
+<li>Products returned in non-resalable condition</li>
+<li>Returns without original tags, packaging and receipts or invoices</li>
+</ol>
+<p>If you sell an assortment of products, outline which items can or cannot be returned.</p>
+<h2><span style="color: #ff7d2f">Refund Amount</span></h2>
+<p>List the refund amount customers can expect. For example, shipping fees are generally not refunded while taxes are. If you charge restocking fees, list them in your return policy as well. Customers should be able to calculate the exact amount they will receive.</p>
+<h2><span style="color: #ff7d2f">How much time?</span></h2>
+<p>Specify the return period (in days or months), customers have to return their order. Not sure how much time is appropriate? Consider this key factor &#8211; payment processers store customers’ credit card information for a limited number of days. Without this, you will not be able to refund customers. Other factors to consider include the order delivery and return shipping times.</p>
+<p>For a very clear return policy, we suggest indicating when the return period starts. Is it the day the purchase is made, orders ship, or customers receive the package? Also, include the activity that must be completed before that period ends. For example, do customers just have to ship their return or should you receive the package by the then. Finally, specify how many days it will take for your business to process the refund and keep customers updated by systematically updating their return status.</p>
+<h2><span style="color: #ff7d2f">Where should customers send returns?</span></h2>
+<p>List the address return packages should be sent to and don’t forget to include the department. To help ensure customers ship to the right location, include a return slip customers can tape outside of their package.</p>
+<p>You should also specify who pays for the postage. Having customers pay for the postage is cost effective, however, they may select a cheap and unreliable shipping service. Regardless of who pays, insure your product(s) with tracking services.</p>
+<h2><span style="color: #ff7d2f">What about exchanges?</span></h2>
+<p>Can customers return an item for an exchange or store credit? If so, what is the process like for customers? How long will it take? Also, list any fees they will have to pay such as restocking fees or additional shipping charges. If you do not accept exchanges or offer store credit, clearly state so.</p>
+<h2><span style="color: #ff7d2f">Special situations:</span></h2>
+<h4><strong>Sales</strong></h4>
+<p>When retailers run sales, it can be assumed that those goods cannot be returned. However, this assumption varies from person to person, so explicitly state the applicable return policy for sales. For example, if you use language like “as is”, “all sales final”, “gifts with purchase”, or “BOGO (buy one get one free)”, clearly state it will not be accepted for refunds.</p>
+<h4><strong>Past Due</strong></h4>
+<p>Let customers know what happens if products are received past the return period. Will customers receive store credit, get a refund at a discounted amount, or will you simply return the item back? A strict return policy may protect you against losses, however, it may also dissuade customers from making purchases.</p>
+<h2><span style="color: #ff7d2f">Closing remarks</span></h2>
+<p>Include a clause that lets you make reasonable changes or updates to the return policy at your discretion. As you learn more about your customers’ shopping habits, you can modify the return policy to better reflect their expectations. If you find that you receive too many returns, check out these <a href="http://www.prestashop.com/blog/en/10-ways-to-reduce-returns-for-your-e-commerce-site/" target="_blank">10 ways to reduce returns</a>.</p>
+<p>Let us know if this has been helpful, or if we’ve missed anything by commenting below. Looking for an ecommerce software that helps you manage orders and returns more efficiently? <a href="http://www.prestashop.com/en/download" target="_blank">Download PrestaShop’s shopping cart software</a> to get started!</p>
+<address><em>(Author’s Note: This blog post is intended to help you draft your return policy. Please consult your lawyer to ensure your return policy adheres to local and/or federal laws.)</em></address>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/the-anatomy-of-ecommerce-return-policies/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>How to Install PrestaShop &#124; Video Tutorial</title>
+		<link>http://www.prestashop.com/blog/en/how-to-install-prestashop-video-tutorial/</link>
+		<comments>http://www.prestashop.com/blog/en/how-to-install-prestashop-video-tutorial/#comments</comments>
+		<pubDate>Mon, 18 Aug 2014 14:33:31 +0000</pubDate>
+		<dc:creator>Benjamin Utterback</dc:creator>
+				<category><![CDATA[Best Development Practices]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18058</guid>
+		<description><![CDATA[If you are looking to learn how to install PrestaShop, you came to the right spot. This easy to understand video, created by PrestaShop Forum Moderator, Fabio Porta aka Nemo1, introduces the 1.6 version of PrestaShop and teaches you step-by-step how to &#8230; <a href="http://www.prestashop.com/blog/en/how-to-install-prestashop-video-tutorial/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<h3></h3>
+<p>If you are looking to learn how to install PrestaShop, you came to the right spot. This easy to understand video, created by PrestaShop Forum Moderator, Fabio Porta aka <a href="http://www.prestashop.com/forums/user/228329-nemo1/" target="_blank">Nemo1</a>, introduces the 1.6 version of PrestaShop and teaches you step-by-step how to install PrestaShop onto your server. To see more PrestaShop 101 tutorial videos, check out the<a href="https://www.youtube.com/user/NemoPostScriptum" target="_blank"> YouTube page for Nemo&#8217;s Post Scriptum</a>.</p>
+<p>Use this tutorial video in combination with the <a href="http://doc.prestashop.com/display/PS16/Installing+PrestaShop" target="_blank">Official PrestaShop documentation</a> to get started on your online store. If you are have any questions, feel free to comment on this post. Check out below the video for more links to our awesome community resources.</p>
+<p><iframe src="//www.youtube.com/embed/p8RQOUogBmQ" frameborder="0" width="560" height="315"></iframe></p>
+<h4><span style="font-size: 14px;"><span id="more-18058"></span>Ways to Contribute</span></h4>
+<p>Whether you are a developer, a merchant, or just a software enthusiast, there are a variety ways you can help contribute to PrestaShop.</p>
+<ul>
+<li><a href="http://www.prestashop.com/forums/">Join the PrestaShop Forum</a> and be active on one of the largest online retail communities in the world. With over 650,000 members and nearly 30 languages/communities, you’ll be in the perfect place for Ecommerce discussions, tips, technical tutorials and more.</li>
+<li><a href="https://crowdin.net/project/prestashop-official">Help translate PrestaShop in your language</a>. Thanks to contributions from our global Community, store owners can translate their online store in 60+ languages. Submit translations on PrestaShop’s CrowdIn page to help the Community sell all across the globe.</li>
+<li>Found an issue or want to submit a feature request? <a href="http://forge.prestashop.com/">Use the Forge!</a> PrestaShop Forge is the official issue-tracker for PrestaShop. You don’t need to be a developer to write a ticket or request an improvement. You will need to create an account on the Forge:<a href="http://doc.prestashop.com/display/PS16/How+to+use+the+Forge+to+contribute+to+PrestaShop">follow these instructions</a>, and then wait for a core developer to answer you.</li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/how-to-install-prestashop-video-tutorial/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>4 Essential Tips To Improving Your On-Site Search Engine</title>
+		<link>http://www.prestashop.com/blog/en/4-essential-tips-to-improving-your-on-site-search-engine/</link>
+		<comments>http://www.prestashop.com/blog/en/4-essential-tips-to-improving-your-on-site-search-engine/#comments</comments>
+		<pubDate>Thu, 14 Aug 2014 15:18:42 +0000</pubDate>
+		<dc:creator>Julie Liu</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18198</guid>
+		<description><![CDATA[This week we welcome Steve Chou, co-owner of Bumblebee Linens and MyWifeQuitHerJob.com. Within a year of launching, Steve’s online store &#8211; Bumblebee Linens &#8211; successfully netted over $100,000 in sales. Yes, that’s right – 6 figures in one year. He &#8230; <a href="http://www.prestashop.com/blog/en/4-essential-tips-to-improving-your-on-site-search-engine/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>This week we welcome Steve Chou, co-owner of Bumblebee Linens and MyWifeQuitHerJob.com. Within a year of launching, Steve’s online store &#8211; Bumblebee Linens &#8211; successfully netted over $100,000 in sales. Yes, that’s right – 6 figures in one year.</p>
+<p>He then created MyWifeQuitHerJob.com to share expert tips and advice on running a successful online business. Today his blog reaches over 90,000 monthly readers and has been featured by <em>The New York Times </em>and <em>The</em> <em>Huffington Post</em>. We invited him to share expert advice with 4 essential tips to improving your on-site search engine.</p>
+<p style="text-align: center"><img class="aligncenter  wp-image-18199" src="http://www.prestashop.com/blog/en/files/2014/08/search-improve5.png" alt="" width="540" height="284" /> <span id="more-18198"></span></p>
+<p>If you run your own online store, you probably already know that optimizing for the search engines (especially Google) is essential if you want to drive more traffic to your web site and increase your sales. However, as important as it is to drive traffic to your web site, <strong>the real key is keeping visitors on your site </strong>&#8211; and encouraging them to buy.<br />
+<img class="aligncenter size-medium wp-image-18202" src="http://www.prestashop.com/blog/en/files/2014/08/mywifequitherjob-headshot-200x300.jpg" alt="" width="200" height="300" align="right" /><br />
+Unfortunately, too many online businesses focus so much on optimizing for the big search engines that they completely <strong>neglect their own web sites</strong>. After <a href="http://mywifequitherjob.com/how-to-open-an-online-store/" target="_blank">teaching ecommerce</a> and running my own online business selling handkerchiefs for many years now, I have learned the value of <strong>a good on-site search engine</strong>.</p>
+<p>Here&#8217;s an interesting fact. Most customers that land on my store home page don’t browse for the product they want. <strong>Instead, they head directly to the search bar to locate exactly what they want.</strong></p>
+<p><strong></strong>If your site isn&#8217;t ready to handle those potential customers, you could lose thousands of dollars in business. In fact, the data indicates that more than <strong>95 percent of customers will leave a site immediately if the search doesn&#8217;t yield what they are looking for.</strong> One bad search, and that customer is gone &#8212; and so is your sale.</p>
+<h4><span style="color: #fc883e">Out-Of-The-Box Search Solutions Are Not Good Enough</span></h4>
+<p>If you blindly add products to your shopping cart database without taking into account your on-site search engine, then guess what? Your on-site search engine is going to suck.<br />
+Not too long ago, I analyzed some of the search queries on my site that weren&#8217;t returning results for customers. Here were the results:</p>
+<p style="padding-left: 30px">handkie<br />
+hankercheif<br />
+women’s hankies<br />
+mankerchief</p>
+<p><strong>It’s pretty clear, when looking at these terms, why no results were returned.</strong> The first two of those are misspelled. The third features an apostrophe that would normally be stripped out of the search string, but wasn&#8217;t. The fourth is clearly an attempt to find a handkerchief for a man. All of these items are available in my online store. However, a customer wouldn&#8217;t realize this from the search results.</p>
+<p>Most ecommerce platforms won’t offer you what you need for an effective search return by default. <strong>Misspellings and synonyms could be costing you thousands of dollars,</strong> and you might not even realize it. If you want a chance at retaining these would-be customers and converting them to sales, here are 4 things you need to start doing:</p>
+<h4><span style="color: #fc883e">1. Understand That Improving Your On-Site Search Engine Is Up To You</span></h4>
+<p>It’s true that most of your customers are going to find your products through Google, landing directly on the product page or on a category page. However, even with this reality, there are likely many potential customers using your on-site search tool.</p>
+<p>While you don’t need to create Google’s next competitor, you do have to create <strong>a localized search engine </strong>on your site for your own products. In other words, you will need to <strong>populate product specific search terms</strong> to help potential customers find relevant results that keep them on your site. Even if you need a little help from a web developer, it is usually worth the investment.</p>
+<p>PrestaShop’s onsite search is already pretty good in that it offers auto-completion and search suggestions, but most of work in optimizing your own search engine is going to require work on your part.</p>
+<h4><span style="color: #fc883e">2. Log All of Your Searches</span></h4>
+<p>You will never be able to think of all the variations on your products. No matter how long you spend trying to pinpoint possible misspellings, syntax errors, punctuation mistakes, and other variations on your products, you will never think of them all. Searchers will constantly surprise you.</p>
+<p>If you want a high-level view of what’s happening with search queries on your site, <strong>log them all</strong>. You can spot patterns and irregularities and adjust accordingly so that, even when searchers make mistakes, they will see results on the page. Here are the main things to watch for as you analyze the queries on your site:</p>
+<p style="padding-left: 30px"><strong>Synonyms:</strong> Even if you have good product descriptions that provide alternative words for your merchandise, there is likely another word you haven’t heard of. Make note of those words and direct your on-site search to connect them to the appropriate products.</p>
+<p style="padding-left: 30px"><strong>Plurals, apostrophes, and other punctuation: </strong>Make sure that your search strings strip punctuation marks and plurals. You can tinker with the code to make this happen so that errant grammar doesn&#8217;t doom your customers’ search results.<br />
+<strong></strong></p>
+<p style="padding-left: 30px"><strong>Contractions:</strong> Many searchers use slang and abbreviations when looking for specific products. Factor these into your search as well.<br />
+<strong></strong></p>
+<p style="padding-left: 30px"><strong>Misspellings: </strong>People will always have trouble spelling. You need to make sure your on-site search takes that into account. Pay attention to “alternative” spellings and common typos so that you can return valid search results when customers make mistakes.</p>
+<h4><span style="color: #fc883e">3. Allow Customers to Easily Refine Searches</span></h4>
+<p>My store sells handkerchiefs. More than half of the products I sell are labeled “handkerchiefs.” This means that someone looking for “hankies” is likely to run into trouble with the search. Most customers aren&#8217;t going to stick around when they see the meager results. At the same time, it’s impractical for me to go back and add the search term “hankies” to all of those product search descriptions.</p>
+<p>The good news is that you can use a little hack to get around that issue. Rather than displaying no results, or very limited results, you can <strong>include a new search link</strong> that asks the customer if s/he meant to look for something else. In my case, a search for “hankies” shows this message:</p>
+<p><strong>Did you mean to search for “handkerchiefs”?</strong></p>
+<p><strong></strong>This method can be applied to a number of misspellings and other errors that surface in customer searches. It’s easy to make this link <strong>prominent and clickable </strong>so that customers have to put very little effort into changing up the search. They receive better results, and stay on your site rather than abandoning.</p>
+<h4><span style="color: #fc883e">4. Add Search-Specific Keywords to Your Products</span></h4>
+<p>Now that you&#8217;ve analyzed what people are looking for, it’s time to <strong>add search-specific keywords to your products.</strong> These are keywords that might not appear in your product name or title, and may not appear in the product description. However, you want these products to be listed for certain popular search terms on your site.</p>
+<p>“Mother of the bride” is a popular term on my site. However, we don’t want to title or describe hundreds of products using that term. So this term is <strong>included in the search terms</strong> associated with particular products. This association means that customers can find hundreds of suitable items when they search for “mother of the bride.”</p>
+<p>The best way to go about this process is to<strong> add the search terms each time you add a new product. </strong>Make it part of the routine when you add products to avoid time-consuming mass updates. If you are in a position that requires mass updates, block out time to do it little by little, starting with the most popular terms.</p>
+<p><em>Bottom Line<br />
+</em>Your on-site search matters. If you don’t want to lose customers due to frustrating search results, you need to make the effort to improve your on-site search.</p>
+<div>
+<hr align="left" size="2" width="20%" />
+</div>
+<p>With all this great advice, where should you begin? If you’re a PrestaShop merchant, we’ve got you covered with:</p>
+<h4><span style="color: #fc883e">4 Steps to Get Started</span></h4>
+<p style="text-align: left"><strong>1.</strong> Access and review keywords your customers have searched<br />
+<em>         Back Office &gt; Stats &gt; Shop Search </em></p>
+<p style="text-align: left"><strong>2. </strong>Categorize each search word or phrase into<br />
+<span style="color: #800080">          a. Misspellings or Synonyms</span><br />
+<span style="color: #008000">          b. Attributes or Descriptions</span></p>
+<p><strong>3.</strong> For each word or phrase under the <span style="color: #800080">Misspelling or Synonyms</span> category, figure out which keyword(s) you would like to redirect customers to. Then create redirects for each word.<br />
+<em>          Back Office &gt; Preferences &gt; Search</em></p>
+<p><strong>4.</strong> For each<span style="color: #008000"> Attribute or Description,</span> find products that fit those descriptions and add the keyword(s) as tags.<br />
+<em>         Back Office &gt; Catalog &gt; Product &gt; Information Tab</em><br />
+(Learn more about <a href="http://doc.prestashop.com/display/PS16/Managing+Tags" target="_blank">managing Tags</a> in our User Guide.)</p>
+<p>Want a premium feature to ensure customers always find what they’re looking for? One of our certified agencies has developed the perfect solution. Give suggestions for “no result” searches with the <a href="http://addons.prestashop.com/en/search-filters-prestashop-modules/5071-search-autocorrection.html" target="_blank">Search AutoCorrection Module</a>.</p>
+<p>Not a PrestaShop merchant? Ask yourself, “Does my shopping cart software offer all these <a href="http://www.prestashop.com/en/features" target="_blank">features – for free</a>?” If not, it’s time to<a href="http://www.prestashop.com/en/switch-to-prestashop" target="_blank"> switch to PrestaShop</a>! (Or help us convince you by testing our <a href="http://demo.prestashop.com/en/" target="_blank">demo</a>.)</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/4-essential-tips-to-improving-your-on-site-search-engine/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>August Staff Picks: Top 3 Features to Help You Sell More</title>
+		<link>http://www.prestashop.com/blog/en/august-staff-picks-top-3-features-to-help-you-sell-more/</link>
+		<comments>http://www.prestashop.com/blog/en/august-staff-picks-top-3-features-to-help-you-sell-more/#comments</comments>
+		<pubDate>Tue, 12 Aug 2014 16:03:19 +0000</pubDate>
+		<dc:creator>Julie Liu</dc:creator>
+				<category><![CDATA[PrestaShop Partners]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18134</guid>
+		<description><![CDATA[In an ever growing and competitive online market, you are always looking for the right tools and features to help you sprint ahead. Our team has selected this month’s top 3 PrestaShop features to help you sell more. Best of &#8230; <a href="http://www.prestashop.com/blog/en/august-staff-picks-top-3-features-to-help-you-sell-more/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-18192" src="http://www.prestashop.com/blog/en/files/2014/08/staff-picks-1.png" alt="" width="200" height="155" align="right" />In an ever growing and competitive online market, you are always looking for the right tools and features to help you sprint ahead. Our team has selected this month’s top 3 PrestaShop features to help you sell more. Best of all, each of these features are available in your PrestaShop back office for a quick and easy installation! <span id="more-18134"></span></p>
+<p><strong>Here’s what you’ll find!</strong></p>
+<ol>
+<ul>
+<li><span style="color: #ed2279">Brow.si</span> – a completely free feature that optimizes your shop’s mobile shopping experience</li>
+<li><span style="color: #ed2279">PrestaStats</span> – view, compare and export your store’s critical data with an advanced dashboard</li>
+<li><span style="color: #ed2279">Riskified</span> – fraud prevention and protection for all or any high risk transactions</li>
+</ul>
+</ol>
+<h2></h2>
+<h2><a href="http://addons.prestashop.com/en/mobile/8609-browsi.html" target="_blank"><span style="color: #008000">1. Brow.si</span></a></h2>
+<p><strong>TRANSFORM YOUR MOBILE FRIENDLY SHOP INTO A SEAMLESS USER EXPERIENCE</strong></p>
+<p style="text-align: center"><img class="aligncenter  wp-image-18136" src="http://www.prestashop.com/blog/en/files/2014/08/browsi.png" alt="" width="527" height="278" /></p>
+<p style="text-align: left"><span style="color: #ed2279"><strong>What it does: </strong></span>Brow.si creates an intuitive mobile shopping experience with an easy-to-use, semi-transparent layer. It adds features for customers to easily search, explore, share, and purchase from anywhere on your site.</p>
+<p style="text-align: left"><span style="color: #ed2279"><strong>Why we love it:</strong></span> In one click, give your website app-like functionality with Brow.si. When users visit from their smartphone, key elements of mobile browsing makes the shopping experience clear, consistent and helpful. Customize this feature to match your site, set localization options and access analytics.</p>
+<p style="text-align: left"><span style="color: #ed2279"><strong>How it helps you sell more: </strong></span>Brow.si adds features that enrich the mobile browsing experience with push notifications, mobile search, a mobile checkout funnel, 1-click social sharing and more. Convert more mobile shoppers with an intuitive user experience.</p>
+<p style="text-align: center"><a href="http://addons.prestashop.com/en/mobile/8609-browsi.html" target="_blank">Get Brow.si on your shop – it’s free!</a><br />
+<em>Or find it in your PrestaShop Back Office &gt; Modules &gt; Mobile</em></p>
+<h2></h2>
+<h2><a href="http://addons.prestashop.com/en/analytics-stats-prestashop-modules/17294-prestastats.html" target="_blank"><span style="color: #008000">2. PrestaStats</span></a></h2>
+<p style="text-align: center"><strong>MANAGE BUSINESS DATA MORE CLOSELY THAN EVER WITH ADVANCED FUNCTIONALITY</strong> <img class="aligncenter  wp-image-18137" src="http://www.prestashop.com/blog/en/files/2014/08/prestastats.png" alt="" width="605" height="294" /></p>
+<p style="text-align: left"><span style="color: #ed2279"><strong>What it does:</strong></span> PrestaStats exports raw data from your PrestaShop store and compiles it into easy to understand statistics you’ll need to make smarter business decisions. Abandoned carts, top products and profit are easily accessible from a real-time dashboard.</p>
+<p style="text-align: left"><span style="color: #ed2279"><strong>Why we love it:</strong></span> Your data is consolidated into key statistics to understand your business quickly and in-depth. Access them from any device, at any time &#8211; especially when to need to make critical business decisions. Best of all, you can review data from as far back as the day your shop opened. <strong></strong></p>
+<p style="text-align: left"><strong><span style="color: #ed2279">How it helps you sell more:</span> </strong>These statistics help you understand what’s happening with your online store to help you make better sales, management and marketing decisions. Quickly spot trends to make timely assessments, based on today’s data…today. PrestaStats empowers you with hard facts that help you run your online business smoother.</p>
+<p style="text-align: center"><a href="http://addons.prestashop.com/en/analytics-stats-prestashop-modules/17294-prestastats.html" target="_blank">Start Your Free Trial</a><br />
+<em>Or find it in your PrestaShop Back Office &gt; Modules &gt; Analytics &amp; Stats</em></p>
+<h2></h2>
+<h2><a href="http://addons.prestashop.com/en/secure-payment-prestashop-modules/17295-riskified.html" target="_blank"><span style="color: #008000">3. Riskified</span></a></h2>
+<p style="text-align: center"><strong>ACCEPT TRANSACTIONS YOU WOULD HAVE DECLINED WITH GUARANTEED PROTECTION</strong> <img class="aligncenter  wp-image-18138" src="http://www.prestashop.com/blog/en/files/2014/08/riskified.png" alt="" width="488" height="191" /></p>
+<p><span style="color: #ed2279"><strong>What it does:</strong> </span>Riskified’s turnkey fraud detection features lets you review, verify and approve all transaction or selected suspicious transactions. It also provides valuable insights into your transaction, which helps you understand your customers better.</p>
+<p><span style="color: #ed2279"><strong>Why we love it:</strong></span> Riskified stands by their fraud detection technology by offering a 100% money back guarantee in the event of a fraud. You pay only when a transaction is approved and you make money.</p>
+<p><span style="color: #ed2279"><strong>How it helps you sell more:</strong></span>Complete orders you would otherwise decline because they appear fraudulent to gain incremental sales. You also increase your profits by reducing charge-back losses and avoiding bank fees.</p>
+<p style="text-align: center"><a href="http://addons.prestashop.com/en/secure-payment-prestashop-modules/17295-riskified.html" target="_blank">Accept More Payments &#8211; Request Your Demo<br />
+</a><em>Or find it in your PrestaShop Back Office &gt; Modules &gt;<br />
+Site Certification &amp; Fraud Prevention</em></p>
+<div>
+<hr align="left" size="2" width="20%" />
+</div>
+<p>Which of these features are you looking forward to adding on your PrestaShop store? Let us know in the comments below. Then tune in next month to see which features we select.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/august-staff-picks-top-3-features-to-help-you-sell-more/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Infographic: Back-to-School Shopping and Ecommerce 2014</title>
+		<link>http://www.prestashop.com/blog/en/infographic-back-to-school-shopping-and-ecommerce-2014/</link>
+		<comments>http://www.prestashop.com/blog/en/infographic-back-to-school-shopping-and-ecommerce-2014/#comments</comments>
+		<pubDate>Wed, 06 Aug 2014 15:24:28 +0000</pubDate>
+		<dc:creator>Natalie Beigel</dc:creator>
+				<category><![CDATA[Ecommerce Trends]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18062</guid>
+		<description><![CDATA[It’s that time of the year again, students and families around the world and especially in the United States are shopping for all their school year essentials. According to industry research, more and more of these shoppers are purchasing online &#8230; <a href="http://www.prestashop.com/blog/en/infographic-back-to-school-shopping-and-ecommerce-2014/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>It’s that time of the year again, students and families around the world and especially in the United States are shopping for all their school year essentials. According to industry research, more and more of these shoppers are purchasing online this season.</p>
+<p>Is your online store prepared for the second busiest shopping season of the year? Check out this infographic: back-to-school shopping and ecommerce 2014 for interesting stats on how this major digital holiday could influence your business.</p>
+<p><span id="more-18062"></span></p>
+<p style="text-align: center;"><a href="http://www.pinterest.com/pin/118641771409202296/" target="_blank"><img class="aligncenter  wp-image-11692" title="Back-To-School" src="http://www.prestashop.com/blog/es/files/2014/08/Back-To-School.jpg" alt="" width="600" height="1985" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/infographic-back-to-school-shopping-and-ecommerce-2014/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Reader Survey: Tell us what ecommerce topics matter to you!</title>
+		<link>http://www.prestashop.com/blog/en/tell-us-what-ecommerce-topics-matter-to-you/</link>
+		<comments>http://www.prestashop.com/blog/en/tell-us-what-ecommerce-topics-matter-to-you/#comments</comments>
+		<pubDate>Tue, 05 Aug 2014 15:44:57 +0000</pubDate>
+		<dc:creator>Natalie Beigel</dc:creator>
+				<category><![CDATA[PrestaShop News]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18065</guid>
+		<description><![CDATA[Dear readers, your opinion matters! Please take our quick, 1-minute survey to tell us what topics you’d like us to cover on the blog.]]></description>
+			<content:encoded><![CDATA[<p>Dear readers, your opinion matters! Please take our quick, 1-minute survey to tell us what topics you’d like us to cover on the blog.</p>
+<p><img class="aligncenter size-large wp-image-16900" title="Readers Survey Blog Image" src="http://www.prestashop.com/blog/fr/files/2014/08/Readers-Survey-Blog-Image-1024x537.jpg" alt="" width="584" height="306" /></p>
+<p><span id="more-18065"></span></p>
+<p><iframe src="https://docs.google.com/forms/d/1xnCawknTuIixQV4DkHSYlWqgvjGx2zH2uClB4AkSAhM/viewform?embedded=true" frameborder="0" marginwidth="0" marginheight="0" width="540" height="1070"></iframe></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/tell-us-what-ecommerce-topics-matter-to-you/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Optimize your Ecommerce Site for Social Gift Giving</title>
+		<link>http://www.prestashop.com/blog/en/optimize-your-ecommerce-site-for-social-gift-giving/</link>
+		<comments>http://www.prestashop.com/blog/en/optimize-your-ecommerce-site-for-social-gift-giving/#comments</comments>
+		<pubDate>Mon, 04 Aug 2014 15:26:19 +0000</pubDate>
+		<dc:creator>Julie Liu</dc:creator>
+				<category><![CDATA[PrestaShop Partners]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=18088</guid>
+		<description><![CDATA[Finding the perfect gift is never an easy thing to do. According to Hubspot, 64.8% of consumers are turning to social media sites to find a perfect gift. To help PrestaShop merchants capitalize on this growing trend, we are introducing &#8230; <a href="http://www.prestashop.com/blog/en/optimize-your-ecommerce-site-for-social-gift-giving/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>Finding the perfect gift is never an easy thing to do. According to <a href="http://www.slideshare.net/HubSpot/47-stats-for-remarkable-holiday-marketing?utm_source=buffer&amp;utm_campaign=Buffer&amp;utm_content=buffer68391&amp;utm_medium=twitter" target="_blank">Hubspot</a>, 64.8% of consumers are turning to social media sites to find a perfect gift. To help PrestaShop merchants capitalize on this growing trend, we are introducing Give.it, an interactive gift-giving solution beyond personal messages and wrapping.</p>
+<p style="text-align: center;"><img class="aligncenter  wp-image-18089" src="http://www.prestashop.com/blog/en/files/2014/08/giveit-main.png" alt="" width="540" height="284" /></p>
+<p><span id="more-18088"></span><br />
+By installing the<a href="http://addons.prestashop.com/en/advertising-marketing-newsletter-modules/15784-giveit.html" target="_blank"> Give.it module</a>, PrestaShop users will enable the Give.it button on their product pages and instantly optimize their ecommerce site for social gifting. This unique social ecommerce experience allows customers to complete gift purchases through a seamless transaction.</p>
+<h2><span style="color: #0000ff;">Worry-free Gift Giving</span></h2>
+<p>A gift giver’s worry does not end at picking out a present. They now have to select the right preferences (such as size and color) and input correct mailing information. By installing the Give.it module, you’ll remove both worries for your gift-giving customers. After selecting the product, customers click the Give.it button and from there, they only have to find their friend through social media and pay for the gift. The chore of picking the right preferences and inputting shipping information becomes an interactive and exciting task for the recipient.</p>
+<p><img class="aligncenter size-full wp-image-18090" src="http://www.prestashop.com/blog/en/files/2014/08/give-it-1.png" alt="" width="513" height="272" /></p>
+<h2><span style="color: #0000ff;">Encourage Online Gift Purchases</span></h2>
+<p>When customers shop online, they are generally shopping for themselves. By having the Give.it button next to your products, your customers are continuously reminded that an item can be purchased as a gift. This gives you the ability to influence impulse purchases to generate more sales. Give.it also encourages customers to come back and shop by always suggesting gift giving as an option.</p>
+<p><img class="aligncenter size-full wp-image-18091" src="http://www.prestashop.com/blog/en/files/2014/08/give-it-3.png" alt="" width="529" height="186" /></p>
+<h2><span style="color: #0000ff;">Integrate Social Media</span></h2>
+<p>Using social media to promote your products is effective but the message is more impactful when it comes from a friend. Upon completing the purchase, Give.it creates an update for the customer’s social media profile with your product image and site name. By integrating the social media feature, you not only increase brand awareness but also build brand confidence. It shows your customers’ social media connections that they not only like your product but love it enough to purchase it for their friends. This shifts the message from “you should get it” to “you need to have it.”</p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-18099" src="http://www.prestashop.com/blog/en/files/2014/08/give-it-4-logo.png" alt="" width="300" height="219" /></p>
+<p> Beyond optimizing your site for social gift giving, Give.it also offers the following:</p>
+<ol>
+<ul>
+<li>Transparent and simple pricing – no fees until you’ve made your first sale</li>
+<li>Customizable buttons to complement your site image and brand</li>
+<li>Easy installation and configuration to multiple products</li>
+</ul>
+</ol>
+<p>Give.it is on a mission to change the face of online gifting. PrestaShop merchants can profit from this innovative concept by downloading the <a href="http://addons.prestashop.com/en/advertising-marketing-newsletter-modules/15784-giveit.html" target="_blank">Give.it module</a> for free from the Official PrestaShop Marketplace!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/optimize-your-ecommerce-site-for-social-gift-giving/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>PrestaShop World Tour: Meet Sweet Isabelle, a Canadian Online Store Turned Bakery</title>
+		<link>http://www.prestashop.com/blog/en/prestashop-world-tour-meet-sweet-isabelle-a-canadian-online-store-turned-bakery/</link>
+		<comments>http://www.prestashop.com/blog/en/prestashop-world-tour-meet-sweet-isabelle-a-canadian-online-store-turned-bakery/#comments</comments>
+		<pubDate>Fri, 01 Aug 2014 13:49:28 +0000</pubDate>
+		<dc:creator>Quentin Audrain</dc:creator>
+				<category><![CDATA[PrestaShop World Tour]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=17961</guid>
+		<description><![CDATA[Canada is a fascinating and complex country for ecommerce. With two official languages (English and French), e-merchants have to work harder just to accommodate customers in their country. This however, is also a huge opportunity for merchants to quickly expand &#8230; <a href="http://www.prestashop.com/blog/en/prestashop-world-tour-meet-sweet-isabelle-a-canadian-online-store-turned-bakery/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p style="text-align: left;">Canada is a fascinating and complex country for ecommerce. With two official languages (English and French), e-merchants have to work harder just to accommodate customers in their country. This however, is also a huge opportunity for merchants to quickly expand beyond their borders. After all, American and French customers are merely a few clicks away.</p>
+<p style="text-align: center;"><img class="aligncenter  wp-image-17974" src="http://www.prestashop.com/blog/en/files/2014/07/MONTREAL.jpg" alt="" width="540" height="284" /></p>
+<p><span id="more-17961"></span></p>
+<p>Ecommerce in Canada is rapidly growing, having reached $22 billion Canadian dollars in 2013. This shows that Canadians are eager to shop online, making average of 13 separate purchases a year.</p>
+<p>On this stop of the World Tour, we’re in Montreal with Isabelle and Michel. Isabelle’s passion for having fun while decorating sweets and Michel’s knowledge of coding led them to create and run<a href="http://www.sweetisabelle.com/en/" target="_blank"> Sweet Isabelle</a>. In 4 years, they turned baking for family and friends into an online store with 3 physical locations. What is their secret recipe for successfully running an online store?</p>
+<p>Let’s find out!</p>
+<p><iframe src="//player.vimeo.com/video/102019698" frameborder="0" width="500" height="281"></iframe></p>
+<p><a href="http://vimeo.com/102019698">PrestaShop World Tour: Montreal with Sweet Isabelle.</a> from <a href="http://vimeo.com/prestashop">PrestaShop</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p>This stop wraps up our 5-month journey around the world exploring ecommerce cultures. Which country was your favorite in our world tour? Share in the comments below or Tweet at us with using <strong>#PSWorldTour</strong> on <a href="https://twitter.com/search?f=realtime&amp;q=%23PSworldtour&amp;src=typd" target="_blank">Twitter</a>, <a href="http://instagram.com/prestashop#" target="_blank">Instagram </a>and <a href="https://www.facebook.com/prestashop" target="_blank">Facebook</a>.</p>
+<p>Next stop: <strong>HOME </strong></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/prestashop-world-tour-meet-sweet-isabelle-a-canadian-online-store-turned-bakery/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>6 Time-tested Ways to Reduce Abandoned Shopping Carts</title>
+		<link>http://www.prestashop.com/blog/en/6-time-tested-ways-to-reduce-abandoned-shopping-carts/</link>
+		<comments>http://www.prestashop.com/blog/en/6-time-tested-ways-to-reduce-abandoned-shopping-carts/#comments</comments>
+		<pubDate>Thu, 31 Jul 2014 13:32:29 +0000</pubDate>
+		<dc:creator>Julie Liu</dc:creator>
+				<category><![CDATA[Ecommerce Tips and Advice]]></category>
+
+		<guid isPermaLink="false">http://www.prestashop.com/blog/en/?p=17930</guid>
+		<description><![CDATA[Did you know that for every 1 shopping cart converted, 2-3 of them are abandoned? According to BI Intelligence, the global average rate for abandoned shopping carts is 71.2%. Want another staggering statistic? The estimated value of these shopping carts &#8230; <a href="http://www.prestashop.com/blog/en/6-time-tested-ways-to-reduce-abandoned-shopping-carts/" rel="nofollow" class="more-link">Read more<span class="meta-nav"></span></a>]]></description>
+			<content:encoded><![CDATA[<p>Did you know that for every 1 shopping cart converted, 2-3 of them are abandoned? According to <a href="http://www.businessinsider.com/heres-how-retailers-can-reduce-shopping-cart-abandonment-and-recoup-billions-of-dollars-in-lost-sales-2014-4" target="_blank">BI Intelligence</a>, the global average rate for abandoned shopping carts is 71.2%. Want another staggering statistic? The estimated value of these shopping carts is worth approximately $4 trillion.</p>
+<p><img class="alignleft  wp-image-18030" src="http://www.prestashop.com/blog/en/files/2014/07/6abandoned-carts.png" alt="" width="605" height="318" /></p>
+<p>Today, we’re helping you cash in with 6 time-tested ways to reduce abandoned shopping carts. What are you waiting for? Let’s get started converting tentative shoppers into paying customers!<br />
+<span id="more-17930"></span></p>
+<h2>1. Improve UX with Instant Field Validation</h2>
+<p>Improve the user experience (UX) of your site, specifically the checkout page with instant field validation. It’s a standard feature in PrestaShop v1.6 that validates each field as customers enter their information on the page. Customers are notified immediately when they make typo errors like adding letters in phone numbers or excluding “@” from their email addresses. Instant field validation helps customers correct errors immediately rather than waiting until after they&#8217;ve filled out the page.</p>
+<p>In addition to instant field validation, improve the UX by regularly testing your checkout process. Add it to you weekly to-do list. If you don’t have one already, check out our <a href="http://www.prestashop.com/blog/en/the-smartest-checklists-to-manage-your-online-store/" target="_blank">smartest checklists</a> for managing your online store.</p>
+<h2>2. Enable Guest Checkout</h2>
+<p>Need a reason to enable guest checkout? Look no further than its nickname – the <a href="http://www.uie.com/articles/three_hund_million_button" target="_blank">$300 Million Button</a>. By allowing customers to check out as a guest, one online retailer saw a 45% increase in orders. Guest checkout allows customers to provide only the information needed to complete their order. Customers also don’t have to remember a username and password. Here’s what instant checkout / guest checkout looks like on <a href="http://www.evavarro.com/" target="_blank">Eva varro,</a> a PrestaShop store.</p>
+<p><img class="aligncenter size-full wp-image-17936" src="http://www.prestashop.com/blog/en/files/2014/07/evavarro-guest-checkout.png" alt="" width="560" height="295" /></p>
+<h2>3. Avoid Unexpected Fees</h2>
+<p>Of the people surveyed by <a href="http://www.statista.com/statistics/232285/reasons-for-online-shopping-cart-abandonment/" target="_blank">Statista</a>, 56% of them abandoned their carts because they were “presented with unexpected costs”. Combat this by clearly displaying the fees you charge, from shipping to taxes and everything in between. You can also use this as a marketing opportunity to promote your shipping specials. PrestaShop store, <a href="http://www.huntandstyle.com.au/" target="_blank">Hunt and Style</a> uses a threshold free shipping strategy and clearly details it on their homepage banner.</p>
+<p style="text-align: center;"><img class="aligncenter  wp-image-17932" src="http://www.prestashop.com/blog/en/files/2014/07/huntandstyle-homepage-shipping-fee.png" alt="" width="572" height="361" /></p>
+<p>Remember: Customers do not abandon carts because of the fees, it’s finding out about them at checkout that drives them away.</p>
+<h2>4. Reassure Customers of your Trustworthiness</h2>
+<p>Customers want to shop on sites they feel they can trust. Reassure customers by displaying elements of trust like badges from the <a href="http://www.bbb.org/council/for-businesses/about-bbb-accreditation/" target="_blank">Better Business Bureau</a> or <a href="http://www.google.com/trustedstores/for-businesses/" target="_blank">Google Trusted Sites</a>. Next, clearly display your contact information such as phone number, email address and physical address. Don’t forget to leverage social media to boost your company’s social credibility. Each fan and follower also helps you build customer trust.</p>
+<p>Finally, include logos of reputable companies you work with. From payment processing to shipping or even well-known suppliers, they can all help build trust in your site. Johnson’s Popcorn, a PrestaShop store, uses a combination of their contact information and reputable company logos to build trust.</p>
+<p><img class="aligncenter size-full wp-image-17933" src="http://www.prestashop.com/blog/en/files/2014/07/johnsonspopcorn.png" alt="" width="560" height="173" /></p>
+<h2>5. Provide Your Customer’s Preferred Payment Methods</h2>
+<p style="text-align: left;"><a href="http://www.marketingprofs.com/chirp/2014/25578/consumer-psychology-and-the-e-commerce-checkout-infographic" target="_blank">Vouchercloud quotes</a>, 59% of customers will abandon a transaction if their preferred payment is not available. The forms of payment methods you offer should be determined by your customers. PrestaShop merchant, <a href="http://www.headict.co.uk/content/5-secure-payment" target="_blank">Headict</a>, displays a secured payment block in their footer to show customers which payment methods they accept.</p>
+<p style="text-align: center;"><img class="aligncenter  wp-image-17931" src="http://www.prestashop.com/blog/en/files/2014/07/headict.png" alt="" width="610" height="210" /></p>
+<p>Offering customers their preferred payment method extends beyond the payment processor. Don’t forget about your customers’ shopping habits. For example, American customers are accustomed to paying for their order in full. In contrast, customers in many South American countries expect the option to pay in installments. Learn more about international ecommerce trends by checking out the <a href="http://www.prestashop.com/blog/en/category/prestashop-world-tour/" target="_blank">PrestaShop World Tour</a>.</p>
+<h2>6. Remind Customers about Their Carts</h2>
+<p>Sometimes customers just abandon carts. Whether they are not ready to make the purchase or were simply distracted, shopping carts get left behind. However, a cart is not technically considered abandoned if customers come back to complete their purchase. See how <a href="http://www.ralphlauren.com" target="_blank">Ralph Lauren</a> encourages customers to come back and shop with this reminder email.</p>
+<p style="text-align: center;"><img class="aligncenter  wp-image-17935" src="http://www.prestashop.com/blog/en/files/2014/07/ralphlauren-abandon.png" alt="" width="571" height="427" /></p>
+<p>Convert abandoned shopping carts with automated reminder emails from the <a href="http://addons.prestashop.com/en/checkout-modules/16535-abandoned-cart-pro.html" target="_blank">Abandoned Cart Reminder Pro Module</a>. Beyond a reminder, this module personalizes each email to include the products your customers left in their carts.</p>
+<h2>Conclusion</h2>
+<p>Reducing abandoned shopping carts is all about addressing customer concerns. Whether it is peace of mind or a just friendly reminder, each of these time-tested ways work because they make the customer more comfortable with shopping on your website. Try one, all or a combination of these methods to find what works for your particular website. Then, let us know which worked best in the comments below.</p>
+<p style="text-align: center;"><img class="aligncenter  wp-image-17934" src="http://www.prestashop.com/blog/en/files/2014/07/order-kpi.png" alt="" width="522" height="131" /></p>
+<p>If you are a PrestaShop merchant running 1.6, track your success with by reviewing the intelligent KPIs on your orders tab. Now an online merchant yet? <a href="http://www.prestashop.com/en/download" target="_blank">Download </a>PrestaShop’s ecommerce software to get started today.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.prestashop.com/blog/en/6-time-tested-ways-to-reduce-abandoned-shopping-carts/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk: basic
+Page Caching using disk: enhanced
+Object Caching 833/981 objects using disk: basic
+
+Served from: www.prestashop.com @ 2014-08-21 15:56:02 -->
