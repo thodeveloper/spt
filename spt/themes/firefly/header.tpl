@@ -28,6 +28,7 @@
 	<!--<script src="../js/less-1.7.3.js"></script>-->
 	<script src="{$js_dir}jquery-1.9.js"></script>
 	<script src="{$js_dir}jquery-ui.min.js"></script>
+	<script src="{$js_dir}jquery.number.min.js"></script>
 	<script src="{$js_dir}jquery.immersive-slider.js"></script>
 	<script src="{$js_dir}kendo.all.min.js"></script>
 	<script src="{$js_dir}main.js"></script> 

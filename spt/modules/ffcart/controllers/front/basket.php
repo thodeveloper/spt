@@ -1,5 +1,6 @@
 <?php
-require_once( './PSWebServiceLibrary.php' );
+
+require_once( _PS_CLASS_DIR_.'CommonUtils.php' );
 
 class FfcartBasketModuleFrontController extends ModuleFrontController
 {
@@ -14,22 +15,24 @@ class FfcartBasketModuleFrontController extends ModuleFrontController
      */
     public function initContent()
     {
-    	// if cart is empty, return to home page
-    	$cart_id = $this->context->cart->id;
-		if(empty($cart_id)){
-			Tools::redirect('index.php');
+    	// get term of domain
+		$product_terms = $this->context->cookie->product_terms;
+		if(empty($product_terms) == FALSE){
+			$product_terms = json_decode($product_terms, TRUE);
 		}
-		$domain_name = $this->context->cookie->domain_name;
-		$carts = $this->__getCartById($cart_id);
-		$products = $this->__getProductsByCart($carts);
-		if(empty($products)){
-			Tools::redirect('index.php');
-		}
-    	global $smarty; 
+		// build cart data
+		$cart_data = $this->_buildCart($product_terms);
+		// load suggestion list
+		$suggestion_data = $this->__loadSuggestion($cart_data["cart_data"]);
+		
+    	global $smarty;
     	$smarty->assign(array(
-			'domain_name' =>$domain_name,
-			'products' => $products,
-			'static_token' => Tools::getToken(false)
+			'cart_data' => $cart_data,
+			'terms_id' => array(1, 2, 3, 5, 10),
+			'terms_names' => array('1 Years', '2 Years', '3 Years', '5 Years', '10 Years'),
+			'selected_terms' => $product_terms,
+			'suggestion_data' => $suggestion_data,
+			'module_link' => $this->context->link->getModuleLink('ffcart', 'basket')
 		));
 		$this->setTemplate('basket.tpl');
     }
@@ -38,59 +41,105 @@ class FfcartBasketModuleFrontController extends ModuleFrontController
 	{
 		$this->addJS(_THEME_JS_DIR_.'cart_basket.js');
 	}
-
-	private function __getProductsByCart($carts){
-		try {
-			$cart_rows = $carts->cart->associations->cart_rows->children();
-			if(empty($cart_rows) == true){
-				return;
-			}
-			$id_products = "[";
-			$del = "";
-			foreach ($cart_rows as $row) {
-				$id_products .= $del.$row->id_product;
-				$del = "|";
-			}
-			$id_products .= "]";
-		   // creating webservice access
-		   $webService = new PrestaShopWebservice(_WS_SHOP_BASE_URL_, _WS_AUTH_KEY_, _WS_DEBUG_);
-		   $opt = array(
-			    'resource'   => 'products',
-			    'display'    => 'full',
-			    'filter[id]' => $id_products
-			);
-		   	// call to retrieve all clients
-		   	$xml = $webService->get($opt);
-		   	// Retrieve resource elements in a variable (table)
-		   	$resources = $xml->products->children();
-			return $resources;
+	
+	public function postProcess() {
+		// init check
+		if (Tools::isSubmit('product_term') == FALSE || Tools::isSubmit('product_id') == FALSE) {
+			return;
 		}
-		catch (PrestaShopWebserviceException $ex) {
-		   // TODO: show 503 page
-		   // Shows a message related to the error
-		   echo 'Other error: <br />' . $ex->getMessage();
+		// assign vars
+		$product_term = Tools::getValue("product_term");
+		$product_id= Tools::getValue("product_id");
+		
+		//if no data, go back to home page
+		if(is_numeric($product_term) && is_numeric($product_id)){
+			$return_data = array();
+			$product_terms = $this->context->cookie->product_terms;
+			if( empty($product_terms)){
+				$return_data[$product_id] = $product_term;
+			} else {
+				$return_data = json_decode($product_terms, TRUE);
+				$return_data[$product_id] = $product_term;
+			}
+			$this->context->cookie->__set("product_terms", json_encode($return_data));
+			global $smarty;
+			//echo $smarty->display($this->getTemplatePath('account_review.tpl'));
+			echo json_encode(array("hasError" => FALSE));
+		}
+		else {
+			echo json_encode(array("hasError" => true, "errors" => "Term should be number!"));
 		}
 	}
 	
-	private function __getCartById($cart_id){
-		try {
-		   // creating webservice access
-		   $webService = new PrestaShopWebservice(_WS_SHOP_BASE_URL_, _WS_AUTH_KEY_, _WS_DEBUG_);
-		   $opt = array(
-			    'resource'   => 'carts',
-			    'display'    => 'full',
-			    'filter[id]' => $cart_id
+	private function __loadSuggestion($cart_list){
+		$return_data = array();
+		
+		$domain_list = CommonUtils::getProductsByDomainCategoryId();
+		if(empty($domain_list) && is_array($domain_list) == FALSE ){
+			return $return_data;
+		}
+		foreach ($domain_list as $domain) {
+			// ignore the items in cart
+			if( isset($cart_list[(string)$domain->id]) ) {
+				continue;
+			}
+			$price = $domain->wholesale_price > 0? $domain->wholesale_price: $domain->price;
+			$product_name = $this->context->cookie->domain_name.$domain->reference;
+			
+			$return_data[(string)$domain->id] = array(
+				"product_name" => (string)$product_name,
+				"product_price" => (string)$price
 			);
-		   	// call to retrieve all clients
-		   	$xml = $webService->get($opt);
-		   	// Retrieve resource elements in a variable (table)
-		   	$resources = $xml->carts->children();
-			return $resources;
 		}
-		catch (PrestaShopWebserviceException $ex) {
-		   // TODO: show 503 page
-		   // Shows a message related to the error
-		   echo 'Other error: <br />' . $ex->getMessage();
+		return $return_data;
+	}
+
+	private function _buildCart($product_terms){
+		$return_data = array();
+		
+		// if cart is empty, return to home page
+    	$cart_id = $this->context->cart->id;
+		if(empty($cart_id)){
+			return $return_data;
 		}
+		// get products based on selected items from user
+		$carts = CommonUtils::getCartById($cart_id);
+		$products = CommonUtils::getProductsByCart($carts);
+		if(empty($products)){
+			return $return_data;
+		}
+		$cart_total = 0;
+		$ican_fee = 0;
+		$cart_data = array();
+		foreach ($products as $product) {
+			$price = $product->wholesale_price > 0? $product->wholesale_price: $product->price;			$product_id = (string)$product->id;
+			
+			if(is_array($product_terms) == TRUE && isset($product_terms[$product_id])){
+				$subtotal = $price*$product_terms[$product_id];
+				$ican_fee += _ICAN_FEE_*$product_terms[$product_id];
+			} else {
+				$subtotal = $price;
+				$ican_fee += _ICAN_FEE_;
+			}
+			
+			$cart_total += $subtotal;
+			$product_name = $this->context->cookie->domain_name.$product->reference;
+			
+			$cart_data[$product_id] = array(
+				"product_name" => (string)$product_name,
+				"product_price" => (string)$price,
+				"product_subtotal" => (string)$subtotal
+			);
+		}
+		$cart_tax = $cart_total*0.1;
+		$cart_grandtotal = $cart_total+$cart_tax+$ican_fee;
+		
+		$return_data["cart_data"] = $cart_data;
+		$return_data["cart_total"] = $cart_total;
+		$return_data["cart_tax"] = $cart_tax;
+		$return_data["ican_fee"] = $ican_fee;
+		$return_data["cart_grandtotal"] = $cart_grandtotal;
+		
+		return $return_data;
 	}
 }

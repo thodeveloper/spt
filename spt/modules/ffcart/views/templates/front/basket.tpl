@@ -16,7 +16,7 @@
 	<div class="article">
 		<div class="col_l left">
 			<div class="box">
-				{if isset($products)}
+				{if isset($cart_data)}
 				<table cellpadding="0" cellspacing="0">
 					<thead>
 						<tr>
@@ -28,45 +28,43 @@
 						</tr>
 					</thead>
 					<tbody id="cart_content">
-            			{foreach from=$products item=product name=product}
-						<tr id="cart_item_{$product->id}">
-							<td></td>
+            			{foreach from=$cart_data["cart_data"] item=cart key=product_id name=cart}
+						<tr id="cart_item_{$product_id}">
 							<td>
-							<p>
-								{$domain_name}{$product->reference}
-							</p>
-							<p>
-								*Plus ICANN fee of $0.18/yr
-							</p></td>
+								<input type="hidden" name="product_id" value="{$product_id}" />
+							</td>
 							<td>
-							<select name="domain_year">
-								<option value="1">1 Years</option>
-								<option value="2">2 Years</option>
-								<option value="3">3 Years</option>
-								<option value="5">5 Years</option>
-								<option value="10">10 Years</option>
+								<p>
+									{$cart['product_name']}
+								</p>
+								<p>
+									*Plus ICANN fee of VND{$smarty.const._ICAN_FEE_}/yr
+								</p>
+							</td>
+							<td>
+							<select id="domain_year_{$product_id}" onchange="return updateCart({$product_id})">
+								{if isset($selected_terms[$product_id])}
+									{assign "selected_id" $selected_terms[$product_id]}
+								{else}
+									{assign "selected_id" 0}
+								{/if}
+								{html_options values=$terms_id output=$terms_names selected=$selected_id}
 							</select></td>
 							<td>
 								<p>
 									<b>
-										{if $product->wholesale_price > 0 }
-			                    			VND{trim($product->wholesale_price)|number_format:0:",":"."}
-			                    		{else}
-			                    			VND{trim($product->price)|number_format:2:",":"."}
-			                    		{/if}
+										<input name="unit_price" value='{$cart['product_price']|number_format:0:"":""}' type="hidden" />
+										VND{$cart['product_price']|number_format:0:",":"."}
 									</b>
 								</p>
 							</td>
 							<td>
-							<p>
-								<b>
-									{if $product->wholesale_price > 0 }
-	                    			VND{trim($product->wholesale_price)|number_format:0:",":"."}
-	                    		{else}
-	                    			VND{trim($product->price)|number_format:2:",":"."}
-	                    		{/if}
-								</b>
-							</p><span onclick="return removeCartItem({$product->id}, '{$static_token}')" class="btn_remove">Remove</span></td>
+								<p>
+									<b>
+										VND<span class="sub_price">{$cart['product_subtotal']|number_format:0:",":"."}</span>
+									</b>
+								</p><span onclick="return removeCartItem({$product_id})" class="btn_remove">Remove</span>
+							</td>
 						</tr>
 						{/foreach}
 					</tbody>
@@ -77,80 +75,55 @@
 						<tr>
 							<td>Suggestion</td>
 							<td></td>
-							<td width="260"></td>
+							<td>Term</td>
+							<td>Unit Price</td>
 							<td></td>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td></td>
+						{foreach from=$suggestion_data item=product key=product_id name=product}
+						<tr id="cart_item_{$product_id}">
 							<td>
-							<p>
-								youwin.guru
-							</p>
-							<p>
-								GURU Domain Registration
-							</p>
-							<p class="txt_color1">
-								15% Off
-							</p>
-							<p>
-								*Plus ICANN fee of $0.18/yr
-							</p></td>
-							<td >
-							<select>
-								<option>1 Years</option>
-								<option>2 Years</option>
-							</select></td>
-
-							<td><span class="btn_add">add to cart</span></td>
-						</tr>
-						<tr>
-							<td></td>
+								<input type="hidden" name="product_id" value="{$product_id}" />
+							</td>
 							<td>
-							<p>
-								youwin.guru
-							</p>
-							<p>
-								GURU Domain Registration
-							</p>
-							<p class="txt_color1">
-								15% Off
-							</p>
-							<p>
-								*Plus ICANN fee of $0.18/yr
-							</p></td>
-							<td >
-							<select>
-								<option>1 Years</option>
-								<option>2 Years</option>
-							</select></td>
-
-							<td><span class="btn_add">add to cart</span></td>
-						</tr>
-						<tr>
-							<td></td>
+								<p>
+									{$product["product_name"]}
+								</p>
+								<p>
+									*Plus ICANN fee of VND{$smarty.const._ICAN_FEE_}/yr
+								</p>
+							</td>
+							<td id="cart_domain_year_{$product_id}" style="display:none;">
+								<select id="domain_year_{$product_id}" onchange="return updateCart({$product_id})">
+									{html_options values=$terms_id output=$terms_names}
+								</select>
+							</td>
+							<td id="cart_suggestion_terms_{$product_id}">
+								<select id="suggestion_terms_{$product_id}">
+									{html_options values=$terms_id output=$terms_names}
+								</select>
+							</td>
 							<td>
-							<p>
-								youwin.guru
-							</p>
-							<p>
-								GURU Domain Registration
-							</p>
-							<p class="txt_color1">
-								15% Off
-							</p>
-							<p>
-								*Plus ICANN fee of $0.18/yr
-							</p></td>
-							<td >
-							<select>
-								<option>1 Years</option>
-								<option>2 Years</option>
-							</select></td>
-
-							<td><span class="btn_add">add to cart</span></td>
+								<p>
+									<b>
+										<input name="unit_price" id="unit_price_{$product_id}" value="{$product['product_price']|number_format:0:'':''}" type="hidden" />
+										VND{$product['product_price']|number_format:0:",":"."}
+									</b>
+								</p>
+							</td>
+							<td id="cart_remove_{$product_id}" style="display: none;">
+								<p>
+									<b>
+										VND<span class="sub_price">{$product['product_price']|number_format:0:",":"."}</span>
+									</b>
+								</p><span onclick="return removeCartItem({$product_id})" class="btn_remove">Remove</span>
+							</td>
+							<td id="cart_addtocart_{$product_id}">
+								<a class="btn1"><span onclick="addToCart({$product_id}, 1)" class="btn_add">Add to cart</span></a>
+							</td>
 						</tr>
+						{/foreach}
 					</tbody>
 				</table>
 			</div>
@@ -159,24 +132,21 @@
 		<div class="col_r right">
 			<div class="box">
 				<p>
-					<span class="left">Coun:t</span>
-					<select class="right">
-						<option>1 Years</option>
-						<option>2 Years</option>
-					</select>
+					<span class="left">Total:</span>
+					<span class="right txt_color1 price_big">VND<span id="cart_total">{$cart_data['cart_total']|number_format:0:",":"."}</span></span>
 				</p>
 				<p>
-					<span class="left">Total cost:</span>
-					<span class="right txt_color1 price_big">$400</span>
+					<span class="left">Taxes(10%):</span>
+					<span class="right"><strong>VND<span id="tax_fee">{$cart_data['cart_tax']|number_format:0:",":"."}<strong></span></span>
 				</p>
 				<p>
-					<span class="left">Taxes:</span>
-					<span class="right"><strong>$16.50<strong></span>
+					<span class="left">ICAN fee:</span>
+					<span class="right"><strong>VND<span id="ican_fee">{$cart_data['ican_fee']|number_format:0:",":"."}<strong></span></span>
 				</p>
 				<p class="line"></p>
 				<p>
-					<span class="left">Total saving </span>
-					<span class="right txt_color3">$16.50</span>
+					<span class="left">Total cost </span>
+					<span class="right txt_color3">VND<span id="cart_grandtotal">{$cart_data['cart_grandtotal']|number_format:0:",":"."}</span></span>
 				</p>
 				<p>
 					<a class="btn1" href="{$link->getModuleLink('ffcart', 'accountreview', array(), true)|addslashes}">

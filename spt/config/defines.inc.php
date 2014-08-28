@@ -204,3 +204,6 @@ define('_WS_DEBUG_', false);											// Debug mode
 define('_WS_SHOP_BASE_URL_', 'http://demo.fireflyinnov.com/');	    // Root path of your PrestaShop store
 define('_WS_AUTH_KEY_', '5XS86QS8R3PPTSFWYZBLMJ7XLXXXXKUL');	// Auth key (Get it in your Back Office)
 
+define('_ICAN_FEE_', 4000);
+define('_TAX_FEE_', 0.1);
+

@@ -32,6 +32,11 @@
 {addJsDef roundMode=$roundMode}
 {addJsDef isLogged=$is_logged|intval}
 {addJsDef isGuest=$is_guest|intval}
+{addJsDef defaultTaxFee=$smarty.const._TAX_FEE_}
+{addJsDef defaultICANFee=$smarty.const._ICAN_FEE_}
+{if isset($module_link)}
+	{addJsDef module_link=$module_link}
+{/if}
 {addJsDef page_name=$page_name|escape:'html':'UTF-8'}
 {addJsDef contentOnly=$content_only|boolval}
 {if isset($cookie->id_lang)}
