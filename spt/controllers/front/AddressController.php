@@ -127,11 +127,11 @@ class AddressControllerCore extends FrontController
 
 		// Check page token
 		if ($this->context->customer->isLogged() && !$this->isTokenValid())
-			$this->errors[] = Tools::displayError('Invalid token.');
+			$this->errors['alias'] = Tools::displayError('Invalid token.');
 
 		// Check phone
 		if (Configuration::get('PS_ONE_PHONE_AT_LEAST') && !Tools::getValue('phone') && !Tools::getValue('phone_mobile'))
-			$this->errors[] = Tools::displayError('You must register at least one phone number.');
+			$this->errors['phone'] = Tools::displayError('At least 1 phone is required');
 		if ($address->id_country)
 		{
 			// Check country
@@ -139,19 +139,19 @@ class AddressControllerCore extends FrontController
 				throw new PrestaShopException('Country cannot be loaded with address->id_country');
 
 			if ((int)$country->contains_states && !(int)$address->id_state)
-				$this->errors[] = Tools::displayError('This country requires you to chose a State.');
+				$this->errors['id_country'] = Tools::displayError('This country requires you to chose a State.');
 
 			if (!$country->active)
-				$this->errors[] = Tools::displayError('This country is not active.');
+				$this->errors['id_country'] = Tools::displayError('This country is not active.');
 
 			$postcode = Tools::getValue('postcode');		
 			/* Check zip code format */
 			if ($country->zip_code_format && !$country->checkZipCode($postcode))
-				$this->errors[] = sprintf(Tools::displayError('The Zip/Postal code you\'ve entered is invalid. It must follow this format: %s'), str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format))));
+				$this->errors['postcode'] = sprintf(Tools::displayError('postcode format: %s'), str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format))));
 			elseif(empty($postcode) && $country->need_zip_code)
-				$this->errors[] = Tools::displayError('A Zip/Postal code is required.');
+				$this->errors['postcode'] = Tools::displayError('A Zip/Postal code is required.');
 			elseif ($postcode && !Validate::isPostCode($postcode))
-				$this->errors[] = Tools::displayError('The Zip/Postal code is invalid.');
+				$this->errors['postcode'] = Tools::displayError('The Zip/Postal code is invalid.');
 
 			// Check country DNI
 			if ($country->isNeedDni() && (!Tools::getValue('dni') || !Validate::isDniLite(Tools::getValue('dni'))))
@@ -167,7 +167,7 @@ class AddressControllerCore extends FrontController
 				$id_address = Tools::getValue('opc_id_address_'.Tools::getValue('type'));
 
 			if (Address::aliasExist(Tools::getValue('alias'), (int)$id_address, (int)$this->context->customer->id))
-				$this->errors[] = sprintf(Tools::displayError('The alias "%s" has already been used. Please select another one.'), Tools::safeOutput(Tools::getValue('alias')));		
+				$this->errors['alias'] = sprintf(Tools::displayError('The alias "%s" has already been used. Please select another one.'), Tools::safeOutput(Tools::getValue('alias')));		
 		}
 
 		// Check the requires fields which are settings in the BO
@@ -194,7 +194,6 @@ class AddressControllerCore extends FrontController
 				}
 			}
 		}
-		
 		if ($this->ajax && Tools::getValue('type') == 'invoice' && Configuration::get('PS_ORDER_PROCESS_TYPE'))
 		{
 			$this->errors = array_unique(array_merge($this->errors, $address->validateController()));			

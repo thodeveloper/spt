@@ -10,19 +10,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
   'nocache_hash' => '2429353f85c973ddfe7-10666404',
-  'variables' => 
-  array (
-    'link' => 0,
-    'returnAllowed' => 0,
-    'voucherAllowed' => 0,
-    'HOOK_BLOCK_MY_ACCOUNT' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53f85c974b0371_20929068',
+  'unifunc' => 'content_540483a8294a28_51708070',
+  'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53f85c974b0371_20929068')) {function content_53f85c974b0371_20929068($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_540483a8294a28_51708070')) {function content_540483a8294a28_51708070($_smarty_tpl) {?>
 <!-- Block myaccount module -->
 <div class="block myaccount">
 	<h4 class="title_block"><a href="http://demo.fireflyinnov.com/en/my-account" title="Manage my customer account" rel="nofollow">My account</a></h4>

@@ -21,7 +21,10 @@ class FfcartBasketModuleFrontController extends ModuleFrontController
 			$product_terms = json_decode($product_terms, TRUE);
 		}
 		// build cart data
-		$cart_data = $this->_buildCart($product_terms);
+		$cart_data = CommonUtils::buildCart($product_terms);
+		if(empty($cart_data)){
+			Tools::redirect('index.php');
+		}
 		// load suggestion list
 		$suggestion_data = $this->__loadSuggestion($cart_data["cart_data"]);
 		
@@ -91,55 +94,6 @@ class FfcartBasketModuleFrontController extends ModuleFrontController
 				"product_price" => (string)$price
 			);
 		}
-		return $return_data;
-	}
-
-	private function _buildCart($product_terms){
-		$return_data = array();
-		
-		// if cart is empty, return to home page
-    	$cart_id = $this->context->cart->id;
-		if(empty($cart_id)){
-			return $return_data;
-		}
-		// get products based on selected items from user
-		$carts = CommonUtils::getCartById($cart_id);
-		$products = CommonUtils::getProductsByCart($carts);
-		if(empty($products)){
-			return $return_data;
-		}
-		$cart_total = 0;
-		$ican_fee = 0;
-		$cart_data = array();
-		foreach ($products as $product) {
-			$price = $product->wholesale_price > 0? $product->wholesale_price: $product->price;			$product_id = (string)$product->id;
-			
-			if(is_array($product_terms) == TRUE && isset($product_terms[$product_id])){
-				$subtotal = $price*$product_terms[$product_id];
-				$ican_fee += _ICAN_FEE_*$product_terms[$product_id];
-			} else {
-				$subtotal = $price;
-				$ican_fee += _ICAN_FEE_;
-			}
-			
-			$cart_total += $subtotal;
-			$product_name = $this->context->cookie->domain_name.$product->reference;
-			
-			$cart_data[$product_id] = array(
-				"product_name" => (string)$product_name,
-				"product_price" => (string)$price,
-				"product_subtotal" => (string)$subtotal
-			);
-		}
-		$cart_tax = $cart_total*0.1;
-		$cart_grandtotal = $cart_total+$cart_tax+$ican_fee;
-		
-		$return_data["cart_data"] = $cart_data;
-		$return_data["cart_total"] = $cart_total;
-		$return_data["cart_tax"] = $cart_tax;
-		$return_data["ican_fee"] = $ican_fee;
-		$return_data["cart_grandtotal"] = $cart_grandtotal;
-		
 		return $return_data;
 	}
 }

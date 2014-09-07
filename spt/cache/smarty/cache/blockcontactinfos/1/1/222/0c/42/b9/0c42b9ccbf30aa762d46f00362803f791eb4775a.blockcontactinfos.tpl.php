@@ -10,19 +10,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
   'nocache_hash' => '2399453f85c974d29a0-34562524',
-  'variables' => 
-  array (
-    'blockcontactinfos_company' => 0,
-    'blockcontactinfos_address' => 0,
-    'blockcontactinfos_phone' => 0,
-    'blockcontactinfos_email' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53f85c97549041_38162580',
+  'unifunc' => 'content_540483a82c2343_76579052',
+  'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53f85c97549041_38162580')) {function content_53f85c97549041_38162580($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_540483a82c2343_76579052')) {function content_540483a82c2343_76579052($_smarty_tpl) {?>
 <!-- MODULE Block contact infos -->
 <div id="block_contact_infos">
 	<h4 class="title_block">Contact us</h4>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-08-28 10:22:41
+<?php /* Smarty version Smarty-3.1.19, created on 2014-08-30 14:05:36
          compiled from "E:\wamp\www\spt\spt\spt\modules\account\views\templates\front\\settings.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:319253fea081100af0-70767874%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dbe9b4792f7f3f0641290e794a4a65ed016b37af' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\account\\views\\templates\\front\\\\settings.tpl',
-      1 => 1408778850,
+      1 => 1409382170,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
   'unifunc' => 'content_53fea08113d652_31930398',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_53fea08113d652_31930398')) {function content_53fea08113d652_31930398($_smarty_tpl) {?><div class="k-content child_panel child_panel3">
 	<p class="note">

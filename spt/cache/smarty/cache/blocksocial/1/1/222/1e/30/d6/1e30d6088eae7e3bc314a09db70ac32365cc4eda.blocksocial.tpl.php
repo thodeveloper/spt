@@ -10,21 +10,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
   'nocache_hash' => '2282553f85c96d49c72-13494676',
-  'variables' => 
-  array (
-    'facebook_url' => 0,
-    'twitter_url' => 0,
-    'rss_url' => 0,
-    'youtube_url' => 0,
-    'google_plus_url' => 0,
-    'pinterest_url' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53f85c96de9273_12556486',
+  'unifunc' => 'content_540483a8086923_36693671',
+  'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53f85c96de9273_12556486')) {function content_53f85c96de9273_12556486($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_540483a8086923_36693671')) {function content_540483a8086923_36693671($_smarty_tpl) {?>
 <div id="social_block">
 	<h4 class="title_block">Follow us</h4>
 	<ul>

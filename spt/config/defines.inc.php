@@ -207,3 +207,5 @@ define('_WS_AUTH_KEY_', '5XS86QS8R3PPTSFWYZBLMJ7XLXXXXKUL');	// Auth key (Get it
 define('_ICAN_FEE_', 4000);
 define('_TAX_FEE_', 0.1);
 
+/* reseller group */
+define('__RESELLER_GROUP_ID__', 4);

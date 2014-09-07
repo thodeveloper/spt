@@ -50,6 +50,7 @@
 </head>
 
 <body>
+{addJsDef whmcsUrl={$link->getModuleLink('whmcs', 'main', array(), true)|addslashes}|escape:'quotes':'UTF-8'}
 <header>
 	<div class="div_header">
     	<div class="article">
@@ -59,19 +60,26 @@
                     <i class="fa fa-phone" ></i>
                     <a>(084) 932 912830 </a>
                 </div>
+                {if $is_logged == true}
                 <div class="login_out btn_log active">
+                    <i class="fa fa-user"> </i>
+                    <a id="btn_log" href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html':'UTF-8'}">Logout</a>
+                </div>
+                {else}
+            	<div class="login_out btn_log active">
                     <i class="fa fa-user" ></i>
                     <a id="btn_log">Sign In</a>
                     <span></span>
                     <a id="btn_log2">Register</a>
                     <div class="box_log">
-                    	<div class="line"></div>
+                    	<div class="line"> </div>
                         <div class="box_sign">
                         	<h3>Sign in</h3>
-                            <input class="sm" type="text" placeholder="Email" />
-                            <input class="sm" type="text" placeholder="Pass" />
+                        	<p class="error" id="header_login_error"> </p>
+                            <input class="sm" type="text" name="header_login_email" id="header_login_email" placeholder="Email" />
+                            <input class="sm" type="password" id="header_login_passwd" name="header_login_passwd" placeholder="Password" />
                             <a class="text_link">Forgot your password?</a>
-                            <button class="btn_gr">Sign in</button>
+                            <button class="btn_gr" id="header_SubmitLogin">Sign in</button>
                         </div>
                         <div class="box_login">
                         	<h3>New Customer</h3>
@@ -82,8 +90,9 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn1">
-                    <i class="fa fa-shopping-cart"></i><span>checkout</span>
+                {/if}
+                <a href="{$link->getModuleLink('ffcart', 'basket', array(), true)|addslashes}" class="btn1">
+                    <i class="fa fa-shopping-cart"></i><span>Checkout</span>
                 </a>
             </div>
         </div>
@@ -105,7 +114,4 @@
 <!--Popup create account user-->
 {include file="$tpl_dir./modules/popup/new_user.tpl"}
 <!--Popup create account user-------------------- end-->
-<!--Popup create account reseller-->
-{include file="$tpl_dir./modules/popup/new_retailer.tpl"}
-<!--Popup create account reseller end-->
 <div class="bg_dark"></div>

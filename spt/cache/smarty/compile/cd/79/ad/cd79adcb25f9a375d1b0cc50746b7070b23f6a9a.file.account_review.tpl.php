@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-08-27 10:07:22
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-07 19:51:15
          compiled from "E:\wamp\www\spt\spt\spt\modules\ffcart\views\templates\front\account_review.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2525153fd4b6a440f80-15048264%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cd79adcb25f9a375d1b0cc50746b7070b23f6a9a' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\ffcart\\views\\templates\\front\\account_review.tpl',
-      1 => 1408778850,
+      1 => 1410094232,
       2 => 'file',
     ),
   ),
@@ -15,11 +15,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
   'unifunc' => 'content_53fd4b6a4abb01_06278014',
+  'variables' => 
+  array (
+    'link' => 0,
+    'cart_data' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53fd4b6a4abb01_06278014')) {function content_53fd4b6a4abb01_06278014($_smarty_tpl) {?><div class="div_step">
+<?php if ($_valid && !is_callable('content_53fd4b6a4abb01_06278014')) {function content_53fd4b6a4abb01_06278014($_smarty_tpl) {?><?php ob_start();?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','billing',array(),true));?>
+<?php $_tmp1=ob_get_clean();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('billingUrl'=>preg_replace("%(?<!\\\\)'%", "\'",$_tmp1)),$_smarty_tpl);?>
+
+<div class="div_step">
 	<div class="step_content">
 		<div class="line steping4">
 			<span class="step step1 active">1</span>
@@ -42,9 +50,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<br />
 					Customers</h3>
 					<p class="txtcontent">
-						New to SPT? Continue checkout.
+						Please enter your email address to create an account.
 					</p>
-					<a class="btn">Continue ></a>
+					<a href="<?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','billing',array(),true));?>
+">
+						<span class="btn">Continue ></span>
+					</a>
 				</div>
 				<div class="col1 col2 left">
 					<h3>Returning
@@ -53,28 +64,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<p class="txtcontent">
 						Already got an account? Sign In.
 					</p>
+					<p class="error" id="login_error"> </p>
 					<div class="form">
 						<p>
-							Username or Customer#
+							Email
 						</p>
-						<input type="text" />
-						<p class="error">
-							loi
-						</p>
+						<input type="text" id="login_email" name="login_email" />
 					</div>
 					<div class="form">
 						<p>
 							Password
 						</p>
-						<input type="text" />
-						<p class="error">
-							loi
-						</p>
+						<input type="password" id="login_passwd" name="login_passwd" />
 					</div>
 					<p class="link">
 						<a>Forgot your password?</a>
 					</p>
-					<a class="btn">Sign In ></a>
+					<a class="btn" id="SubmitLogin">Sign In ></a>
 				</div>
 			</div>
 			<div style="margin-bottom: 50px"></div>
@@ -86,12 +92,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</p>
 				<p>
 					<span class="left">ICANN Fees*</span>
-					<span class="right"><strong>$16.50<strong></span>
+					<span class="right"><strong>VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['ican_fee'],0,",",".");?>
+<strong></span>
 				</p>
 
 				<p class="tax">
-					<span class="left">Taxes:</span>
-					<span class="right txt_color2">$354.11</span>
+					<span class="left">Total:</span>
+					<span class="right txt_color2">VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['cart_grandtotal'],0,",",".");?>
+</span>
 				</p>
 				<p class="line"></p>
 				<p>

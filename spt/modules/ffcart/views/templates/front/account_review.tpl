@@ -1,3 +1,4 @@
+{addJsDef billingUrl={$link->getModuleLink('ffcart', 'billing', array(), true)|addslashes}|escape:'quotes':'UTF-8'}
 <div class="div_step">
 	<div class="step_content">
 		<div class="line steping4">
@@ -21,9 +22,11 @@
 					<br />
 					Customers</h3>
 					<p class="txtcontent">
-						New to SPT? Continue checkout.
+						Please enter your email address to create an account.
 					</p>
-					<a class="btn">Continue ></a>
+					<a href="{$link->getModuleLink('ffcart', 'billing', array(), true)|addslashes}">
+						<span class="btn">Continue ></span>
+					</a>
 				</div>
 				<div class="col1 col2 left">
 					<h3>Returning
@@ -32,28 +35,23 @@
 					<p class="txtcontent">
 						Already got an account? Sign In.
 					</p>
+					<p class="error" id="login_error"> </p>
 					<div class="form">
 						<p>
-							Username or Customer#
+							Email
 						</p>
-						<input type="text" />
-						<p class="error">
-							loi
-						</p>
+						<input type="text" id="login_email" name="login_email" />
 					</div>
 					<div class="form">
 						<p>
 							Password
 						</p>
-						<input type="text" />
-						<p class="error">
-							loi
-						</p>
+						<input type="password" id="login_passwd" name="login_passwd" />
 					</div>
 					<p class="link">
 						<a>Forgot your password?</a>
 					</p>
-					<a class="btn">Sign In ></a>
+					<a class="btn" id="SubmitLogin">Sign In ></a>
 				</div>
 			</div>
 			<div style="margin-bottom: 50px"></div>
@@ -65,12 +63,12 @@
 				</p>
 				<p>
 					<span class="left">ICANN Fees*</span>
-					<span class="right"><strong>$16.50<strong></span>
+					<span class="right"><strong>VND{$cart_data['ican_fee']|number_format:0:",":"."}<strong></span>
 				</p>
 
 				<p class="tax">
-					<span class="left">Taxes:</span>
-					<span class="right txt_color2">$354.11</span>
+					<span class="left">Total:</span>
+					<span class="right txt_color2">VND{$cart_data['cart_grandtotal']|number_format:0:",":"."}</span>
 				</p>
 				<p class="line"></p>
 				<p>

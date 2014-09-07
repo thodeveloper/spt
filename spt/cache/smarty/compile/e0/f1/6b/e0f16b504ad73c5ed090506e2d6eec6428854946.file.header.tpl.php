@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-08-23 18:38:47
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-07 20:14:01
          compiled from "E:\wamp\www\spt\spt\spt\themes\firefly\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:704653f85c9782d074-40568774%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0f16b504ad73c5ed090506e2d6eec6428854946' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\themes\\firefly\\header.tpl',
-      1 => 1408793854,
+      1 => 1410095212,
       2 => 'file',
     ),
   ),
@@ -31,6 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'js_dir' => 0,
     'js_def' => 0,
     'link' => 0,
+    'is_logged' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -113,6 +114,9 @@ ie9.css">
 </head>
 
 <body>
+<?php ob_start();?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('whmcs','main',array(),true));?>
+<?php $_tmp1=ob_get_clean();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('whmcsUrl'=>preg_replace("%(?<!\\\\)'%", "\'",$_tmp1)),$_smarty_tpl);?>
+
 <header>
 	<div class="div_header">
     	<div class="article">
@@ -122,19 +126,27 @@ ie9.css">
                     <i class="fa fa-phone" ></i>
                     <a>(084) 932 912830 </a>
                 </div>
+                <?php if ($_smarty_tpl->tpl_vars['is_logged']->value==true) {?>
                 <div class="login_out btn_log active">
+                    <i class="fa fa-user"> </i>
+                    <a id="btn_log" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('index',true,null,"mylogout"), ENT_QUOTES, 'UTF-8', true);?>
+">Logout</a>
+                </div>
+                <?php } else { ?>
+            	<div class="login_out btn_log active">
                     <i class="fa fa-user" ></i>
                     <a id="btn_log">Sign In</a>
                     <span></span>
                     <a id="btn_log2">Register</a>
                     <div class="box_log">
-                    	<div class="line"></div>
+                    	<div class="line"> </div>
                         <div class="box_sign">
                         	<h3>Sign in</h3>
-                            <input class="sm" type="text" placeholder="Email" />
-                            <input class="sm" type="text" placeholder="Pass" />
+                        	<p class="error" id="header_login_error"> </p>
+                            <input class="sm" type="text" name="header_login_email" id="header_login_email" placeholder="Email" />
+                            <input class="sm" type="password" id="header_login_passwd" name="header_login_passwd" placeholder="Password" />
                             <a class="text_link">Forgot your password?</a>
-                            <button class="btn_gr">Sign in</button>
+                            <button class="btn_gr" id="header_SubmitLogin">Sign in</button>
                         </div>
                         <div class="box_login">
                         	<h3>New Customer</h3>
@@ -145,8 +157,10 @@ ie9.css">
                         </div>
                     </div>
                 </div>
-                <a class="btn1">
-                    <i class="fa fa-shopping-cart"></i><span>checkout</span>
+                <?php }?>
+                <a href="<?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','basket',array(),true));?>
+" class="btn1">
+                    <i class="fa fa-shopping-cart"></i><span>Checkout</span>
                 </a>
             </div>
         </div>
@@ -171,8 +185,4 @@ ie9.css">
 <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./modules/popup/new_user.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <!--Popup create account user-------------------- end-->
-<!--Popup create account reseller-->
-<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_dir']->value)."./modules/popup/new_retailer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-<!--Popup create account reseller end-->
 <div class="bg_dark"></div><?php }} ?>

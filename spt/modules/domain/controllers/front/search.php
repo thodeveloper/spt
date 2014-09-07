@@ -27,7 +27,11 @@ class DomainSearchModuleFrontController extends ModuleFrontController {
 			Tools::redirect('index.php');
 		}
 		
-		$domain_results 	= CommonUtils::checkDomain($domain_str);
+		$postfields = array(
+			"action" => "domainwhois",
+			"domain" => $domain_str
+		);
+		$domain_results 	= CommonUtils::whmcs($postfields);
 		$domain_parts 		= $this->__extractTLD($domain_str);
 		$domain_name 		= "";
 		$domain_tld 		= "";

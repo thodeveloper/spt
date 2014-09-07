@@ -55,10 +55,12 @@ class AuthControllerCore extends FrontController
 	 */
 	public function setMedia()
 	{
+		/*
 		parent::setMedia();
-		if (!$this->useMobileTheme())
-			$this->addCSS(_THEME_CSS_DIR_.'authentication.css');
-		$this->addJqueryPlugin('typewatch');
+				if (!$this->useMobileTheme())
+					$this->addCSS(_THEME_CSS_DIR_.'authentication.css');
+				$this->addJqueryPlugin('typewatch');*/
+		
 		$this->addJS(array(
 			_THEME_JS_DIR_.'tools/vatManagement.js',
 			_THEME_JS_DIR_.'tools/statesManagement.js',
@@ -382,7 +384,7 @@ class AuthControllerCore extends FrontController
 		// Checked the user address in case he changed his email address
 		if (Validate::isEmail($email = Tools::getValue('email')) && !empty($email))
 			if (Customer::customerExists($email))
-				$this->errors[] = Tools::displayError('An account using this email address has already been registered.', false);
+				$this->errors['email'] = Tools::displayError('email existed', false);
 		// Preparing customer
 		$customer = new Customer();
 		$lastnameAddress = Tools::getValue('lastname');
@@ -409,7 +411,7 @@ class AuthControllerCore extends FrontController
 		}
 
 		if ($error_phone)
-			$this->errors[] = Tools::displayError('You must register at least one phone number.');
+			$this->errors['phone'] = Tools::displayError('At least one phone number required');
 
 		$this->errors = array_unique(array_merge($this->errors, $customer->validateController()));
 
@@ -426,7 +428,7 @@ class AuthControllerCore extends FrontController
 				$customer->firstname = Tools::ucwords($customer->firstname);
 				$customer->birthday = (empty($_POST['years']) ? '' : (int)$_POST['years'].'-'.(int)$_POST['months'].'-'.(int)$_POST['days']);
 				if (!Validate::isBirthDate($customer->birthday))
-					$this->errors[] = Tools::displayError('Invalid date of birth.');
+					$this->errors['birthday'] = Tools::displayError('Invalid date of birth.');
 
 				// New Guest customer
 				$customer->is_guest = (Tools::isSubmit('is_new_customer') ? !Tools::getValue('is_new_customer', 1) : 0);
@@ -479,7 +481,7 @@ class AuthControllerCore extends FrontController
 		else // if registration type is in one step, we save the address
 		{
 			$_POST['lastname'] = $lastnameAddress;
-			$_POST['firstname'] = $firstnameAddress;
+			$_POST['firstname'] = $firstnameAddress; 
 			$post_back = $_POST;
 			// Preparing addresses
 			foreach($addresses_types as $addresses_type)
@@ -505,11 +507,11 @@ class AuthControllerCore extends FrontController
 				$postcode = Tools::getValue('postcode');		
 				/* Check zip code format */
 				if ($country->zip_code_format && !$country->checkZipCode($postcode))
-					$this->errors[] = sprintf(Tools::displayError('The Zip/Postal code you\'ve entered is invalid. It must follow this format: %s'), str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format))));
+					$this->errors['postcode'] = sprintf(Tools::displayError('postcode format is %s'), str_replace('C', $country->iso_code, str_replace('N', '0', str_replace('L', 'A', $country->zip_code_format))));
 				elseif(empty($postcode) && $country->need_zip_code)
-					$this->errors[] = Tools::displayError('A Zip / Postal code is required.');
+					$this->errors['postcode'] = Tools::displayError('A Zip / Postal code is required.');
 				elseif ($postcode && !Validate::isPostCode($postcode))
-					$this->errors[] = Tools::displayError('The Zip / Postal code is invalid.');
+					$this->errors['postcode'] = Tools::displayError('The Zip / Postal code is invalid.');
 	
 				if ($country->need_identification_number && (!Tools::getValue('dni') || !Validate::isDniLite(Tools::getValue('dni'))))
 					$this->errors[] = Tools::displayError('The identification number is incorrect or has already been used.');
@@ -527,12 +529,12 @@ class AuthControllerCore extends FrontController
 		}
 
 		if (!@checkdate(Tools::getValue('months'), Tools::getValue('days'), Tools::getValue('years')) && !(Tools::getValue('months') == '' && Tools::getValue('days') == '' && Tools::getValue('years') == ''))
-			$this->errors[] = Tools::displayError('Invalid date of birth');
+			$this->errors['birthday'] = Tools::displayError('Invalid date of birth');
 
 		if (!count($this->errors))
 		{
 			if (Customer::customerExists(Tools::getValue('email')))
-				$this->errors[] = Tools::displayError('An account using this email address has already been registered. Please enter a valid password or request a new one. ', false);
+				$this->errors['email'] = Tools::displayError('An account using this email address has already been registered. Please enter a valid password or request a new one. ', false);
 			if (Tools::isSubmit('newsletter'))
 				$this->processCustomerNewsletter($customer);
 
@@ -667,7 +669,7 @@ class AuthControllerCore extends FrontController
 			$this->errors[] = Tools::displayError('Invalid email address.');
 		elseif (Customer::customerExists($email))
 		{
-			$this->errors[] = Tools::displayError('An account using this email address has already been registered. Please enter a valid password or request a new one. ', false);
+			$this->errors['email'] = Tools::displayError('An account using this email address has already been registered. Please enter a valid password or request a new one. ', false);
 			$_POST['email'] = $_POST['email_create'];
 			unset($_POST['email_create']);
 		}
