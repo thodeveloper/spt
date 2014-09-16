@@ -887,7 +887,7 @@ class CartCore extends ObjectModel
 		{
 			/* Check if the product is already in the cart */
 			$result = $this->containsProduct($id_product, $id_product_attribute, (int)$id_customization, (int)$id_address_delivery);
-
+			
 			/* Update quantity if product already exist */
 			if ($result)
 			{
@@ -1214,7 +1214,7 @@ class CartCore extends ObjectModel
 		$result = Db::getInstance()->execute('
 		DELETE FROM `'._DB_PREFIX_.'cart_product`
 		WHERE `id_product` = '.(int)$id_product.'
-		'.(!is_null($id_product_attribute) ? ' AND `id_product_attribute` = '.(int)$id_product_attribute : '').'
+		'.(!empty($id_product_attribute) ? ' AND `id_product_attribute` = '.(int)$id_product_attribute : '').'
 		AND `id_cart` = '.(int)$this->id.'
 		'.((int)$id_address_delivery ? 'AND `id_address_delivery` = '.(int)$id_address_delivery : ''));
 

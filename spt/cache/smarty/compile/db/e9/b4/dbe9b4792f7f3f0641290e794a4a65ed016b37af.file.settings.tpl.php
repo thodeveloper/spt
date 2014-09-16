@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-08-30 14:05:36
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 01:46:27
          compiled from "E:\wamp\www\spt\spt\spt\modules\account\views\templates\front\\settings.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:319253fea081100af0-70767874%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:409154171f9d10ffb2-53055565%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'dbe9b4792f7f3f0641290e794a4a65ed016b37af' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\account\\views\\templates\\front\\\\settings.tpl',
-      1 => 1409382170,
+      1 => 1410806764,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '319253fea081100af0-70767874',
+  'nocache_hash' => '409154171f9d10ffb2-53055565',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53fea08113d652_31930398',
+  'unifunc' => 'content_54171f9d1149a6_97445415',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53fea08113d652_31930398')) {function content_53fea08113d652_31930398($_smarty_tpl) {?><div class="k-content child_panel child_panel3">
+<?php if ($_valid && !is_callable('content_54171f9d1149a6_97445415')) {function content_54171f9d1149a6_97445415($_smarty_tpl) {?><div class="k-content child_panel child_panel3">
 	<p class="note">
 		<i class="fa fa-exclamation-triangle"></i><span>Warning</span><i>*</i><span>Required letter</span>
 	</p>
@@ -126,53 +126,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="div_form">
 				<p class="form">
 					<span class="text"><i>*</i> Confirm New Password:</span>
-					<input type="text" class="xsm" />
-					<span class="notice"><i class="fa fa-exclamation-circle"></i>(0-9, a-z, _-)</span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text"></span>
-					<span class="btn_gr">Save</span>
-					<span class="notice"></span>
-				</p>
-			</div>
-		</div>
-		<div class="header">
-			<h5>Change Email Login</h5>
-		</div>
-		<div class="div_pop">
-			<div class="div_form">
-				<p class="form">
-					<span class="text">Current Email Login:</span>
-					<span class="text txt-left">truong.yuna@gmail.com</span>
-					<span class="notice error"></span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text">*Current Password:</span>
-					<input type="text" class="xsm" />
-					<span class="notice"><i class="fa fa-exclamation-circle"></i>(0-9, a-z, _-)</span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text">*Enter New Email Login:</span>
-					<input type="text" class="xsm" />
-					<span class="notice"><i class="fa fa-exclamation-circle"></i>(0-9, a-z, _-)</span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text"></span>
-					<span class="text txt-left">Check Availability</span>
-					<span class="notice"></span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text">*Confirm New Email Login:</span>
 					<input type="text" class="xsm" />
 					<span class="notice"><i class="fa fa-exclamation-circle"></i>(0-9, a-z, _-)</span>
 				</p>

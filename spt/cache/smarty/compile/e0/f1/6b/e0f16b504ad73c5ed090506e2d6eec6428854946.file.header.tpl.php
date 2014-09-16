@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-07 20:14:01
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-15 09:44:17
          compiled from "E:\wamp\www\spt\spt\spt\themes\firefly\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:704653f85c9782d074-40568774%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:80055416528137fc93-25119663%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e0f16b504ad73c5ed090506e2d6eec6428854946' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\themes\\firefly\\header.tpl',
-      1 => 1410095212,
+      1 => 1410511292,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '704653f85c9782d074-40568774',
+  'nocache_hash' => '80055416528137fc93-25119663',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53f85c97946c99_89768496',
   'variables' => 
   array (
     'lang_iso' => 0,
@@ -34,8 +32,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'is_logged' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_541652814b00e6_83303987',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53f85c97946c99_89768496')) {function content_53f85c97946c99_89768496($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_541652814b00e6_83303987')) {function content_541652814b00e6_83303987($_smarty_tpl) {?><!DOCTYPE HTML>
 <html lang="<?php echo $_smarty_tpl->tpl_vars['lang_iso']->value;?>
 "><!-- InstanceBegin template="/Templates/tempalte.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -131,6 +131,9 @@ ie9.css">
                     <i class="fa fa-user"> </i>
                     <a id="btn_log" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('index',true,null,"mylogout"), ENT_QUOTES, 'UTF-8', true);?>
 ">Logout</a>
+                    <span></span>
+                    <a id="btn_log2" href="<?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('account','main',array(),true));?>
+">My account</a>
                 </div>
                 <?php } else { ?>
             	<div class="login_out btn_log active">

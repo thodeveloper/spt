@@ -4,7 +4,8 @@ $(document).ready(function() {
 	});
 });
 
-function addToCart(product_id, static_token, quantity){
+function addToCart(product_id, domain_name, quantity){
+	var gift_message = 'domain='+product_id+':'+domain_name;
 	$.ajax({
 		type: 'POST',
 		headers: { "cache-control": "no-cache" },
@@ -12,7 +13,7 @@ function addToCart(product_id, static_token, quantity){
 		async: true,
 		cache: false,
 		dataType : "json",
-		data: 'controller=cart&add=1&ajax=true&qty=' + ((quantity && quantity != null) ? quantity : '1') + '&id_product=' + product_id + '&token=' + static_token,
+		data: 'controller=cart&add=1&ajax=true&qty=' + ((quantity && quantity != null) ? quantity : '1') + '&id_product=' + product_id + '&gift_message='+ gift_message+ '&token=' + static_token,
 		success: function(jsonData,textStatus,jqXHR)
 		{
 			if (!jsonData.hasError)

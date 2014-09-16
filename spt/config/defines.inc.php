@@ -205,7 +205,14 @@ define('_WS_SHOP_BASE_URL_', 'http://demo.fireflyinnov.com/');	    // Root path 
 define('_WS_AUTH_KEY_', '5XS86QS8R3PPTSFWYZBLMJ7XLXXXXKUL');	// Auth key (Get it in your Back Office)
 
 define('_ICAN_FEE_', 4000);
+define('_VNNIC_DOTCOMDOTVN_FEE_', 500000);
+define('_VNNIC_DOTVN_FEE_', 780000);
 define('_TAX_FEE_', 0.1);
 
 /* reseller group */
 define('__RESELLER_GROUP_ID__', 4);
+/* domain category */
+define('__DOMAIN_CATEGORY_ID__', 17);
+/* domain category */
+define('__RECHARGE_CATEGORY_ID__', 18);
+

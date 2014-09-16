@@ -6,58 +6,48 @@
 				<span class="icon_domain"></span>
 				Domain
 				<div class="box_child">
-					<div class="search_title">
-						<div class="right">
-							<input type="text" placeholder="Jump to domain" />
-							<i class="fa fa-search"></i>
-						</div>
-					</div>
 					<div class="box_child_content">
 						<div id="clientsDb">
 							<div id="grid" style=""></div>
 						</div>
 					</div>
-					<p class="p_footer">
-						Need another domain? <span class="txt_color2">Search Now!</span>
-					</p>
 				</div>
 			</li>
 			<li>
 				<span class="k-image ico_show"></span>
 				<span class="icon_webhosting"></span>
 				web hosting
-				<ul>
-					<li>
-						Monday
-					</li>
-					<li>
-						Tuesday
-					</li>
-					<li>
-						Wednesday
-					</li>
-					<li>
-						Thursday
-					</li>
-					<li>
-						Friday
-					</li>
-				</ul>
+				<div class="box_child">
+					<div class="box_child_content">
+						<div id="clientsDb">
+							<div id="grid_hosting" style=""></div>
+						</div>
+					</div>
+				</div>
 			</li>
 			<li>
 				<span class="k-image ico_show"></span>
 				<span class="icon_email"></span>
 				email
+				<div class="box_child">
+					<div class="box_child_content">
+						<div id="clientsDb">
+							<div id="grid_email" style=""></div>
+						</div>
+					</div>
+				</div>
 			</li>
 			<li>
 				<span class="k-image ico_show"></span>
 				<span class="icon_webbuild"></span>
 				WEBSITE BUILDER / INSTANTPAGE
-			</li>
-			<li>
-				<span class="k-image ico_show"></span>
-				<span class="icon_photoalbum"></span>
-				PHOTO ALBUM
+				<div class="box_child">
+					<div class="box_child_content">
+						<div id="clientsDb">
+							<div id="grid_vps" style=""></div>
+						</div>
+					</div>
+				</div>
 			</li>
 		</ul>
 		<div id="bottom"></div>

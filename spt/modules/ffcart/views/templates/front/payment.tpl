@@ -37,16 +37,26 @@
 								<p>
 									{$cart['product_name']}
 								</p>
-								<p>
-									*Plus ICANN fee of VND{$smarty.const._ICAN_FEE_}/yr
-								</p>
+								{if $cart["type"] == 'domain'}
+									{if $cart["reference"] == '.vn'}
+									<p>
+										*Plus VNNIC .VN fee of VND{$smarty.const._VNNIC_DOTVN_FEE_}
+									</p>
+									{else if $cart["reference"] == '.com.vn'}
+									<p>
+										*Plus VNNIC .COM.VN fee of VND{$smarty.const._VNNIC_DOTCOMDOTVN_FEE_}
+									</p>
+									{else}
+									<p>
+										*Plus ICANN fee of VND{$smarty.const._ICAN_FEE_}/yr
+									</p>
+									{/if}
+								{/if}
 							</td>
 							<td style="text-align: center;">
-								<b>{if isset($selected_terms[$product_id])}
-									{$selected_terms[$product_id]}
-								{else}
-									0
-								{/if}</b>
+								<b>
+									{$cart['quantity']|number_format:0:",":"."}
+								</b>
 							</td>
 							<td>
 								<p>
@@ -131,13 +141,16 @@
 		<div class="col_r right">
 			<div class="box">
 				<p>
-					<span class="left">Oder Summary</span>
+					<span class="left">Order Summary</span>
 				</p>
 				<p>
 					<span class="left">ICANN Fees*</span>
 					<span class="right"><strong>VND{$cart_data['ican_fee']|number_format:0:",":"."}</strong></span>
 				</p>
-
+				<p>
+					<span class="left">VNNIC Fees*</span>
+					<span class="right"><strong>VND{$cart_data['vnnic_reg_fee']|number_format:0:",":"."}</strong></span>
+				</p>
 				<p class="tax">
 					<span class="left">Total:</span>
 					<span class="right txt_color2">VND{$cart_data['cart_grandtotal']|number_format:0:",":"."}</span>

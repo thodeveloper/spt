@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:2399453f85c974d29a0-34562524%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2138554165280d599c1-64727731%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,13 +9,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2399453f85c974d29a0-34562524',
+  'nocache_hash' => '2138554165280d599c1-64727731',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_540483a82c2343_76579052',
+  'unifunc' => 'content_5417d298ebc5d5_51887170',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540483a82c2343_76579052')) {function content_540483a82c2343_76579052($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5417d298ebc5d5_51887170')) {function content_5417d298ebc5d5_51887170($_smarty_tpl) {?>
 <!-- MODULE Block contact infos -->
 <div id="block_contact_infos">
 	<h4 class="title_block">Contact us</h4>

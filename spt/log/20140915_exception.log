@@ -1,0 +1,14 @@
+*ERROR* 	2014/09/15 - 21:02:53: Property Cart->gift_message is not valid at line 846 in file classes/ObjectModel.php
+*ERROR* 	2014/09/15 - 21:05:17: Property Cart->gift_message is not valid at line 846 in file classes/ObjectModel.php
+*ERROR* 	2014/09/15 - 23:51:02: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`id_cart` = 20
+							LIMIT 1' at line 3<br /><br /><pre>
+							UPDATE `ffi_cart_product`
+							SET `quantity` = 0, `date_add` = NOW()
+							WHERE `id_product` = 0AND `id_cart` = 20
+							LIMIT 1</pre> at line 635 in file classes/db/Db.php
+*ERROR* 	2014/09/15 - 23:51:31: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`id_cart` = 20
+							LIMIT 1' at line 3<br /><br /><pre>
+							UPDATE `ffi_cart_product`
+							SET `quantity` = 0, `date_add` = NOW()
+							WHERE `id_product` = 10AND `id_cart` = 20
+							LIMIT 1</pre> at line 635 in file classes/db/Db.php

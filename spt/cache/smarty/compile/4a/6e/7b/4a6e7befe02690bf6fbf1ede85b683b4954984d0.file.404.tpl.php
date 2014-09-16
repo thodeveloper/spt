@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-01 17:13:57
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 01:57:44
          compiled from "E:\wamp\www\spt\spt\spt\themes\firefly\404.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:31469540446e56d7592-69514558%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8817541736a810c263-82678559%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '31469540446e56d7592-69514558',
+  'nocache_hash' => '8817541736a810c263-82678559',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_540446e5751535_05809338',
+  'unifunc' => 'content_541736a817b6d6_31018776',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540446e5751535_05809338')) {function content_540446e5751535_05809338($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_541736a817b6d6_31018776')) {function content_541736a817b6d6_31018776($_smarty_tpl) {?>
 <div class="pagenotfound">
 	<div class="img-404">
     	<img src="<?php echo $_smarty_tpl->tpl_vars['img_dir']->value;?>

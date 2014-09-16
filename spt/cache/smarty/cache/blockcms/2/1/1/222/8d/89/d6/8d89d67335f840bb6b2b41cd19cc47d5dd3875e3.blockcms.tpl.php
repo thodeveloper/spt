@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:1993253f85c971e2b07-93509153%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9555541652809e2e96-94320876%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,13 +9,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1993253f85c971e2b07-93509153',
+  'nocache_hash' => '9555541652809e2e96-94320876',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_540483a825aa72_55842071',
+  'unifunc' => 'content_5417d298c149a5_69297174',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540483a825aa72_55842071')) {function content_540483a825aa72_55842071($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5417d298c149a5_69297174')) {function content_5417d298c149a5_69297174($_smarty_tpl) {?>
 	<!-- MODULE Block footer -->
 	<div class="block_various_links" id="block_various_links_footer">
 		<h4 class="title_block">Information</h4>

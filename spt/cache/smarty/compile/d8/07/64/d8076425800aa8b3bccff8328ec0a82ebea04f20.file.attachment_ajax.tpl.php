@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-05 13:23:54
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-14 22:47:13
          compiled from "E:\wamp\www\spt\spt\spt\admin9973\themes\default\template\controllers\products\helpers\uploader\attachment_ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12359540956fa23d7e5-48204664%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11875415b881a91638-30619711%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12359540956fa23d7e5-48204664',
+  'nocache_hash' => '11875415b881a91638-30619711',
   'function' => 
   array (
   ),
@@ -24,9 +24,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_540956fa388b06_70490024',
+  'unifunc' => 'content_5415b881bb7691_82461392',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540956fa388b06_70490024')) {function content_540956fa388b06_70490024($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5415b881bb7691_82461392')) {function content_5415b881bb7691_82461392($_smarty_tpl) {?>
 <div class="col-lg-8">
 	<input id="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['id']->value, ENT_QUOTES, 'UTF-8', true);?>
 " type="file" name="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['name']->value, ENT_QUOTES, 'UTF-8', true);?>

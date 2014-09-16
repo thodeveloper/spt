@@ -3,57 +3,82 @@ require_once( './PSWebServiceLibrary.php' );
 
 class CommonUtils{
 	
-	public static function buildCart($product_terms){
+	public static function buildCart(){
 		$return_data = array();
+		$cart_products = Context::getContext()->cart->getProducts();
+		if(!is_array($cart_products)){
+			return $return_data;
+		}
+		$domain_terms_ids = array(1, 2, 3, 5, 10);
+		$domain_terms_names = array('1 Years', '2 Years', '3 Years', '5 Years', '10 Years');
+		$recharge_terms_ids = array(1, 2, 3, 4, 5);
+		$recharge_terms_names = array(1, 2, 3, 4, 5);
+		$hosting_terms_ids = array(3, 6, 12, 24, 36);
+		$hosting_terms_names = array('3 months', '6 months', '12 months', '24 months', '36 months');
 		
-		$cart_id = Context::getContext()->cart->id;
-		// if cart is empty, return to home page
-		if(empty($cart_id)){
-			return $return_data;
-		}
-		// get products based on selected items from user
-		$carts = CommonUtils::getCartById($cart_id);
-		$products = CommonUtils::getProductsByCart($carts);
-		if(empty($products)){
-			return $return_data;
-		}
 		$cart_total = 0;
 		$ican_fee = 0;
+		$vnnic_reg_fee = 0;
 		$cart_data = array();
-		foreach ($products as $product) {
-			$price = $product->wholesale_price > 0? $product->wholesale_price: $product->price;
-			$product_id = (string)$product->id;
+		foreach ($cart_products as $product) {
+			$price = $product['wholesale_price'] > 0? $product['wholesale_price']: $product['price'];
+			$product_id = $product['id_product'];
+			$subtotal = $price*$product['cart_quantity'];
+			$cart_total += $subtotal;
 			
-			if(is_array($product_terms) == TRUE && isset($product_terms[$product_id])){
-				$subtotal = $price*$product_terms[$product_id];
-				$ican_fee += _ICAN_FEE_*$product_terms[$product_id];
+			$type = '';
+			$term_ids = array();
+			$term_names = array();
+			if( __DOMAIN_CATEGORY_ID__ == $product['id_category_default'] ){
+				$product_name = Context::getContext()->cookie->domain_name.$product['reference'];
+				$type = "domain";
+				if( $product['reference'] == '.vn' ){
+					$vnnic_reg_fee += _VNNIC_DOTVN_FEE_;
+				} else if( $product['reference'] == '.com.vn' ){
+					$vnnic_reg_fee += _VNNIC_DOTCOMDOTVN_FEE_;
+				} else {
+					$ican_fee += _ICAN_FEE_*$product['cart_quantity'];
+				}
+				
+				$term_ids = $domain_terms_ids;
+				$term_names = $domain_terms_names;
+			} else if( __RECHARGE_CATEGORY_ID__ == $product['id_category_default'] ){
+				$product_name = $product['name'];
+				$type = "recharge";
+				$term_ids = $recharge_terms_ids;
+				$term_names = $recharge_terms_names;
 			} else {
-				$subtotal = $price;
-				$ican_fee += _ICAN_FEE_;
+				$product_name = $product['name'];
+				$type = "hosting";
+				$term_ids = $hosting_terms_ids;
+				$term_names = $hosting_terms_names;
 			}
 			
-			$cart_total += $subtotal;
-			$product_name = Context::getContext()->cookie->domain_name.$product->reference;
-			
 			$cart_data[$product_id] = array(
+				"term_ids" => $term_ids,
+				"term_names" => $term_names,
+				"type" => $type,
+				"reference" => $product['reference'],
+				"quantity" => $product['cart_quantity'],
 				"product_name" => (string)$product_name,
 				"product_price" => (string)$price,
 				"product_subtotal" => (string)$subtotal
 			);
 		}
 		$cart_tax = $cart_total*0.1;
-		$cart_grandtotal = $cart_total+$cart_tax+$ican_fee;
+		$cart_grandtotal = $cart_total+$cart_tax+$ican_fee+$vnnic_reg_fee;
 		
 		$return_data["cart_data"] = $cart_data;
 		$return_data["cart_total"] = $cart_total;
 		$return_data["cart_tax"] = $cart_tax;
 		$return_data["ican_fee"] = $ican_fee;
+		$return_data["vnnic_reg_fee"] = $vnnic_reg_fee;
 		$return_data["cart_grandtotal"] = $cart_grandtotal;
 		
 		return $return_data;
 	}
 	
-	public static function getProductsByDomainCategoryId($cate_id = 17){
+	public static function getProductsByCategoryId($cate_id = __DOMAIN_CATEGORY_ID__){
 		try {
 		   // creating webservice access
 		   $webService = new PrestaShopWebservice(_WS_SHOP_BASE_URL_, _WS_AUTH_KEY_, _WS_DEBUG_);

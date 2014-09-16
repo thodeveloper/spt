@@ -59,13 +59,16 @@
 		<div class="col_r right">
 			<div class="box">
 				<p>
-					<span class="left">Oder Summary</span>
+					<span class="left">Order Summary</span>
 				</p>
 				<p>
 					<span class="left">ICANN Fees*</span>
-					<span class="right"><strong>VND{$cart_data['ican_fee']|number_format:0:",":"."}<strong></span>
+					<span class="right"><strong>VND{$cart_data['ican_fee']|number_format:0:",":"."}</strong></span>
 				</p>
-
+				<p>
+					<span class="left">VNNIC Fees*</span>
+					<span class="right"><strong>VND{$cart_data['vnnic_reg_fee']|number_format:0:",":"."}</strong></span>
+				</p>
 				<p class="tax">
 					<span class="left">Total:</span>
 					<span class="right txt_color2">VND{$cart_data['cart_grandtotal']|number_format:0:",":"."}</span>

@@ -544,6 +544,11 @@ class AuthControllerCore extends FrontController
 
 			if (!count($this->errors))
 			{
+				//TODO: START Thanh: mod
+				if(isset($_POST['note'])){
+					$customer->note = $_POST['note'];
+				}
+				//END
 				$customer->active = 1;
 				// New Guest customer
 				if (Tools::isSubmit('is_new_customer'))
@@ -572,7 +577,12 @@ class AuthControllerCore extends FrontController
 					{
 						if (!$customer->is_guest)
 						{
-							$this->context->customer = $customer;
+							//TODO: START Thanh: mod
+							if($this->context->customer->logged == FALSE || $this->context->customer->id_default_group != __RESELLER_GROUP_ID__){
+								$this->context->customer = $customer;
+							}
+							//END
+							//$this->context->customer = $customer;
 							$customer->cleanGroups();
 							// we add the guest customer in the default customer group
 							$customer->addGroups(array((int)Configuration::get('PS_CUSTOMER_GROUP')));
@@ -585,6 +595,17 @@ class AuthControllerCore extends FrontController
 							// we add the guest customer in the guest customer group
 							$customer->addGroups(array((int)Configuration::get('PS_GUEST_GROUP')));
 						}
+						//TODO: START Thanh: mod
+						if($this->context->customer->logged == TRUE && $this->context->customer->id_default_group == __RESELLER_GROUP_ID__){
+							$return = array(
+								'hasError' => !empty($this->errors),
+								'errors' => $this->errors,
+								'isSaved' => true
+							);
+							die(Tools::jsonEncode($return));
+						}
+						//END
+						
 						$this->updateContext($customer);
 						$this->context->cart->id_address_delivery = (int)Address::getFirstCustomerAddressId((int)$customer->id);
 						$this->context->cart->id_address_invoice = (int)Address::getFirstCustomerAddressId((int)$customer->id);

@@ -1921,7 +1921,7 @@ class ProductCore extends ObjectModel
 		if (!Combination::isFeatureActive())
 			return array();
 		$sql = 'SELECT pa.*, product_attribute_shop.*, ag.`id_attribute_group`, ag.`is_color_group`, agl.`name` AS group_name, al.`name` AS attribute_name,
-					a.`id_attribute`, pa.`unit_price_impact`
+					a.`id_attribute`, pa.`unit_price_impact`, agl.`public_name` AS group_public_name
 				FROM `'._DB_PREFIX_.'product_attribute` pa
 				'.Shop::addSqlAssociation('product_attribute', 'pa').'
 				LEFT JOIN `'._DB_PREFIX_.'product_attribute_combination` pac ON pac.`id_product_attribute` = pa.`id_product_attribute`

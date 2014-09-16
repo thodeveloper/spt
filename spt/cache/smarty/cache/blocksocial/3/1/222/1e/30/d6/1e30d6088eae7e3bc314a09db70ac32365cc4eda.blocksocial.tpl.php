@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:2282553f85c96d49c72-13494676%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2957541652806eded9-85411639%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,13 +9,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2282553f85c96d49c72-13494676',
+  'nocache_hash' => '2957541652806eded9-85411639',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_540498d2878f97_80412420',
+  'unifunc' => 'content_5417e264e76c68_42788741',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540498d2878f97_80412420')) {function content_540498d2878f97_80412420($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5417e264e76c68_42788741')) {function content_5417e264e76c68_42788741($_smarty_tpl) {?>
 <div id="social_block">
 	<h4 class="title_block">Follow us</h4>
 	<ul>

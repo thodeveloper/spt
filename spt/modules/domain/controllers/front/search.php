@@ -40,7 +40,7 @@ class DomainSearchModuleFrontController extends ModuleFrontController {
 			$domain_tld = $domain_parts[1];
 			$this->context->cookie->__set("domain_name", $domain_name);
 		}
-		$products 			= CommonUtils::getProductsByDomainCategoryId();
+		$products 			= CommonUtils::getProductsByCategoryId();
 		$searchedDomainInfo = $this->__isAvailableDomain($products, $domain_results, $domain_tld);
 		global $smarty; 
     	$smarty->assign(array(
@@ -50,7 +50,6 @@ class DomainSearchModuleFrontController extends ModuleFrontController {
 			'domain_tld' => $domain_tld,
 			'products' => $products,
 			'searchedDomainInfo' => $searchedDomainInfo,
-			'static_token' => Tools::getToken(false)
 		));
 	}
 	

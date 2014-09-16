@@ -32,23 +32,32 @@
 						<tr id="cart_item_{$product_id}">
 							<td>
 								<input type="hidden" name="product_id" value="{$product_id}" />
+								<input type="hidden" name="type" value="{$cart['type']}" />
+								<input type="hidden" name="reference" value="{$cart['reference']}" />
 							</td>
 							<td>
 								<p>
 									{$cart['product_name']}
 								</p>
-								<p>
-									*Plus ICANN fee of VND{$smarty.const._ICAN_FEE_}/yr
-								</p>
+								{if $cart["type"] == 'domain'}
+									{if $cart["reference"] == '.vn'}
+									<p>
+										*Plus VNNIC .VN fee of VND{$smarty.const._VNNIC_DOTVN_FEE_}
+									</p>
+									{else if $cart["reference"] == '.com.vn'}
+									<p>
+										*Plus VNNIC .COM.VN fee of VND{$smarty.const._VNNIC_DOTCOMDOTVN_FEE_}
+									</p>
+									{else}
+									<p>
+										*Plus ICANN fee of VND{$smarty.const._ICAN_FEE_}/yr
+									</p>
+									{/if}
+								{/if}
 							</td>
 							<td>
 							<select id="domain_year_{$product_id}" onchange="return updateCart({$product_id})">
-								{if isset($selected_terms[$product_id])}
-									{assign "selected_id" $selected_terms[$product_id]}
-								{else}
-									{assign "selected_id" 0}
-								{/if}
-								{html_options values=$terms_id output=$terms_names selected=$selected_id}
+								{html_options values=$cart['term_ids'] output=$cart['term_names'] selected=$cart['quantity']}
 							</select></td>
 							<td>
 								<p>
@@ -85,23 +94,35 @@
 						<tr id="cart_item_{$product_id}">
 							<td>
 								<input type="hidden" name="product_id" value="{$product_id}" />
+								<input type="hidden" name="type" value="domain" />
+								<input type="hidden" name="reference" value="{$product['reference']}" />
 							</td>
 							<td>
 								<p>
 									{$product["product_name"]}
 								</p>
+								{if $product["reference"] == '.vn'}
+								<p>
+									*Plus VNNIC .VN fee of VND{$smarty.const._VNNIC_DOTVN_FEE_}
+								</p>
+								{else if $product["reference"] == '.com.vn'}
+								<p>
+									*Plus VNNIC .COM.VN fee of VND{$smarty.const._VNNIC_DOTCOMDOTVN_FEE_}
+								</p>
+								{else}
 								<p>
 									*Plus ICANN fee of VND{$smarty.const._ICAN_FEE_}/yr
 								</p>
+								{/if}
 							</td>
 							<td id="cart_domain_year_{$product_id}" style="display:none;">
 								<select id="domain_year_{$product_id}" onchange="return updateCart({$product_id})">
-									{html_options values=$terms_id output=$terms_names}
+									{html_options values=$product['term_ids'] output=$product['term_names']}
 								</select>
 							</td>
 							<td id="cart_suggestion_terms_{$product_id}">
 								<select id="suggestion_terms_{$product_id}">
-									{html_options values=$terms_id output=$terms_names}
+									{html_options values=$product['term_ids'] output=$product['term_names']}
 								</select>
 							</td>
 							<td>
@@ -120,14 +141,14 @@
 								</p><span onclick="return removeCartItem({$product_id})" class="btn_remove">Remove</span>
 							</td>
 							<td id="cart_addtocart_{$product_id}">
-								<a class="btn1"><span onclick="addToCart({$product_id}, 1)" class="btn_add">Add to cart</span></a>
+								<a class="btn1"><span onclick="addToCart({$product_id}, '{$domain_name}')" class="btn_add">Add to cart</span></a>
 							</td>
 						</tr>
 						{/foreach}
 					</tbody>
 				</table>
 			</div>
-			<div style="margin-bottom: 50px"></div>
+			<div style="margin-bottom: 50px"> </div>
 		</div>
 		<div class="col_r right">
 			<div class="box">
@@ -137,13 +158,17 @@
 				</p>
 				<p>
 					<span class="left">Taxes(10%):</span>
-					<span class="right"><strong>VND<span id="tax_fee">{$cart_data['cart_tax']|number_format:0:",":"."}<strong></span></span>
+					<span class="right"><strong>VND<span id="tax_fee">{$cart_data['cart_tax']|number_format:0:",":"."}</span></strong></span>
 				</p>
 				<p>
 					<span class="left">ICAN fee:</span>
-					<span class="right"><strong>VND<span id="ican_fee">{$cart_data['ican_fee']|number_format:0:",":"."}<strong></span></span>
+					<span class="right"><strong>VND<span id="ican_fee">{$cart_data['ican_fee']|number_format:0:",":"."}</span></strong></span>
 				</p>
-				<p class="line"></p>
+				<p>
+					<span class="left">VNNIC register fee:</span>
+					<span class="right"><strong>VND<span id="vnnic_reg_fee">{$cart_data['vnnic_reg_fee']|number_format:0:",":"."}</span></strong></span>
+				</p>
+				<p class="line"> </p>
 				<p>
 					<span class="left">Total cost </span>
 					<span class="right txt_color3">VND<span id="cart_grandtotal">{$cart_data['cart_grandtotal']|number_format:0:",":"."}</span></span>

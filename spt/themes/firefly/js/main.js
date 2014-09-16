@@ -31,7 +31,11 @@ $(document).on('click', '#header_SubmitLogin', function(e){
 
 $(document).on('click', '#headerSubmitAccount', function(e){
 	e.preventDefault();
-	addAccount('register_account', baseUri);
+	var url = baseUri;
+	if( isLogged == true ){
+		url = 'addClient';
+	}
+	addAccount('register_account', url);
 });
 
 function login(_email, _pwd, _url, _id_error){
@@ -154,6 +158,9 @@ function whmcs_addAccount(_frm_id, _url){
 			{
 				if(_url == ''){
 					updateAddressSelection();
+				} else if(_url == 'addClient'){
+					$('.k-window-action span').trigger('click');
+					$('.k-pager-refresh span').trigger('click');
 				}
 				else {
 					alert("Account created");

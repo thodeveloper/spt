@@ -64,6 +64,8 @@
                 <div class="login_out btn_log active">
                     <i class="fa fa-user"> </i>
                     <a id="btn_log" href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html':'UTF-8'}">Logout</a>
+                    <span></span>
+                    <a id="btn_log2" href="{$link->getModuleLink('account', 'main', array(), true)|addslashes}">My account</a>
                 </div>
                 {else}
             	<div class="login_out btn_log active">

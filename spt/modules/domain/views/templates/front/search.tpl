@@ -46,7 +46,7 @@
             		{else}
             			<i>VND{$searchedDomainInfo["price"]|number_format:2:",":"."}*</i>
             		{/if}
-            		<span id="selectItem_{$searchedDomainInfo["product_id"]}" onclick="addToCart({$searchedDomainInfo["product_id"]}, '{$static_token}', 1)" class="btn_gr">+ Select</span>
+            		<span id="selectItem_{$searchedDomainInfo["product_id"]}" onclick="addToCart({$searchedDomainInfo["product_id"]}, '{$domain_name|escape:'html':'UTF-8'}', 1)" class="btn_gr">+ Select</span>
             	</div>
             </div>
         </div>
@@ -57,9 +57,6 @@
     	<div class="search_result">
         	<div class="title">
             	<span>Here is a list of domains recommended for you:</span>
-            	<a href="{$link->getModuleLink('ffcart', 'basket', array(), true)|addslashes}">
-					<span class="btn_addcart"><i class="fa fa-shopping-cart"></i>Continue to cart</span>
-				</a>
             </div>
             <div class="title_page">
             	<span class="ico_result"></span>
@@ -84,7 +81,7 @@
 			                    		{else}
 			                    			<i>VND{trim($product->price)|number_format:2:",":"."}*</i>
 			                    		{/if}
-			                    		<span id="selectItem_{$product->id}" onclick="addToCart({$product->id}, '{$static_token}', 1)" class="btn_gr">+ Select</span>
+			                    		<span id="selectItem_{$product->id}" onclick="addToCart({$product->id}, '{$domain_name|escape:'html':'UTF-8'}', 1)" class="btn_gr">+ Select</span>
 		                    		</div>
 			                    </div>
 			                </div>

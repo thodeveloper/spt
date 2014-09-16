@@ -1,28 +1,27 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-05 15:55:16
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 14:12:34
          compiled from "E:\wamp\www\spt\spt\spt\modules\ffcart\views\templates\front\payment.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:29771540969cb7efeb2-47875080%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1059454171e1a037684-10706277%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '11a9bf47da1fb25db883aadef0b880e16946ac6c' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\ffcart\\views\\templates\\front\\payment.tpl',
-      1 => 1409907131,
+      1 => 1410851547,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '29771540969cb7efeb2-47875080',
+  'nocache_hash' => '1059454171e1a037684-10706277',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_540969cbab7913_67381421',
+  'unifunc' => 'content_54171e1a1afa96_68114567',
   'variables' => 
   array (
     'cart_data' => 0,
     'product_id' => 0,
     'cart' => 0,
-    'selected_terms' => 0,
     'address' => 0,
     'countries' => 0,
     'v' => 0,
@@ -31,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540969cbab7913_67381421')) {function content_540969cbab7913_67381421($_smarty_tpl) {?><div class="div_step">
+<?php if ($_valid && !is_callable('content_54171e1a1afa96_68114567')) {function content_54171e1a1afa96_68114567($_smarty_tpl) {?><div class="div_step">
 	<div class="step_content">
 		<div class="line steping4">
 			<span class="step step1">1</span>
@@ -79,18 +78,30 @@ $_smarty_tpl->tpl_vars['cart']->_loop = true;
 									<?php echo $_smarty_tpl->tpl_vars['cart']->value['product_name'];?>
 
 								</p>
-								<p>
-									*Plus ICANN fee of VND<?php echo @constant('_ICAN_FEE_');?>
+								<?php if ($_smarty_tpl->tpl_vars['cart']->value["type"]=='domain') {?>
+									<?php if ($_smarty_tpl->tpl_vars['cart']->value["reference"]=='.vn') {?>
+									<p>
+										*Plus VNNIC .VN fee of VND<?php echo @constant('_VNNIC_DOTVN_FEE_');?>
+
+									</p>
+									<?php } elseif ($_smarty_tpl->tpl_vars['cart']->value["reference"]=='.com.vn') {?>
+									<p>
+										*Plus VNNIC .COM.VN fee of VND<?php echo @constant('_VNNIC_DOTCOMDOTVN_FEE_');?>
+
+									</p>
+									<?php } else { ?>
+									<p>
+										*Plus ICANN fee of VND<?php echo @constant('_ICAN_FEE_');?>
 /yr
-								</p>
+									</p>
+									<?php }?>
+								<?php }?>
 							</td>
 							<td style="text-align: center;">
-								<b><?php if (isset($_smarty_tpl->tpl_vars['selected_terms']->value[$_smarty_tpl->tpl_vars['product_id']->value])) {?>
-									<?php echo $_smarty_tpl->tpl_vars['selected_terms']->value[$_smarty_tpl->tpl_vars['product_id']->value];?>
+								<b>
+									<?php echo number_format($_smarty_tpl->tpl_vars['cart']->value['quantity'],0,",",".");?>
 
-								<?php } else { ?>
-									0
-								<?php }?></b>
+								</b>
 							</td>
 							<td>
 								<p>
@@ -195,14 +206,18 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		<div class="col_r right">
 			<div class="box">
 				<p>
-					<span class="left">Oder Summary</span>
+					<span class="left">Order Summary</span>
 				</p>
 				<p>
 					<span class="left">ICANN Fees*</span>
 					<span class="right"><strong>VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['ican_fee'],0,",",".");?>
 </strong></span>
 				</p>
-
+				<p>
+					<span class="left">VNNIC Fees*</span>
+					<span class="right"><strong>VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['vnnic_reg_fee'],0,",",".");?>
+</strong></span>
+				</p>
 				<p class="tax">
 					<span class="left">Total:</span>
 					<span class="right txt_color2">VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['cart_grandtotal'],0,",",".");?>

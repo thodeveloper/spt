@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:1993253f85c971e2b07-93509153%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9555541652809e2e96-94320876%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,13 +9,34 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1993253f85c971e2b07-93509153',
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_540c063690bc55_76808749',
+  'nocache_hash' => '9555541652809e2e96-94320876',
+  'variables' => 
+  array (
+    'block' => 0,
+    'cms_titles' => 0,
+    'cms_key' => 0,
+    'cms_title' => 0,
+    'cms_page' => 0,
+    'link' => 0,
+    'show_price_drop' => 0,
+    'PS_CATALOG_MODE' => 0,
+    'show_new_products' => 0,
+    'show_best_sales' => 0,
+    'display_stores_footer' => 0,
+    'show_contact' => 0,
+    'contact_url' => 0,
+    'cmslinks' => 0,
+    'cmslink' => 0,
+    'show_sitemap' => 0,
+    'display_poweredby' => 0,
+    'footer_text' => 0,
+  ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_54165280bd99a9_78103026',
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540c063690bc55_76808749')) {function content_540c063690bc55_76808749($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_54165280bd99a9_78103026')) {function content_54165280bd99a9_78103026($_smarty_tpl) {?>
 	<!-- MODULE Block footer -->
 	<div class="block_various_links" id="block_various_links_footer">
 		<h4 class="title_block">Information</h4>

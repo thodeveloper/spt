@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-08-23 16:19:19
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-15 09:44:16
          compiled from "E:\wamp\www\spt\spt\spt\modules\blockcontactinfos\blockcontactinfos.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2399453f85c974d29a0-34562524%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2138554165280d599c1-64727731%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2399453f85c974d29a0-34562524',
+  'nocache_hash' => '2138554165280d599c1-64727731',
   'function' => 
   array (
   ),
@@ -24,9 +24,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53f85c97534280_94074599',
+  'unifunc' => 'content_54165280dbf7f3_70322267',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53f85c97534280_94074599')) {function content_53f85c97534280_94074599($_smarty_tpl) {?><?php if (!is_callable('smarty_function_mailto')) include 'E:\\wamp\\www\\spt\\spt\\spt\\tools\\smarty\\plugins\\function.mailto.php';
+<?php if ($_valid && !is_callable('content_54165280dbf7f3_70322267')) {function content_54165280dbf7f3_70322267($_smarty_tpl) {?><?php if (!is_callable('smarty_function_mailto')) include 'E:\\wamp\\www\\spt\\spt\\spt\\tools\\smarty\\plugins\\function.mailto.php';
 ?>
 
 <!-- MODULE Block contact infos -->

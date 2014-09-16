@@ -1,160 +1,28 @@
 <div class="div_headermenu">
 	<div class="article">
-    	<a class="logo"><img src="{$img_dir}logo.png" width="242" /></a>
+    	<a href="{$base_dir}" title="{$shop_name|escape:'html':'UTF-8'}" class="logo"><img src="{$img_dir}logo.png" width="242" /></a>
         <div class="div_menu">
             <ul id="menu">
-                <li>Products
-                	<span class="arrow"></span>
+            	{foreach from=$categories item=category key=cate_id name=category}
+                <li><a href="{$link->getModuleLink('ffproduct', 'main', ['id_cate' => $cate_id], true)|escape:'quotes':'UTF-8'}">{$category['name']}</a>
+                	<span class="arrow"> </span>
+                	{if isset($category['children'])}
                 	<ul>
                         <li>
                             <div class="div_content_menu">
+                            	{foreach from=$category['children'] item=sub_category key=sub_cate_id name=sub_category}
                             	<div class="col">
-                                	<h1>Domains</h1>
-                                    <h3>Find a domain das d ad as das</h3>
-                                    <a>Domain Sear fds fds fsdf ds f dsf ds fch</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Sea sdf dsf dsfrch</a>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
+                            		<h1><a href="{$link->getModuleLink('ffproduct', 'main', ['id_cate' => $sub_cate_id], true)|escape:'quotes':'UTF-8'}">{$sub_category['name']}</a></h1>
                                 </div>
-                                <div class="col">
-                                	<h1>Domains</h1>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Sea sdf ds fdsf ds fdsf dsf ds fsdf srch</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                </div>
-                                <div class="col">
-                                	<h1>Domains</h1>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                </div>
-                                <div class="col last">
-                                	<h1>Domains</h1>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                </div>
+                                {/foreach}
                             </div>
                         </li>
                     </ul>
+                    {/if}
                 </li>
-                <li>Products
-                	<span class="arrow"></span>
-                	<ul>
-                        <li>
-                            <div class="div_content_menu">
-                            	<div class="col">
-                                	<h1>Domains</h1>
-                                    <h3>Find a domain das d ad as das</h3>
-                                    <a>Domain Sear fds fds fsdf ds f dsf ds fch</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Sea sdf dsf dsfrch</a>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                </div>
-                          	</div>
-                      	</li>
-                 	</ul>
-                </li>
-                <li>Products
-                	<span class="arrow"></span>
-                	<ul>
-                        <li>
-                            <div class="div_content_menu">
-                            	<div class="col">
-                                	<h1>Domains</h1>
-                                    <h3>Find a domain das d ad as das</h3>
-                                    <a>Domain Sear fds fds fsdf ds f dsf ds fch</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Sea sdf dsf dsfrch</a>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                </div>
-                                <div class="col">
-                                	<h1>Domains</h1>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Sea sdf ds fdsf ds fdsf dsf ds fsdf srch</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                </div>
-                                <div class="col">
-                                	<h1>Domains</h1>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                </div>
-                                <div class="col last">
-                                	<h1>Domains</h1>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <h3>Find a domain</h3>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                    <a>Domain Search</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                {/foreach}
+                <li><a href="{$link->getModuleLink('ffnews', 'home')|escape:'quotes':'UTF-8'}">News</a>
+                	<span class="arrow"> </span>
                 </li>
             </ul>
         </div>

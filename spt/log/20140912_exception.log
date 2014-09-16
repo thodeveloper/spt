@@ -1,0 +1,1 @@
+*ERROR* 	2014/09/12 - 22:29:42: Table 'c1vas2.ffi_ffi_charge_history' doesn't exist<br /><br /><pre>SELECT * FROM ffi_ffi_charge_history WHERE id_customer=18 AND id_shop=1 AND id_shop_group=1</pre> at line 635 in file classes/db/Db.php

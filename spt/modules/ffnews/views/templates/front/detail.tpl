@@ -14,21 +14,14 @@
 			<div class="box">
 				<img class="banner_ads" src="{$img_dir}banner_ad.png" width="177" />
 				<div class="detail_new">
-					<h3>The Biggest New Domains to Hit the Internet Are Here!</h3>
+					<h3>{$post["meta_title"]}</h3>
 					<p>
-						The first round of new domain extensions (also called new TLDs) are already live, and more will launch every week.
+						{$post['short_description']}
 					</p>
-					<p>
-						For soon-to-be-released domains, Domain.com offers Pre-Registration for General Availability. Pre-registering a domain gives you a better chance of securing the name you want. The new domains will be popular, so we recommend pre-registering. Get started by entering a domain or keyword in the search box above.
-					</p>
-					<img src="{$img_dir}exm_news.png" width="181" height="129" />
-					<h3>The Biggest New Domains to Hit the Internet Are Here!</h3>
-					<p>
-						The first round of new domain extensions (also called new TLDs) are already live, and more will launch every week.
-					</p>
-					<p>
-						For soon-to-be-released domains, Domain.com offers Pre-Registration for General Availability. Pre-registering a domain gives you a better chance of securing the name you want. The new domains will be popular, so we recommend pre-registering. Get started by entering a domain or keyword in the search box above.
-					</p>
+					{if $post['post_img'] != "no" }
+                    <img src="{$modules_dir}smartblog/images/{$post['post_img']}" alt="{$post['meta_title']}" width="181" height="129">
+					{/if}
+					{$post['content']}
 				</div>
 			</div>
 		</div>

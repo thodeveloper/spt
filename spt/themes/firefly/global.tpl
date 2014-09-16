@@ -34,6 +34,8 @@
 {addJsDef isGuest=$is_guest|intval}
 {addJsDef defaultTaxFee=$smarty.const._TAX_FEE_}
 {addJsDef defaultICANFee=$smarty.const._ICAN_FEE_}
+{addJsDef defaultVNNICDOTCOMDOTVNFee=$smarty.const._VNNIC_DOTCOMDOTVN_FEE_}
+{addJsDef defaultVNNICDOTVNFee=$smarty.const._VNNIC_DOTVN_FEE_}
 {if isset($module_link)}
 	{addJsDef module_link=$module_link}
 {/if}

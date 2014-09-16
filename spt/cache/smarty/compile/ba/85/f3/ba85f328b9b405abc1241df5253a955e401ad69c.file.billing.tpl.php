@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-07 21:21:50
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 14:06:35
          compiled from "E:\wamp\www\spt\spt\spt\modules\ffcart\views\templates\front\billing.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2823540176aad222f2-77210858%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1414854171e10aea129-63359822%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ba85f328b9b405abc1241df5253a955e401ad69c' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\ffcart\\views\\templates\\front\\billing.tpl',
-      1 => 1410099707,
+      1 => 1410851192,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2823540176aad222f2-77210858',
+  'nocache_hash' => '1414854171e10aea129-63359822',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_540176aad52866_88776175',
+  'unifunc' => 'content_54171e10dde1e7_98901365',
   'variables' => 
   array (
     'link' => 0,
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540176aad52866_88776175')) {function content_540176aad52866_88776175($_smarty_tpl) {?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('orderOpcUrl'=>preg_replace("%(?<!\\\\)'%", "\'",$_smarty_tpl->tpl_vars['link']->value->getPageLink("order-opc",true))),$_smarty_tpl);?>
+<?php if ($_valid && !is_callable('content_54171e10dde1e7_98901365')) {function content_54171e10dde1e7_98901365($_smarty_tpl) {?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('orderOpcUrl'=>preg_replace("%(?<!\\\\)'%", "\'",$_smarty_tpl->tpl_vars['link']->value->getPageLink("order-opc",true))),$_smarty_tpl);?>
 
 <?php ob_start();?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','payment',array(),true));?>
 <?php $_tmp1=ob_get_clean();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('orderPaymentUrl'=>preg_replace("%(?<!\\\\)'%", "\'",$_tmp1)),$_smarty_tpl);?>
@@ -314,14 +314,18 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		<div class="col_r right">
 			<div class="box">
 				<p>
-					<span class="left">Oder Summary</span>
+					<span class="left">Order Summary</span>
 				</p>
 				<p>
 					<span class="left">ICANN Fees*</span>
 					<span class="right"><strong>VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['ican_fee'],0,",",".");?>
 </strong></span>
 				</p>
-
+				<p>
+					<span class="left">VNNIC Fees*</span>
+					<span class="right"><strong>VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['vnnic_reg_fee'],0,",",".");?>
+</strong></span>
+				</p>
 				<p class="tax">
 					<span class="left">Total:</span>
 					<span class="right txt_color2">VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['cart_grandtotal'],0,",",".");?>

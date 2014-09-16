@@ -35,6 +35,10 @@ class AuthController extends AuthControllerCore
 			if( Tools::getValue('group_id') == 2 ){
 				Configuration::set('PS_CUSTOMER_GROUP', __RESELLER_GROUP_ID__);
 			}
+			
+			if($this->context->customer->logged == TRUE && $this->context->customer->id_default_group == __RESELLER_GROUP_ID__){
+				$_POST['note'] = "reseller_id=".$this->context->customer->id;
+			}
 		}
 		
 		if (Tools::isSubmit('SubmitLogin')){

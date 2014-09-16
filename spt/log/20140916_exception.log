@@ -1,0 +1,7 @@
+*ERROR* 	2014/09/16 - 01:23:59: Unknown column 'domain_name' in 'field list'<br /><br /><pre>SELECT id, domain_name, terms, cash, date_add, date_upd FROM ffi_charge_history WHERE id_customer=17 AND id_shop=1 AND id_shop_group=1</pre> at line 635 in file classes/db/Db.php
+*ERROR* 	2014/09/16 - 01:24:21: Unknown column 'domain_name' in 'field list'<br /><br /><pre>SELECT id, domain_name, terms, cash, date_add, date_upd FROM ffi_charge_history WHERE id_customer=17 AND id_shop=1 AND id_shop_group=1</pre> at line 635 in file classes/db/Db.php
+*ERROR* 	2014/09/16 - 22:03:18: Table 'c1vas2.ffi_banner_manager' doesn't exist<br /><br /><pre>
+		SELECT `id_banner_manager`, `description`, `image_name`, `image_link`, `block_id`, `order`, `active`, `open_blank` FROM `ffi_banner_manager`WHERE `block_id` = 1 ORDER BY `block_id`, `order`;</pre> at line 635 in file classes/db/Db.php
+*ERROR* 	2014/09/16 - 22:05:16: Unknown table 'c1vas2.ffi_banner_manager'<br /><br /><pre>DROP TABLE `ffi_banner_manager`</pre> at line 635 in file classes/db/Db.php
+*ERROR* 	2014/09/16 - 22:05:33: Unknown table 'c1vas2.ffi_banner_manager'<br /><br /><pre>DROP TABLE `ffi_banner_manager`</pre> at line 635 in file classes/db/Db.php
+*ERROR* 	2014/09/16 - 22:07:45: Unknown table 'c1vas2.ffi_banner_manager'<br /><br /><pre>DROP TABLE `ffi_banner_manager`</pre> at line 635 in file classes/db/Db.php

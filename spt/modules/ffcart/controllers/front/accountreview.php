@@ -12,13 +12,8 @@ class FfcartAccountreviewModuleFrontController extends ModuleFrontController
      */
     public function initContent()
     {
-    	// get term of domain
-		$product_terms = $this->context->cookie->product_terms;
-		if(empty($product_terms) == FALSE){
-			$product_terms = json_decode($product_terms, TRUE);
-		}
 		// build cart data
-		$cart_data = CommonUtils::buildCart($product_terms);
+		$cart_data = CommonUtils::buildCart();
 		if(empty($cart_data)){
 			Tools::redirect('index.php');
 		}

@@ -1,15 +1,6 @@
 <div class="k-content child_panel child_panel1 child_panel2">
 	<div class="box_rechange">
-		<p>
-			Recharge $ 50
-		</p>
-		<p class="price">
-			15% Off
-		</p>
-		<p>
-			*Plus $8 (05/07/2014)
-		</p>
-		<span class="btn_gr">+ RECHARGE</span>
+		<span id="undo_recharge" class="btn_gr">+ RECHARGE</span>
 	</div>
 	<div id="organizer2">
 		<ul id="panelbar2">
@@ -29,10 +20,10 @@
 					</div>
 					<div class="col3">
 						<p class="price1">
-							$354.11
+							VND{$cash["cash"]|number_format:0:",":"."}
 						</p>
 						<p class="price2">
-							$10.99
+							VND{$cash["promotion_cash"]|number_format:0:",":"."}
 						</p>
 					</div>
 
@@ -48,25 +39,16 @@
 					</div>
 					<div class="col3">
 						<p class="price3">
-							$10.99
+							VND{($cash["promotion_cash"]+$cash["cash"])|number_format:0:",":"."}
 						</p>
 					</div>
 				</div>
 				<div class="box_child">
-					<div class="search_title filter_title">
-						<div class="left">
-							<span>Filter:</span>
-							<input type="text" placeholder="All clients" />
-						</div>
-					</div>
 					<div class="box_child_content">
 						<div id="clientsDb">
 							<div id="grid2" style=""></div>
 						</div>
 					</div>
-					<p class="p_footer">
-						Need another domain? <span class="txt_color2">Search Now!</span>
-					</p>
 				</div>
 			</li>
 

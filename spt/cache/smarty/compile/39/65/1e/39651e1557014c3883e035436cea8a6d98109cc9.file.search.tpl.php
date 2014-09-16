@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-08-26 13:55:36
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 13:29:07
          compiled from "E:\wamp\www\spt\spt\spt\modules\domain\views\templates\front\search.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1067653fc2f68567ee3-99945645%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:230515416ab2e979610-15880890%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '39651e1557014c3883e035436cea8a6d98109cc9' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\domain\\views\\templates\\front\\search.tpl',
-      1 => 1408778850,
+      1 => 1410848802,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1067653fc2f68567ee3-99945645',
+  'nocache_hash' => '230515416ab2e979610-15880890',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5416ab2ec23a33_88044025',
   'variables' => 
   array (
     'link' => 0,
@@ -22,15 +24,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'searchedDomainInfo' => 0,
     'domain_tld' => 0,
     'domain_name' => 0,
-    'static_token' => 0,
     'products' => 0,
     'product' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53fc2f68733a50_64344719',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53fc2f68733a50_64344719')) {function content_53fc2f68733a50_64344719($_smarty_tpl) {?><!-- InstanceBeginEditable name="body" -->
+<?php if ($_valid && !is_callable('content_5416ab2ec23a33_88044025')) {function content_5416ab2ec23a33_88044025($_smarty_tpl) {?><!-- InstanceBeginEditable name="body" -->
 <div class="div_search">
     <div class="article">
         <div class="box">
@@ -93,7 +92,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             		<?php }?>
             		<span id="selectItem_<?php echo $_smarty_tpl->tpl_vars['searchedDomainInfo']->value["product_id"];?>
 " onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['searchedDomainInfo']->value["product_id"];?>
-, '<?php echo $_smarty_tpl->tpl_vars['static_token']->value;?>
+, '<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['domain_name']->value, ENT_QUOTES, 'UTF-8', true);?>
 ', 1)" class="btn_gr">+ Select</span>
             	</div>
             </div>
@@ -105,10 +104,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     	<div class="search_result">
         	<div class="title">
             	<span>Here is a list of domains recommended for you:</span>
-            	<a href="<?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','basket',array(),true));?>
-">
-					<span class="btn_addcart"><i class="fa fa-shopping-cart"></i>Continue to cart</span>
-				</a>
             </div>
             <div class="title_page">
             	<span class="ico_result"></span>
@@ -148,7 +143,7 @@ $_smarty_tpl->tpl_vars['product']->_loop = true;
 			                    		<?php }?>
 			                    		<span id="selectItem_<?php echo $_smarty_tpl->tpl_vars['product']->value->id;?>
 " onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['product']->value->id;?>
-, '<?php echo $_smarty_tpl->tpl_vars['static_token']->value;?>
+, '<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['domain_name']->value, ENT_QUOTES, 'UTF-8', true);?>
 ', 1)" class="btn_gr">+ Select</span>
 		                    		</div>
 			                    </div>

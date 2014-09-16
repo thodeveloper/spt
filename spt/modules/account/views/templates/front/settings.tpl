@@ -117,52 +117,5 @@
 				</p>
 			</div>
 		</div>
-		<div class="header">
-			<h5>Change Email Login</h5>
-		</div>
-		<div class="div_pop">
-			<div class="div_form">
-				<p class="form">
-					<span class="text">Current Email Login:</span>
-					<span class="text txt-left">truong.yuna@gmail.com</span>
-					<span class="notice error"></span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text">*Current Password:</span>
-					<input type="text" class="xsm" />
-					<span class="notice"><i class="fa fa-exclamation-circle"></i>(0-9, a-z, _-)</span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text">*Enter New Email Login:</span>
-					<input type="text" class="xsm" />
-					<span class="notice"><i class="fa fa-exclamation-circle"></i>(0-9, a-z, _-)</span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text"></span>
-					<span class="text txt-left">Check Availability</span>
-					<span class="notice"></span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text">*Confirm New Email Login:</span>
-					<input type="text" class="xsm" />
-					<span class="notice"><i class="fa fa-exclamation-circle"></i>(0-9, a-z, _-)</span>
-				</p>
-			</div>
-			<div class="div_form">
-				<p class="form">
-					<span class="text"></span>
-					<span class="btn_gr">Save</span>
-					<span class="notice"></span>
-				</p>
-			</div>
-		</div>
 	</div>
 </div>

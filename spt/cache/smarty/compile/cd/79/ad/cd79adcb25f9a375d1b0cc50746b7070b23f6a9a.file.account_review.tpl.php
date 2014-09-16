@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-07 19:51:15
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 14:05:45
          compiled from "E:\wamp\www\spt\spt\spt\modules\ffcart\views\templates\front\account_review.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2525153fd4b6a440f80-15048264%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2466354171e0866bde9-44982004%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'cd79adcb25f9a375d1b0cc50746b7070b23f6a9a' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\ffcart\\views\\templates\\front\\account_review.tpl',
-      1 => 1410094232,
+      1 => 1410851143,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2525153fd4b6a440f80-15048264',
+  'nocache_hash' => '2466354171e0866bde9-44982004',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53fd4b6a4abb01_06278014',
+  'unifunc' => 'content_54171e086eaa11_97238812',
   'variables' => 
   array (
     'link' => 0,
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53fd4b6a4abb01_06278014')) {function content_53fd4b6a4abb01_06278014($_smarty_tpl) {?><?php ob_start();?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','billing',array(),true));?>
+<?php if ($_valid && !is_callable('content_54171e086eaa11_97238812')) {function content_54171e086eaa11_97238812($_smarty_tpl) {?><?php ob_start();?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','billing',array(),true));?>
 <?php $_tmp1=ob_get_clean();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('billingUrl'=>preg_replace("%(?<!\\\\)'%", "\'",$_tmp1)),$_smarty_tpl);?>
 
 <div class="div_step">
@@ -88,14 +88,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="col_r right">
 			<div class="box">
 				<p>
-					<span class="left">Oder Summary</span>
+					<span class="left">Order Summary</span>
 				</p>
 				<p>
 					<span class="left">ICANN Fees*</span>
 					<span class="right"><strong>VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['ican_fee'],0,",",".");?>
-<strong></span>
+</strong></span>
 				</p>
-
+				<p>
+					<span class="left">VNNIC Fees*</span>
+					<span class="right"><strong>VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['vnnic_reg_fee'],0,",",".");?>
+</strong></span>
+				</p>
 				<p class="tax">
 					<span class="left">Total:</span>
 					<span class="right txt_color2">VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['cart_grandtotal'],0,",",".");?>

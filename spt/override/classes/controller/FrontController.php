@@ -7,6 +7,14 @@ class FrontController extends FrontControllerCore{
 		$this->context->smarty->assign('genders', Gender::getGenders());
 		$this->assignDate();
 		$this->assignCountries();
+		$this->__loadCategoryMenu();
+	}
+	
+	private function __loadCategoryMenu(){
+		$categories = Category::getNestedCategories(null, $this->context->language->id, true, array(1,2,3));
+		$this->context->smarty->assign(array(
+			'categories' => $categories[2]['children']
+		));
 	}
 	
 	private function assignDate()
