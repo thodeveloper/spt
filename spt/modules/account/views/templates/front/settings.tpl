@@ -1,10 +1,10 @@
 <div class="k-content child_panel child_panel3">
 	<p class="note">
-		<i class="fa fa-exclamation-triangle"></i><span>Warning</span><i>*</i><span>Required letter</span>
+		<i class="fa fa-exclamation-triangle"></i><span>{l s='Chú ý'}</span><i>*</i><span>{l s='trường bắt buộc'}</span>
 	</p>
 	<div class="box_setting">
 		<div class="header">
-			<h5>Change Profile</h5>
+			<h5>{l s='Thay đổi thông tin cá nhân'}</h5>
 		</div>
 		<div class="div_pop">
 			<div class="div_form">
@@ -65,13 +65,13 @@
 			<div class="div_form">
 				<p class="form">
 					<span class="text"></span>
-					<span class="btn_gr">Save</span>
+					<span class="btn_gr">{l s='Lưu'}</span>
 					<span class="notice"></span>
 				</p>
 			</div>
 		</div>
 		<div class="header">
-			<h5>Change Password</h5>
+			<h5>{l s='Thay đổi mật khẩu'}</h5>
 		</div>
 		<div class="div_pop">
 			<div class="div_form">
@@ -112,7 +112,7 @@
 			<div class="div_form">
 				<p class="form">
 					<span class="text"></span>
-					<span class="btn_gr">Save</span>
+					<span class="btn_gr">{l s='Lưu'}</span>
 					<span class="notice"></span>
 				</p>
 			</div>

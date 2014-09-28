@@ -2,7 +2,7 @@
 	<div class="div_footer">
     	<div class="article">
         	<div class="col">
-            	<h4>company</h4>
+            	<h4>{l s='Công ty'}</h4>
                 <ul>
                 	<li><a>dasd asd as dsada dasd sad sad sad sa dsad as dsa</a></li>
                     <li><a>dasd asd as dsa</a></li>
@@ -11,7 +11,7 @@
                 </ul>
             </div>
             <div class="col">
-            	<h4>services</h4>
+            	<h4>{l s='Dịch vụ'}</h4>
                 <ul>
                 	<li>dasd asd as dsada dasd sad sad sad sa dsad as dsa</li>
                     <li>dasd asd as dsa</li>
@@ -20,7 +20,7 @@
                 </ul>
             </div>
             <div class="col">
-            	<h4>info</h4>
+            	<h4>{l s='Thông tin'}</h4>
                 <ul>
                 	<li>dasd asd as dsada dasd sad sad sad sa dsad as dsa</li>
                     <li>dasd asd as dsa</li>
@@ -30,10 +30,10 @@
             </div>
            
             <div class="col last">
-            	<h4>offer</h4>
+            	<h4>{l s='Đề nghị'}</h4>
                 <div class="input_div">
                 	<input type="text" />
-                    <a class="btn_search">Submit</a>
+                    <a class="btn_search">{l s='Gởi'}</a>
                     <div class="div_social">
                         <a class="ico_face"></a>
                         <a class="ico_twitter"></a>
@@ -47,15 +47,15 @@
 <div class="div_copy">
 	<div class="div_copy_content">
         <div class="div_menu">
-            <a>Domain</a>
+            <a>{l s='Tên miền'}</a>
             <span class="line"></span>
-            <a>Hostings</a>
+            <a>{l s='Máy chủ'}</a>
             <span class="line"></span>
-            <a>Colocation </a>
+            <a>{l s='VPS'} </a>
             <span class="line"></span>
-            <a>Emails & Marketing</a>
+            <a>{l s='Email và tiếp thị'}</a>
             <span class="line"></span>
-            <a>Web Design</a>
+            <a>{l s='Thiết kế web'}</a>
         </div>
         <span class="copy">@ Copyright 2014 by SPT. All rights reserved</span>
     </div>

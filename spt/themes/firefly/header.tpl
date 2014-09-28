@@ -54,7 +54,7 @@
 <header>
 	<div class="div_header">
     	<div class="article">
-        	<a class="change_lang"><i class="fa fa-globe"></i><span>United States - English</span></a>
+        	<a class="change_lang"><i class="fa fa-globe"></i><span>{l s='Tiếng Anh'}</span></a>
             <div class="right">
                 <div class="login_out">
                     <i class="fa fa-phone" ></i>
@@ -63,38 +63,38 @@
                 {if $is_logged == true}
                 <div class="login_out btn_log active">
                     <i class="fa fa-user"> </i>
-                    <a id="btn_log" href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html':'UTF-8'}">Logout</a>
+                    <a id="btn_log" href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html':'UTF-8'}">{l s='Đăng xuất'}</a>
                     <span></span>
-                    <a id="btn_log2" href="{$link->getModuleLink('account', 'main', array(), true)|addslashes}">My account</a>
+                    <a id="btn_log2" href="{$link->getModuleLink('account', 'main', array(), true)|addslashes}">{l s='Tài khoản của tôi'}</a>
                 </div>
                 {else}
             	<div class="login_out btn_log active">
                     <i class="fa fa-user" ></i>
-                    <a id="btn_log">Sign In</a>
+                    <a id="btn_log">{l s='Đăng nhập'}</a>
                     <span></span>
-                    <a id="btn_log2">Register</a>
+                    <a id="btn_log2">{l s='Đăng ký'}</a>
                     <div class="box_log">
                     	<div class="line"> </div>
                         <div class="box_sign">
-                        	<h3>Sign in</h3>
+                        	<h3>{l s='Đăng nhập'}</h3>
                         	<p class="error" id="header_login_error"> </p>
                             <input class="sm" type="text" name="header_login_email" id="header_login_email" placeholder="Email" />
-                            <input class="sm" type="password" id="header_login_passwd" name="header_login_passwd" placeholder="Password" />
-                            <a class="text_link">Forgot your password?</a>
-                            <button class="btn_gr" id="header_SubmitLogin">Sign in</button>
+                            <input class="sm" type="password" id="header_login_passwd" name="header_login_passwd" placeholder="{l s='Mật khẩu'}" />
+                            <a class="text_link">{l s='Quên mật khẩu'}?</a>
+                            <button class="btn_gr" id="header_SubmitLogin">{l s='Đăng nhập'}</button>
                         </div>
                         <div class="box_login">
-                        	<h3>New Customer</h3>
-                            <span>New to GoDaddy? </span>
-                            <span>Create an account to get started today.</span>
-                            <a class="btn_gr" id="undo_user" style="">For Private User</a>
-                            <a class="btn_gr" id="undo_reseller" style="">For Reseller</a>
+                        	<h3>{l s='Khách hàng mới'}</h3>
+                            <span>{l s='Khách hàng mới của SPT'}? </span>
+                            <span>{l s='Tạo một tài khoản để bắt đầu hôm nay'}.</span>
+                            <a class="btn_gr" id="undo_user" style="">{l s='Cá nhân'}</a>
+                            <a class="btn_gr" id="undo_reseller" style="">{l s='Nhà bán lẻ'}</a>
                         </div>
                     </div>
                 </div>
                 {/if}
                 <a href="{$link->getModuleLink('ffcart', 'basket', array(), true)|addslashes}" class="btn1">
-                    <i class="fa fa-shopping-cart"></i><span>Checkout</span>
+                    <i class="fa fa-shopping-cart"></i><span>{l s='Giỏ hàng'}</span>
                 </a>
             </div>
         </div>
@@ -105,8 +105,8 @@
     	<div class="article">
         	<div class="box">
         		<form action="{$link->getModuleLink('domain', 'search')}" method="post" id="frm_domain_search" name="frm_domain_search">
-	            	<input type="text" name="txt_search" placeholder="Enter a Domain Name"/>
-	                <a class="btn-1"><span id="domain_search" class="btn_search">Search Domain</span></a>
+	            	<input type="text" name="txt_search" placeholder="{l s='Nhập tên miền'}"/>
+	                <a class="btn-1"><span id="domain_search" class="btn_search">{l s='Tìm kiếm'}</span></a>
                 </form>
             </div>
         </div>

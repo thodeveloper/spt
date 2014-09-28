@@ -2,7 +2,7 @@
 	<div class="article">
 		<div class="col_l left">
 			<div class="line">
-				<span>NEWS</span>
+				<span></span>
 			</div>
 			<div class="box">
 				<img class="banner_ads" src="{$img_dir}banner_ad.png" width="177" />

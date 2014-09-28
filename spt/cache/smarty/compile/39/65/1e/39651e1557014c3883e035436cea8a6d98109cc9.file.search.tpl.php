@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-28 13:36:42
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-29 05:40:51
          compiled from "E:\wamp\www\spt\spt\spt\modules\domain\views\templates\front\search.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:180645427ac7a23d716-57333019%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39651e1557014c3883e035436cea8a6d98109cc9' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\domain\\views\\templates\\front\\search.tpl',
-      1 => 1411571139,
+      1 => 1411944042,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5427ac7a58b867_64391330',
   'variables' => 
   array (
     'link' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'product' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5427ac7a58b867_64391330',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5427ac7a58b867_64391330')) {function content_5427ac7a58b867_64391330($_smarty_tpl) {?><!-- InstanceBeginEditable name="body" -->
 <div class="div_search">
@@ -35,8 +35,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         	<form action="<?php echo $_smarty_tpl->tpl_vars['link']->value->getModuleLink('domain','search');?>
 " method="post" id="frm_domain_search" name="frm_domain_search">
 	            <input type="text" name="txt_search" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['searchKeyWord']->value, ENT_QUOTES, 'UTF-8', true);?>
-" placeholder="Enter a Domain Name">
-	            <a class="btn-1"><span id="domain_search" class="text_search"><i class="fa fa-search"></i>Search Again</span></a>
+" placeholder="Nhập tên miền">
+	            <a class="btn-1"><span id="domain_search" class="text_search"><i class="fa fa-search"></i>Tìm kiếm lại</span></a>
             </form>
         </div>
     </div>
@@ -44,19 +44,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <?php if ($_smarty_tpl->tpl_vars['isSearchedDomainAvailable']->value==false) {?>
     <div class="article">
         <div class="search_null">
-            <p><span class="ico_caution"></span>Sorry, <span class="txt_color1"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['searchKeyWord']->value, ENT_QUOTES, 'UTF-8', true);?>
-</span> is not available.</p>
+            <p><span class="ico_caution"></span>Rất tiếc, <span class="txt_color1"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['searchKeyWord']->value, ENT_QUOTES, 'UTF-8', true);?>
+</span> đã được đăng ký.</p>
         </div>
    	</div>
    	<?php } elseif (isset($_smarty_tpl->tpl_vars['searchedDomainInfo']->value)) {?>
    	<div class="article">
         <div class="search_notnull">
             <p>
-            	<span class="txt_color2">Good news, this domain is available</span> 
+            	<span class="txt_color2">Tin vui, tên miền này chưa được đăng ký</span> 
 				<a><span class="btn_addcart" onclick="return addToCart(<?php echo $_smarty_tpl->tpl_vars['searchedDomainInfo']->value['id_product'];?>
 , 1, '<?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','basket',array(),true));?>
 ', '<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['searchKeyWord']->value, ENT_QUOTES, 'UTF-8', true);?>
-')"><i class="fa fa-shopping-cart"> </i>Continue to cart</span></a>
+')"><i class="fa fa-shopping-cart"> </i><?php echo smartyTranslate(array('s'=>'Vào giỏ hàng'),$_smarty_tpl);?>
+</span></a>
         	</p>
         </div>
    	</div>
@@ -64,11 +65,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="div_result_item">
         	<?php if ($_smarty_tpl->tpl_vars['searchedDomainInfo']->value["onsale"]==true) {?>
         		<?php if ($_smarty_tpl->tpl_vars['searchedDomainInfo']->value["wholesale_price"]>0) {?>
-            		<span class="gribbon_lar_1"><i>On Sale VND<?php echo number_format($_smarty_tpl->tpl_vars['searchedDomainInfo']->value["wholesale_price"],0,",",".");?>
+            		<span class="gribbon_lar_1"><i>Đang bán VND<?php echo number_format($_smarty_tpl->tpl_vars['searchedDomainInfo']->value["wholesale_price"],0,",",".");?>
  <?php echo $_smarty_tpl->tpl_vars['searchedDomainInfo']->value['reference'];?>
 </i></span>
             	<?php } else { ?>
-            		<span class="gribbon_lar_1"><i>On Sale VND<?php echo number_format($_smarty_tpl->tpl_vars['searchedDomainInfo']->value["price"],0,",",".");?>
+            		<span class="gribbon_lar_1"><i>Đang bán VND<?php echo number_format($_smarty_tpl->tpl_vars['searchedDomainInfo']->value["price"],0,",",".");?>
  <?php echo $_smarty_tpl->tpl_vars['searchedDomainInfo']->value['reference'];?>
 </i></span>
             	<?php }?>
@@ -92,7 +93,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             		<span id="selectItem_<?php echo $_smarty_tpl->tpl_vars['searchedDomainInfo']->value["id_product"];?>
 " onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['searchedDomainInfo']->value['id_product'];?>
 , 1, '', '<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['searchKeyWord']->value, ENT_QUOTES, 'UTF-8', true);?>
-')" class="btn_gr">+ Select</span>
+')" class="btn_gr">+ <?php echo smartyTranslate(array('s'=>'Chọn'),$_smarty_tpl);?>
+</span>
             	</div>
             </div>
         </div>
@@ -103,7 +105,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <div class="article">
     	<div class="search_result">
         	<div class="title">
-            	<span>Here is a list of domains recommended for you:</span>
+            	<span><?php echo smartyTranslate(array('s'=>'Danh sách tên miền đề nghị cho bạn'),$_smarty_tpl);?>
+:</span>
             </div>
             <div class="title_page">
             	<span class="ico_result"> </span>
@@ -138,7 +141,8 @@ $_smarty_tpl->tpl_vars['product']->_loop = true;
 " onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['product']->value['id_product'];?>
 , 1, '', '<?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
 <?php echo $_smarty_tpl->tpl_vars['product']->value['reference'];?>
-')" class="btn_gr">+ Select</span>
+')" class="btn_gr">+ <?php echo smartyTranslate(array('s'=>'Chọn'),$_smarty_tpl);?>
+</span>
                     		</div>
 	                    </div>
 	                </div>

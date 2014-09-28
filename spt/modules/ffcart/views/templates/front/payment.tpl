@@ -21,11 +21,11 @@
 				<table cellpadding="0" cellspacing="0">
 					<thead>
 						<tr>
-							<td>Product</td>
+							<td>{l s='Sản phẩm'}</td>
 							<td> </td>
-							<td>Term</td>
-							<td>Unit Price</td>
-							<td>Subtotal</td>
+							<td>{l s='Thời hạn'}</td>
+							<td>{l s='Giá'}</td>
+							<td>{l s='Thành tiền'}</td>
 						</tr>
 					</thead>
 					<tbody id="cart_content">
@@ -44,15 +44,15 @@
 								{if $cart["type"] == 'domain'}
 									{if $cart["reference"] == '.vn'}
 									<p>
-										*Plus VNNIC .VN fee of VND{$smarty.const._VNNIC_DOTVN_FEE_|number_format:0:"":""}
+										*{l s='Cộng phí VNNIC .VN là '}{$smarty.const._VNNIC_DOTVN_FEE_}
 									</p>
 									{else if $cart["reference"] == '.com.vn'}
 									<p>
-										*Plus VNNIC .COM.VN fee of VND{$smarty.const._VNNIC_DOTCOMDOTVN_FEE_|number_format:0:"":""}
+										*{l s='Cộng phí VNNIC .COM.VN là '}{$smarty.const._VNNIC_DOTCOMDOTVN_FEE_}
 									</p>
 									{else}
 									<p>
-										*Plus ICANN fee of VND{$smarty.const._ICAN_FEE_|number_format:0:"":""}/yr
+										*{l s='Cộng phí ICANN là '}{$smarty.const._ICAN_FEE_}/năm
 									</p>
 									{/if}
 								{/if}
@@ -88,7 +88,7 @@
 					<div class="box_setting">
 						<form id="frm_submit_payment" action="{$link->getModuleLink('ffcart', 'payment', ['payment' => $payment], true)|escape:'quotes':'UTF-8'}" method="post">
 							<div class="header">
-								<h5>{l s='Billing information'}</h5>
+								<h5>{l s='Thông tin hoá đơn'}</h5>
 							</div>
 							<div class="div_pop">
 								<div class="div_form">
@@ -111,7 +111,7 @@
 							</div>
 							{if !empty($client_info) && $customer->id_default_group == $smarty.const.__RESELLER_GROUP_ID__}
 							<div class="header">
-								<h5>{l s='Client information'}</h5>
+								<h5>{l s='Thông tin khách hàng'}</h5>
 							</div>
 							<div class="div_pop">
 								<div class="div_form">
@@ -123,25 +123,25 @@
 							</div>
 							{/if}
 							<div class="header">
-								<h5>{l s='Payment information'}</h5>
+								<h5>{l s='Thông tin thanh toán'}</h5>
 							</div>
 							<div class="div_pop">
 								<div class="div_form">
 									<p class="form">
-										<span class="textline">{l s='Credit Card'}</span>
+										<span class="textline">{l s='Thẻ tín dụng'}</span>
 										<input disabled="disabled" type="radio" name="payment_method" value="1" {if $payment == 1}checked="checked"{/if} />
 									</p>
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline">{l s='Bank Wire Transfer'}</span>
+										<span class="textline">{l s='ATM'}</span>
 										<input disabled="disabled" type="radio" name="payment_method" value="2" {if $payment == 2}checked="checked"{/if} />
 									</p>
 								</div>
 								{if $cart_data['recharge_fee'] lte 0}
 								<div class="div_form">
 									<p class="form">
-										<span class="textline">{l s='Cash'}</span>
+										<span class="textline">{l s='Tiền mặt'}</span>
 										<input disabled="disabled" type="radio" name="payment_method" value="2" {if $payment == 3}checked="checked"{/if} />
 									</p>
 								</div>
@@ -152,7 +152,7 @@
 								<div class="div_form">
 									<p class="form">
 										<span class="textline"> </span>
-										<span class="btn_gr" id="btn_submit_payment">Payment &gt;</span>
+										<span class="btn_gr" id="btn_submit_payment">{l s='Thanh toán'} &gt;</span>
 										<span class="notice"></span>
 									</p>
 								</div>
@@ -166,22 +166,22 @@
 		<div class="col_r right">
 			<div class="box">
 				<p>
-					<span class="left">Order Summary</span>
+					<span class="left">{l s='Thống kê hoá đơn'}</span>
 				</p>
 				<p>
-					<span class="left">Taxes(10%):</span>
+					<span class="left">{l s='Thuế'}(10%):</span>
 					<span class="right"><strong>VND<span id="tax_fee">{$cart_data['cart_tax']|number_format:0:",":"."}</span></strong></span>
 				</p>
 				<p>
-					<span class="left">ICANN Fees*</span>
+					<span class="left">{l s='Phí ICANN'}*</span>
 					<span class="right"><strong>VND{$cart_data['ican_fee']|number_format:0:",":"."}</strong></span>
 				</p>
 				<p>
-					<span class="left">VNNIC Fees*</span>
+					<span class="left">{l s='Phí VNNIC'}*</span>
 					<span class="right"><strong>VND{$cart_data['vnnic_reg_fee']|number_format:0:",":"."}</strong></span>
 				</p>
 				<p class="tax">
-					<span class="left">Total:</span>
+					<span class="left">{l s='Tổng cộng'}:</span>
 					<span class="right txt_color2">VND{$cart_data['cart_grandtotal']|number_format:0:",":"."}</span>
 				</p>
 				<p class="line"></p>

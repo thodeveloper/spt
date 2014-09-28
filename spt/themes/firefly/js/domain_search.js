@@ -11,7 +11,7 @@ function addToCart(product_id, quantity, url, domain_name){
 		{
 			if (!jsonData.hasError)
 			{
-				$("#selectItem_"+product_id).html("&#10004; Selected");
+				$("#selectItem_"+product_id).html("&#10004; Đã chọn");
 				$("#selectItem_"+product_id).removeAttr("onclick");
 				if( url != '' ){
 					window.document.location = url;

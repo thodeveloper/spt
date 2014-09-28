@@ -4,11 +4,11 @@
 <div class="div_account">
     <div class="article">
     	<div class="div_box_acc">
-        	<h3>My Account</h3>
+        	<h3>{l s='Tài khoản của tôi'}</h3>
             <span class="name">{$customer->lastname} {$customer->firstname}</span>
-            <span>Registered email: {$customer->email}</span>
+            <span>{l s='Email đã đăng ký'}: {$customer->email}</span>
             <ul>
-            	<li class="first"><a class="txt_color2">Contact Support</a></li>
+            	<li class="first"><a class="txt_color2">{l s='Địa chỉ liên lạc'}</a></li>
           	</ul>
         </div>
     </div>
@@ -18,21 +18,21 @@
                 <ul>
                     <li class="k-state-active">
                     	<span class="k-image mc1"></span>
-                        Products
+                        {l s='Sản phẩm'}
                     </li>
                     <li>
                     	<span class="k-image mc2"></span>
-                        History
+                        {l s='Lịch sử'}
                     </li>
                     {if $customer->id_default_group == $smarty.const.__RESELLER_GROUP_ID__}
                     <li>
                     	<span class="k-image mc3"></span>
-                        Clients	
+                        {l s='Khách hàng'}
                     </li>
                     {/if}
                     <li>
                     	<span class="k-image mc4"></span>
-                        Settings
+                        {l s='Thiết lập'}
                     </li>
                 </ul>
                 <div>

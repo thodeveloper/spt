@@ -1,11 +1,4 @@
 <!-- InstanceBeginEditable name="body" -->
-<div class="div_sub_menu">
-	<div class="sub_menu">
-    	<a>Produce</a>
-        <span class="line"></span>
-        <a>Web Hosting</a>
-    </div>
-</div>
 <div class="body body_dns">
 	<div class="article">
     	<div class="box">

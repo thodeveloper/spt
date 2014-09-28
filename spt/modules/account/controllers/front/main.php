@@ -27,6 +27,9 @@ class AccountMainModuleFrontController extends ModuleFrontController
     }
 	
 	public function postProcess() {
+		if($this->context->customer->logged != TRUE){
+    		Tools::redirect('index.php');
+    	}
 		//if no data, go back to home page
 		if(Tools::isSubmit("isHistory")){
 			$cash_array = $this->__loadCashHistory();

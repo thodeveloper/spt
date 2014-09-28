@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 02:40:45
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-29 06:18:56
          compiled from "E:\wamp\www\spt\spt\spt\themes\firefly\modules\popup\menu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:441054231e3d02a545-91502402%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dad3d44e1eb371bd48aef22016aabacf9f33cd9a' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\themes\\firefly\\modules\\popup\\menu.tpl',
-      1 => 1410811899,
+      1 => 1411946030,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_54231e3d09dd07_33478540',
   'variables' => 
   array (
     'base_dir' => 0,
@@ -28,8 +30,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'sub_category' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_54231e3d09dd07_33478540',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54231e3d09dd07_33478540')) {function content_54231e3d09dd07_33478540($_smarty_tpl) {?><div class="div_headermenu">
 	<div class="article">
@@ -74,7 +74,8 @@ $_smarty_tpl->tpl_vars['sub_category']->_loop = true;
                 </li>
                 <?php } ?>
                 <li><a href="<?php echo preg_replace("%(?<!\\\\)'%", "\'",$_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffnews','home'));?>
-">News</a>
+"><?php echo smartyTranslate(array('s'=>'Tin tức'),$_smarty_tpl);?>
+</a>
                 	<span class="arrow"> </span>
                 </li>
             </ul>

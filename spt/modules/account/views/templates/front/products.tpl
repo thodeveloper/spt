@@ -4,7 +4,7 @@
 			<li class="k-state-active">
 				<span class="k-image ico_show"></span>
 				<span class="icon_domain"></span>
-				Domain
+				{l s='Tên miền'}
 				<div class="box_child">
 					<div class="box_child_content">
 						<div id="clientsDb">
@@ -16,7 +16,7 @@
 			<li>
 				<span class="k-image ico_show"></span>
 				<span class="icon_webhosting"></span>
-				web hosting
+				{l s='Máy chủ web'}
 				<div class="box_child">
 					<div class="box_child_content">
 						<div id="clientsDb">
@@ -28,7 +28,7 @@
 			<li>
 				<span class="k-image ico_show"></span>
 				<span class="icon_email"></span>
-				email
+				{l s='Email'}
 				<div class="box_child">
 					<div class="box_child_content">
 						<div id="clientsDb">
@@ -40,7 +40,7 @@
 			<li>
 				<span class="k-image ico_show"></span>
 				<span class="icon_webbuild"></span>
-				WEBSITE BUILDER / INSTANTPAGE
+				{l s='VPS'}
 				<div class="box_child">
 					<div class="box_child_content">
 						<div id="clientsDb">

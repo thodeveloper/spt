@@ -2,8 +2,8 @@
 	<div id="organizer1">
 		<ul id="panelbar1">
 			<li class="k-state-active">
-				Client lists
-				<span class="btn_gr right" id="undo_user">Add client</span>
+				{l s='Danh sách khách hàng'}
+				<span class="btn_gr right" id="undo_user">{l s='Thêm khách hàng'}</span>
 				<div class="box_child">
 					<div class="box_child_content">
 						<div id="clientsDb">

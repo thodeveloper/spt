@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-28 23:57:19
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-29 06:01:50
          compiled from "E:\wamp\www\spt\spt\spt\modules\account\views\templates\front\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:321155423b610c97063-39349087%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'aae25ed469a53c1a4b6fd00e339c69d248dfa7e1' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\account\\views\\templates\\front\\main.tpl',
-      1 => 1411923425,
+      1 => 1411945091,
       2 => 'file',
     ),
   ),
@@ -33,14 +33,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="div_account">
     <div class="article">
     	<div class="div_box_acc">
-        	<h3>My Account</h3>
+        	<h3><?php echo smartyTranslate(array('s'=>'Tài khoản của tôi'),$_smarty_tpl);?>
+</h3>
             <span class="name"><?php echo $_smarty_tpl->tpl_vars['customer']->value->lastname;?>
  <?php echo $_smarty_tpl->tpl_vars['customer']->value->firstname;?>
 </span>
-            <span>Registered email: <?php echo $_smarty_tpl->tpl_vars['customer']->value->email;?>
+            <span><?php echo smartyTranslate(array('s'=>'Email đã đăng ký'),$_smarty_tpl);?>
+: <?php echo $_smarty_tpl->tpl_vars['customer']->value->email;?>
 </span>
             <ul>
-            	<li class="first"><a class="txt_color2">Contact Support</a></li>
+            	<li class="first"><a class="txt_color2"><?php echo smartyTranslate(array('s'=>'Địa chỉ liên lạc'),$_smarty_tpl);?>
+</a></li>
           	</ul>
         </div>
     </div>
@@ -50,21 +53,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <ul>
                     <li class="k-state-active">
                     	<span class="k-image mc1"></span>
-                        Products
+                        <?php echo smartyTranslate(array('s'=>'Sản phẩm'),$_smarty_tpl);?>
+
                     </li>
                     <li>
                     	<span class="k-image mc2"></span>
-                        History
+                        <?php echo smartyTranslate(array('s'=>'Lịch sử'),$_smarty_tpl);?>
+
                     </li>
                     <?php if ($_smarty_tpl->tpl_vars['customer']->value->id_default_group==@constant('__RESELLER_GROUP_ID__')) {?>
                     <li>
                     	<span class="k-image mc3"></span>
-                        Clients	
+                        <?php echo smartyTranslate(array('s'=>'Khách hàng'),$_smarty_tpl);?>
+
                     </li>
                     <?php }?>
                     <li>
                     	<span class="k-image mc4"></span>
-                        Settings
+                        <?php echo smartyTranslate(array('s'=>'Thiết lập'),$_smarty_tpl);?>
+
                     </li>
                 </ul>
                 <div>

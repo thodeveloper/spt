@@ -21,7 +21,7 @@
 					<thead>
 						<tr>
 							<td>{l s='Sản phẩm'}</td>
-							<td></td>
+							<td> </td>
 							<td>{l s='Thời hạn'}</td>
 							<td>{l s='Giá'}</td>
 							<td>{l s='Thành tiền'}</td>

@@ -1,6 +1,6 @@
 <div class="k-content child_panel child_panel1 child_panel2">
 	<div class="box_rechange">
-		<span id="undo_recharge" class="btn_gr">+ RECHARGE</span>
+		<span id="undo_recharge" class="btn_gr">+ {l s='Nạp tiền'}</span>
 	</div>
 	<div id="organizer2">
 		<ul id="panelbar2">
@@ -12,10 +12,10 @@
 					</div>
 					<div class="col2">
 						<p class="text">
-							+ Your money:
+							+ {l s='Tiền của bạn'}:
 						</p>
 						<p class="text">
-							+ Cash promotion:
+							+ {l s='Tiền khuyến mãi'}:
 						</p>
 					</div>
 					<div class="col3">
@@ -34,7 +34,7 @@
 					</div>
 					<div class="col2">
 						<p class="text">
-							+ Total:
+							+ {l s='Tổng cộng'}:
 						</p>
 					</div>
 					<div class="col3">

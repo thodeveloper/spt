@@ -12,7 +12,9 @@ class DnsModifyModuleFrontController extends ModuleFrontController
      */
     public function initContent()
     {
-        //parent::initContent();
+    	if($this->context->customer->logged != TRUE){
+    		Tools::redirect('index.php');
+    	}
 		$this->setTemplate('dns.tpl');
     }
 	

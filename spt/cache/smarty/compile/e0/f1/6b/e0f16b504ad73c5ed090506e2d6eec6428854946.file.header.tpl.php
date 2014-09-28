@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 02:40:44
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-29 05:52:30
          compiled from "E:\wamp\www\spt\spt\spt\themes\firefly\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1238954231e3ce339b0-88345023%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0f16b504ad73c5ed090506e2d6eec6428854946' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\themes\\firefly\\header.tpl',
-      1 => 1410511292,
+      1 => 1411944746,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_54231e3d00fde4_36757781',
   'variables' => 
   array (
     'lang_iso' => 0,
@@ -32,8 +34,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'is_logged' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_54231e3d00fde4_36757781',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54231e3d00fde4_36757781')) {function content_54231e3d00fde4_36757781($_smarty_tpl) {?><!DOCTYPE HTML>
 <html lang="<?php echo $_smarty_tpl->tpl_vars['lang_iso']->value;?>
@@ -120,7 +120,8 @@ ie9.css">
 <header>
 	<div class="div_header">
     	<div class="article">
-        	<a class="change_lang"><i class="fa fa-globe"></i><span>United States - English</span></a>
+        	<a class="change_lang"><i class="fa fa-globe"></i><span><?php echo smartyTranslate(array('s'=>'Tiếng Anh'),$_smarty_tpl);?>
+</span></a>
             <div class="right">
                 <div class="login_out">
                     <i class="fa fa-phone" ></i>
@@ -130,40 +131,54 @@ ie9.css">
                 <div class="login_out btn_log active">
                     <i class="fa fa-user"> </i>
                     <a id="btn_log" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('index',true,null,"mylogout"), ENT_QUOTES, 'UTF-8', true);?>
-">Logout</a>
+"><?php echo smartyTranslate(array('s'=>'Đăng xuất'),$_smarty_tpl);?>
+</a>
                     <span></span>
                     <a id="btn_log2" href="<?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('account','main',array(),true));?>
-">My account</a>
+"><?php echo smartyTranslate(array('s'=>'Tài khoản của tôi'),$_smarty_tpl);?>
+</a>
                 </div>
                 <?php } else { ?>
             	<div class="login_out btn_log active">
                     <i class="fa fa-user" ></i>
-                    <a id="btn_log">Sign In</a>
+                    <a id="btn_log"><?php echo smartyTranslate(array('s'=>'Đăng nhập'),$_smarty_tpl);?>
+</a>
                     <span></span>
-                    <a id="btn_log2">Register</a>
+                    <a id="btn_log2"><?php echo smartyTranslate(array('s'=>'Đăng ký'),$_smarty_tpl);?>
+</a>
                     <div class="box_log">
                     	<div class="line"> </div>
                         <div class="box_sign">
-                        	<h3>Sign in</h3>
+                        	<h3><?php echo smartyTranslate(array('s'=>'Đăng nhập'),$_smarty_tpl);?>
+</h3>
                         	<p class="error" id="header_login_error"> </p>
                             <input class="sm" type="text" name="header_login_email" id="header_login_email" placeholder="Email" />
-                            <input class="sm" type="password" id="header_login_passwd" name="header_login_passwd" placeholder="Password" />
-                            <a class="text_link">Forgot your password?</a>
-                            <button class="btn_gr" id="header_SubmitLogin">Sign in</button>
+                            <input class="sm" type="password" id="header_login_passwd" name="header_login_passwd" placeholder="<?php echo smartyTranslate(array('s'=>'Mật khẩu'),$_smarty_tpl);?>
+" />
+                            <a class="text_link"><?php echo smartyTranslate(array('s'=>'Quên mật khẩu'),$_smarty_tpl);?>
+?</a>
+                            <button class="btn_gr" id="header_SubmitLogin"><?php echo smartyTranslate(array('s'=>'Đăng nhập'),$_smarty_tpl);?>
+</button>
                         </div>
                         <div class="box_login">
-                        	<h3>New Customer</h3>
-                            <span>New to GoDaddy? </span>
-                            <span>Create an account to get started today.</span>
-                            <a class="btn_gr" id="undo_user" style="">For Private User</a>
-                            <a class="btn_gr" id="undo_reseller" style="">For Reseller</a>
+                        	<h3><?php echo smartyTranslate(array('s'=>'Khách hàng mới'),$_smarty_tpl);?>
+</h3>
+                            <span><?php echo smartyTranslate(array('s'=>'Khách hàng mới của SPT'),$_smarty_tpl);?>
+? </span>
+                            <span><?php echo smartyTranslate(array('s'=>'Tạo một tài khoản để bắt đầu hôm nay'),$_smarty_tpl);?>
+.</span>
+                            <a class="btn_gr" id="undo_user" style=""><?php echo smartyTranslate(array('s'=>'Cá nhân'),$_smarty_tpl);?>
+</a>
+                            <a class="btn_gr" id="undo_reseller" style=""><?php echo smartyTranslate(array('s'=>'Nhà bán lẻ'),$_smarty_tpl);?>
+</a>
                         </div>
                     </div>
                 </div>
                 <?php }?>
                 <a href="<?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','basket',array(),true));?>
 " class="btn1">
-                    <i class="fa fa-shopping-cart"></i><span>Checkout</span>
+                    <i class="fa fa-shopping-cart"></i><span><?php echo smartyTranslate(array('s'=>'Giỏ hàng'),$_smarty_tpl);?>
+</span>
                 </a>
             </div>
         </div>
@@ -176,8 +191,10 @@ ie9.css">
         	<div class="box">
         		<form action="<?php echo $_smarty_tpl->tpl_vars['link']->value->getModuleLink('domain','search');?>
 " method="post" id="frm_domain_search" name="frm_domain_search">
-	            	<input type="text" name="txt_search" placeholder="Enter a Domain Name"/>
-	                <a class="btn-1"><span id="domain_search" class="btn_search">Search Domain</span></a>
+	            	<input type="text" name="txt_search" placeholder="<?php echo smartyTranslate(array('s'=>'Nhập tên miền'),$_smarty_tpl);?>
+"/>
+	                <a class="btn-1"><span id="domain_search" class="btn_search"><?php echo smartyTranslate(array('s'=>'Tìm kiếm'),$_smarty_tpl);?>
+</span></a>
                 </form>
             </div>
         </div>

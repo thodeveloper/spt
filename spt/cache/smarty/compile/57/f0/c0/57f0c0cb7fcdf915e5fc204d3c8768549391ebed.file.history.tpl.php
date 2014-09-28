@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 13:28:32
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-29 06:01:50
          compiled from "E:\wamp\www\spt\spt\spt\modules\account\views\templates\front\\history.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:200145423b610e26db6-63996709%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '57f0c0cb7fcdf915e5fc204d3c8768549391ebed' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\account\\views\\templates\\front\\\\history.tpl',
-      1 => 1410535268,
+      1 => 1411945194,
       2 => 'file',
     ),
   ),
@@ -15,17 +15,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5423b610e6fc52_78750898',
   'variables' => 
   array (
     'cash' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5423b610e6fc52_78750898',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5423b610e6fc52_78750898')) {function content_5423b610e6fc52_78750898($_smarty_tpl) {?><div class="k-content child_panel child_panel1 child_panel2">
 	<div class="box_rechange">
-		<span id="undo_recharge" class="btn_gr">+ RECHARGE</span>
+		<span id="undo_recharge" class="btn_gr">+ <?php echo smartyTranslate(array('s'=>'Nạp tiền'),$_smarty_tpl);?>
+</span>
 	</div>
 	<div id="organizer2">
 		<ul id="panelbar2">
@@ -37,10 +38,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</div>
 					<div class="col2">
 						<p class="text">
-							+ Your money:
+							+ <?php echo smartyTranslate(array('s'=>'Tiền của bạn'),$_smarty_tpl);?>
+:
 						</p>
 						<p class="text">
-							+ Cash promotion:
+							+ <?php echo smartyTranslate(array('s'=>'Tiền khuyến mãi'),$_smarty_tpl);?>
+:
 						</p>
 					</div>
 					<div class="col3">
@@ -61,7 +64,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</div>
 					<div class="col2">
 						<p class="text">
-							+ Total:
+							+ <?php echo smartyTranslate(array('s'=>'Tổng cộng'),$_smarty_tpl);?>
+:
 						</p>
 					</div>
 					<div class="col3">

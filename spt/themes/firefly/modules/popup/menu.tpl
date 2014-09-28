@@ -21,7 +21,7 @@
                     {/if}
                 </li>
                 {/foreach}
-                <li><a href="{$link->getModuleLink('ffnews', 'home')|escape:'quotes':'UTF-8'}">News</a>
+                <li><a href="{$link->getModuleLink('ffnews', 'home')|escape:'quotes':'UTF-8'}">{l s='Tin tức'}</a>
                 	<span class="arrow"> </span>
                 </li>
             </ul>

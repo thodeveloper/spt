@@ -56,40 +56,40 @@ $(document).ready(function() {
 		columns: [
 		{
 			field: "product_name",
-			title: "Domain name"
+			title: "Tên miền"
 		},
 		{
 			field: "terms",
-			title: "Years",
+			title: "Năm",
 			width: 70,
 			cellsalign: 'right'
 		},
 		{
 			field: "cash",
-			title: "Total",
+			title: "Tổng cộng",
 			width: 100,
 			format: '{0:0}',
 			cellsalign: 'right'
 		},
 		{
 			field: "date_add",
-			title: "Purchased Date",
+			title: "Ngày mua",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		},
 		{
 			field: "expired_date",
-			title: "Expired Date",
+			title: "Ngày hết hạn",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		},
 		{
 			field: "auto_renew", 
-			title: "Auto-renew",
+			title: "Tự động gia hạn",
 			width: 120,
 			template: "<input type='checkbox' #= (auto_renew == 1) ? checked='checked' : '' # />" 
 		},
 		{
 			command: {
-				text: "Renew", 
+				text: "Gia hạn", 
 				name: "id_product",
 		        click: function(e) {
 		          // e.target is the DOM element representing the button
@@ -141,38 +141,38 @@ $(document).ready(function() {
 		columns: [
 		{
 			field: "product_name",
-			title: "Hosting name"
+			title: "Tên máy chủ"
 		},
 		{
 			field: "terms",
-			title: "Months",
+			title: "Tháng",
 			width: 80,
 		},
 		{
 			field: "cash",
-			title: "Total",
+			title: "Tổng cộng",
 			width: 100,
 			format: '{0:0}'
 		},
 		{
 			field: "date_add",
-			title: "Purchased Date",
+			title: "Ngày mua",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		},
 		{
 			field: "expired_date",
-			title: "Expired Date",
+			title: "Ngày hết hạn",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		},
 		{
 			field: "auto_renew", 
-			title: "Auto-renew",
+			title: "Tự động gia hạn",
 			width: 120,
 			template: "<input type='checkbox' #= (auto_renew == 1) ? checked='checked' : '' # />" 
 		},
 		{
 			command: {
-				text: "Renew", 
+				text: "Gia hạn", 
 				name: "id_product",
 		        click: function(e) {
 		          // e.target is the DOM element representing the button
@@ -224,38 +224,38 @@ $(document).ready(function() {
 		columns: [
 		{
 			field: "product_name",
-			title: "VPS name"
+			title: "Tên VPS"
 		},
 		{
 			field: "terms",
-			title: "Months",
+			title: "Tháng",
 			width: 80,
 		},
 		{
 			field: "cash",
-			title: "Total",
+			title: "Tổng cộng",
 			width: 100,
 			format: '{0:0}'
 		},
 		{
 			field: "date_add",
-			title: "Purchased Date",
+			title: "Ngày mua",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		},
 		{
 			field: "expired_date",
-			title: "Expired Date",
+			title: "Ngày hết hạn",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		},
 		{
 			field: "auto_renew", 
-			title: "Auto-renew",
+			title: "Tự động gia hạn",
 			width: 120,
 			template: "<input type='checkbox' #= (auto_renew == 1) ? checked='checked' : '' # />" 
 		},
 		{
 			command: {
-				text: "Renew", 
+				text: "Gia hạn", 
 				name: "id_product",
 		        click: function(e) {
 		          // e.target is the DOM element representing the button
@@ -307,38 +307,38 @@ $(document).ready(function() {
 		columns: [
 		{
 			field: "product_name",
-			title: "Email name"
+			title: "Email"
 		},
 		{
 			field: "terms",
-			title: "Months",
+			title: "Tháng",
 			width: 80,
 		},
 		{
 			field: "cash",
-			title: "Total",
+			title: "Tổng cộng",
 			width: 100,
 			format: '{0:0}'
 		},
 		{
 			field: "date_add",
-			title: "Purchased Date",
+			title: "Ngày mua",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		},
 		{
 			field: "expired_date",
-			title: "Expired Date",
+			title: "Ngày hết hạn",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		},
 		{
 			field: "auto_renew", 
-			title: "Auto-renew",
+			title: "Tự động gia hạn",
 			width: 120,
 			template: "<input type='checkbox' #= (auto_renew == 1) ? checked='checked' : '' # />" 
 		},
 		{
 			command: {
-				text: "Renew", 
+				text: "Gia hạn", 
 				name: "id_product",
 		        click: function(e) {
 		          // e.target is the DOM element representing the button
@@ -387,11 +387,11 @@ $(document).ready(function() {
 		columns: [
 		{
 			field: "lastname",
-			title: "Last Name"
+			title: "Họ"
 		},
 		{
 			field: "firstname",
-			title: "First Name"
+			title: "Tên"
 		},
 		{
 			field: "email",
@@ -399,7 +399,7 @@ $(document).ready(function() {
 		},
 		{
 			field: "date_upd",
-			title: "Updated Date",
+			title: "Ngày cập nhật",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		}]
 	});
@@ -439,22 +439,22 @@ $(document).ready(function() {
 		columns: [
 		{
 			field: "spent",
-			title: "Spent",
+			title: "Đã sử dụng",
 			format: '{0:0}'
 		}, 
 		{
 			field: "charged",
-			title: "Charged",
+			title: "Đã nạp",
 			format: '{0:0}'
 		}, 
 		{
 			field: "remain",
-			title: "Remain",
+			title: "Còn lại",
 			format: '{0:0}'
 		},
 		{
 			field: "date_upd",
-			title: "Updated Date",
+			title: "Ngày cập nhật",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
 		}]
 	});
@@ -488,7 +488,7 @@ $(document).ready(function() {
 
 $(document).on('click', '#recharge_addtocart', function(e){
 	e.preventDefault();
-	if(!confirm("This action will delete all current items in your cart. Continue to process?")){
+	if(!confirm("Hành động này sẽ xoá hết giỏ hàng có sẵn. Bạn có muốn tiếp tục?")){
 		return;
 	}
 	var product_id = $("#recharge_product_id").val();

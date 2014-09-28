@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-29 00:10:52
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-29 05:27:00
          compiled from "E:\wamp\www\spt\spt\spt\modules\ffcart\views\templates\front\billing.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:184025423218ad277d7-82492734%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ba85f328b9b405abc1241df5253a955e401ad69c' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\ffcart\\views\\templates\\front\\billing.tpl',
-      1 => 1411923509,
+      1 => 1411943194,
       2 => 'file',
     ),
   ),
@@ -68,19 +68,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ">
 							<?php if ($_smarty_tpl->tpl_vars['customer']->value->logged==false) {?>
 							<div class="header">
-								<h5><?php echo smartyTranslate(array('s'=>'New Customer'),$_smarty_tpl);?>
+								<h5><?php echo smartyTranslate(array('s'=>'Khách hàng mới'),$_smarty_tpl);?>
 </h5>
 								<input type="hidden" name="is_new_customer" value="1">
 							</div>
 							<div class="div_pop">
 								<div class="div_form">
 						            <p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Group'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Nhóm'),$_smarty_tpl);?>
 </span>
 										<select name="group_id" id="group_id" class="xsm">
-						                    <option value="1"><?php echo smartyTranslate(array('s'=>'Customer'),$_smarty_tpl);?>
+						                    <option value="1"><?php echo smartyTranslate(array('s'=>'Khách hàng'),$_smarty_tpl);?>
 </option>
-						                    <option value="2"><?php echo smartyTranslate(array('s'=>'Reseller'),$_smarty_tpl);?>
+						                    <option value="2"><?php echo smartyTranslate(array('s'=>'Nhà bán lẻ'),$_smarty_tpl);?>
 </option>
 						                </select>
 						                <span class="notice error" id="id_gender_error"> </span>
@@ -97,7 +97,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Password'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Mật khẩu'),$_smarty_tpl);?>
 </span>
 										<input type="password" name="passwd" id="passwd" class="xsm" />
 										<span class="notice error" id="passwd_error"> </span>
@@ -105,7 +105,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'First name'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Tên'),$_smarty_tpl);?>
 </span>
 										<input type="text" id="customer_firstname" name="customer_firstname" class="xsm" />
 										<span class="notice error" id="customer_firstname_error"> </span>
@@ -113,7 +113,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Last name'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Họ'),$_smarty_tpl);?>
 </span>
 										<input type="text" id="customer_lastname" name="customer_lastname" class="xsm" />
 										<span class="notice error" id="customer_lastname_error"> </span>
@@ -122,14 +122,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 							<?php }?>
 							<div class="header">
-								<h5><?php echo smartyTranslate(array('s'=>'Billing information'),$_smarty_tpl);?>
+								<h5><?php echo smartyTranslate(array('s'=>'Thông tin thanh toán'),$_smarty_tpl);?>
 </h5>
 							</div>
 							<div class="div_pop">
 								<?php if ($_smarty_tpl->tpl_vars['customer']->value->logged==true) {?>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Addresses list'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Danh sách địa chỉ'),$_smarty_tpl);?>
 </span>
 										<select name="address_list" id="address_list" class="xsm">
 											<?php  $_smarty_tpl->tpl_vars['address'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['address']->_loop = false;
@@ -145,7 +145,7 @@ $_smarty_tpl->tpl_vars['address']->_loop = true;
 </option>
 											<?php } ?>
 										</select> <a class="txt_color1" href="<?php echo preg_replace("%(?<!\\\\)'%", "\'",$_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','addresses'));?>
-"><?php echo smartyTranslate(array('s'=>'Add new address'),$_smarty_tpl);?>
+"><?php echo smartyTranslate(array('s'=>'Thêm địa chỉ mới'),$_smarty_tpl);?>
 </a>
 										<?php  $_smarty_tpl->tpl_vars['address'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['address']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['addresses']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -180,7 +180,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 												<?php }?>
 											<?php } ?> <br />
 											<span><a class="txt_color1" href="<?php echo preg_replace("%(?<!\\\\)'%", "\'",$_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','addresses',array('id_address'=>$_smarty_tpl->tpl_vars['address']->value->id),true));?>
-"><?php echo smartyTranslate(array('s'=>'Edit billing information'),$_smarty_tpl);?>
+"><?php echo smartyTranslate(array('s'=>'Sửa địa chỉ thanh toán'),$_smarty_tpl);?>
 </a></span>
 										</p>
 										<?php } ?>
@@ -190,7 +190,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								<?php if ($_smarty_tpl->tpl_vars['customer']->value->logged==false) {?>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Assign an address alias for future reference.'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Tạo alias cho địa chỉ để dùng sau này.'),$_smarty_tpl);?>
 </span>
 										<input type="text" class="xsm" name="alias" id="alias" value="<?php if (isset($_POST['alias'])) {?><?php echo $_POST['alias'];?>
 <?php } else { ?><?php echo smartyTranslate(array('s'=>'My address'),$_smarty_tpl);?>
@@ -200,7 +200,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'First name'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Tên'),$_smarty_tpl);?>
 </span>
 										<input type="text" class="xsm" id="firstname" name="firstname" value="<?php if (isset($_smarty_tpl->tpl_vars['guestInformations']->value)&&isset($_smarty_tpl->tpl_vars['guestInformations']->value['firstname'])&&$_smarty_tpl->tpl_vars['guestInformations']->value['firstname']) {?><?php echo $_smarty_tpl->tpl_vars['guestInformations']->value['firstname'];?>
 <?php }?>" />
@@ -209,7 +209,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Last name'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Họ'),$_smarty_tpl);?>
 </span>
 										<input type="text" class="xsm" id="lastname" name="lastname" value="<?php if (isset($_smarty_tpl->tpl_vars['guestInformations']->value)&&isset($_smarty_tpl->tpl_vars['guestInformations']->value['lastname'])&&$_smarty_tpl->tpl_vars['guestInformations']->value['lastname']) {?><?php echo $_smarty_tpl->tpl_vars['guestInformations']->value['lastname'];?>
 <?php }?>" />
@@ -218,7 +218,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Address'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Địa chỉ'),$_smarty_tpl);?>
 </span>
 										<input type="text" class="xsm" name="address1" id="address1" value="<?php if (isset($_smarty_tpl->tpl_vars['guestInformations']->value)&&isset($_smarty_tpl->tpl_vars['guestInformations']->value['address1'])&&isset($_smarty_tpl->tpl_vars['guestInformations']->value)&&isset($_smarty_tpl->tpl_vars['guestInformations']->value['address1'])&&$_smarty_tpl->tpl_vars['guestInformations']->value['address1']) {?><?php echo $_smarty_tpl->tpl_vars['guestInformations']->value['address1'];?>
 <?php }?>" />
@@ -227,7 +227,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Zip/Postal code'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Mã bưu điện'),$_smarty_tpl);?>
 </span>
 										<input type="text" name="postcode" id="postcode" value="<?php if (isset($_smarty_tpl->tpl_vars['guestInformations']->value)&&isset($_smarty_tpl->tpl_vars['guestInformations']->value['postcode'])&&$_smarty_tpl->tpl_vars['guestInformations']->value['postcode']) {?><?php echo $_smarty_tpl->tpl_vars['guestInformations']->value['postcode'];?>
 <?php }?>" class="xsm" />
@@ -236,7 +236,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'City'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Thành phố'),$_smarty_tpl);?>
 </span>
 										<input type="text" name="city" id="city" value="<?php if (isset($_smarty_tpl->tpl_vars['guestInformations']->value)&&isset($_smarty_tpl->tpl_vars['guestInformations']->value['city'])&&$_smarty_tpl->tpl_vars['guestInformations']->value['city']) {?><?php echo $_smarty_tpl->tpl_vars['guestInformations']->value['city'];?>
 <?php }?>" class="xsm" />
@@ -245,7 +245,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Country'),$_smarty_tpl);?>
+										<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Quốc gia'),$_smarty_tpl);?>
 </span>
 										<select name="id_country" id="id_country" class="xsm">
 											<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
@@ -263,7 +263,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><?php echo smartyTranslate(array('s'=>'Home phone'),$_smarty_tpl);?>
+										<span class="textline"><?php echo smartyTranslate(array('s'=>'Điện thoại'),$_smarty_tpl);?>
 </span>
 										<input type="text" class="xsm" name="phone" id="phone" value="<?php if (isset($_smarty_tpl->tpl_vars['guestInformations']->value)&&isset($_smarty_tpl->tpl_vars['guestInformations']->value['phone'])&&$_smarty_tpl->tpl_vars['guestInformations']->value['phone']) {?><?php echo $_smarty_tpl->tpl_vars['guestInformations']->value['phone'];?>
 <?php }?>" />
@@ -272,7 +272,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><?php echo smartyTranslate(array('s'=>'Mobile phone'),$_smarty_tpl);?>
+										<span class="textline"><?php echo smartyTranslate(array('s'=>'Di động'),$_smarty_tpl);?>
 </span>
 										<input type="text" class="xsm" name="phone_mobile" id="phone_mobile" value="<?php if (isset($_smarty_tpl->tpl_vars['guestInformations']->value)&&isset($_smarty_tpl->tpl_vars['guestInformations']->value['phone_mobile'])&&$_smarty_tpl->tpl_vars['guestInformations']->value['phone_mobile']) {?><?php echo $_smarty_tpl->tpl_vars['guestInformations']->value['phone_mobile'];?>
 <?php }?>" />
@@ -282,20 +282,20 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								<?php }?>
 							</div>
 							<div class="header">
-								<h5><?php echo smartyTranslate(array('s'=>'Payment information'),$_smarty_tpl);?>
+								<h5><?php echo smartyTranslate(array('s'=>'Thông tin thanh toán'),$_smarty_tpl);?>
 </h5>
 							</div>
 							<div class="div_pop">
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><?php echo smartyTranslate(array('s'=>'Credit Card'),$_smarty_tpl);?>
+										<span class="textline"><?php echo smartyTranslate(array('s'=>'Thẻ tín dụng'),$_smarty_tpl);?>
 </span>
 										<input type="radio" name="payment_method" value="1" checked="checked" />
 									</p>
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><?php echo smartyTranslate(array('s'=>'Bank Wire Transfer'),$_smarty_tpl);?>
+										<span class="textline"><?php echo smartyTranslate(array('s'=>'ATM'),$_smarty_tpl);?>
 </span>
 										<input type="radio" name="payment_method" value="2" />
 									</p>
@@ -303,7 +303,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								<?php if ($_smarty_tpl->tpl_vars['cart_data']->value['recharge_fee']<=0) {?>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><?php echo smartyTranslate(array('s'=>'Cash'),$_smarty_tpl);?>
+										<span class="textline"><?php echo smartyTranslate(array('s'=>'Tiền mặt'),$_smarty_tpl);?>
 </span>
 										<input type="radio" name="payment_method" value="3" />
 									</p>
@@ -314,7 +314,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 								<div class="div_form">
 									<p class="form">
 										<span class="textline"></span>
-										<span class="btn_gr" name="submitAccount" id="submitAccount">Continue &gt;</span>
+										<span class="btn_gr" name="submitAccount" id="submitAccount"><?php echo smartyTranslate(array('s'=>'Tiếp tục'),$_smarty_tpl);?>
+ &gt;</span>
 										<span class="notice"></span>
 									</p>
 								</div>
@@ -328,20 +329,24 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		<div class="col_r right">
 			<div class="box">
 				<p>
-					<span class="left">Order Summary</span>
+					<span class="left"><?php echo smartyTranslate(array('s'=>'Thống kê hoá đơn'),$_smarty_tpl);?>
+</span>
 				</p>
 				<p>
-					<span class="left">ICANN Fees*</span>
+					<span class="left"><?php echo smartyTranslate(array('s'=>'Phí ICANN'),$_smarty_tpl);?>
+*</span>
 					<span class="right"><strong>VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['ican_fee'],0,",",".");?>
 </strong></span>
 				</p>
 				<p>
-					<span class="left">VNNIC Fees*</span>
+					<span class="left"><?php echo smartyTranslate(array('s'=>'Phí VNNIC'),$_smarty_tpl);?>
+*</span>
 					<span class="right"><strong>VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['vnnic_reg_fee'],0,",",".");?>
 </strong></span>
 				</p>
 				<p class="tax">
-					<span class="left">Total:</span>
+					<span class="left"><?php echo smartyTranslate(array('s'=>'Tổng cộng'),$_smarty_tpl);?>
+:</span>
 					<span class="right txt_color2">VND<?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['cart_grandtotal'],0,",",".");?>
 </span>
 				</p>

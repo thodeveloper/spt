@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 13:28:32
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-29 06:18:56
          compiled from "E:\wamp\www\spt\spt\spt\modules\account\views\templates\front\\recharge.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:92645423b610da2f00-27099288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b42dfebb45f6027f483ff1bf5e32d96621ea616b' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\account\\views\\templates\\front\\\\recharge.tpl',
-      1 => 1410511862,
+      1 => 1411945926,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5423b610de4cb1_79347370',
   'variables' => 
   array (
     'recharge_list' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'recharge' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5423b610de4cb1_79347370',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5423b610de4cb1_79347370')) {function content_5423b610de4cb1_79347370($_smarty_tpl) {?><div id="window_recharge" style="display: none;">
 	<form name="register_account" id="register_account">
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<p class="error" id="recharge_error"> </p>
 	        <div class="div_form">
 	            <p class="form">
-					<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Card options'),$_smarty_tpl);?>
+					<span class="textline"><i>*</i><?php echo smartyTranslate(array('s'=>'Lựa chọn thẻ'),$_smarty_tpl);?>
 </span>
 					<select name="recharge_product_id" id="recharge_product_id" class="xsm">
 						<?php  $_smarty_tpl->tpl_vars['recharge'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['recharge']->_loop = false;
@@ -50,7 +50,8 @@ $_smarty_tpl->tpl_vars['recharge']->_loop = true;
 	        </div>
 	    </div>
 	    <p class="div_btn">
-	    	<button class="btn_gr" name="" id="recharge_addtocart">Add to cart</button>
+	    	<button class="btn_gr" name="" id="recharge_addtocart"><?php echo smartyTranslate(array('s'=>'Thêm vào giỏ hàng'),$_smarty_tpl);?>
+</button>
 	    </p>
     </form>
 </div><?php }} ?>
