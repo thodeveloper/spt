@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:2420854165280c170e2-77869806%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:977654231e3c8cbc87-28975684%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,20 +9,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2420854165280c170e2-77869806',
-  'variables' => 
-  array (
-    'link' => 0,
-    'returnAllowed' => 0,
-    'voucherAllowed' => 0,
-    'HOOK_BLOCK_MY_ACCOUNT' => 0,
-  ),
-  'has_nocache_code' => false,
+  'nocache_hash' => '977654231e3c8cbc87-28975684',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_54165280d2c7f9_62970999',
+  'unifunc' => 'content_54283989268686_15565332',
+  'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54165280d2c7f9_62970999')) {function content_54165280d2c7f9_62970999($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_54283989268686_15565332')) {function content_54283989268686_15565332($_smarty_tpl) {?>
 <!-- Block myaccount module -->
 <div class="block myaccount">
 	<h4 class="title_block"><a href="http://demo.fireflyinnov.com/en/my-account" title="Manage my customer account" rel="nofollow">My account</a></h4>

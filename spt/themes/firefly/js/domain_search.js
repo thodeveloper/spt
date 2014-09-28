@@ -1,11 +1,4 @@
-$(document).ready(function() {
-	$("#showmore").click(function() {
-		showResult("");
-	});
-});
-
-function addToCart(product_id, domain_name, quantity){
-	var gift_message = 'domain='+product_id+':'+domain_name;
+function addToCart(product_id, quantity, url, domain_name){
 	$.ajax({
 		type: 'POST',
 		headers: { "cache-control": "no-cache" },
@@ -13,13 +6,16 @@ function addToCart(product_id, domain_name, quantity){
 		async: true,
 		cache: false,
 		dataType : "json",
-		data: 'controller=cart&add=1&ajax=true&qty=' + ((quantity && quantity != null) ? quantity : '1') + '&id_product=' + product_id + '&gift_message='+ gift_message+ '&token=' + static_token,
+		data: 'controller=cart&add=1&ajax=true&qty=' + ((quantity && quantity != null) ? quantity : '1') + '&id_product=' + product_id + '&txt_search=' + domain_name + '&token=' + static_token,
 		success: function(jsonData,textStatus,jqXHR)
 		{
 			if (!jsonData.hasError)
 			{
 				$("#selectItem_"+product_id).html("&#10004; Selected");
 				$("#selectItem_"+product_id).removeAttr("onclick");
+				if( url != '' ){
+					window.document.location = url;
+				}
 			} else{
 				alert(jsonData.errors);
 			}
@@ -30,30 +26,4 @@ function addToCart(product_id, domain_name, quantity){
 			alert(error);
 		}
 	});
-}
-
-function showResult(condition){
-	$('div.item_result.hidden_box').each(function(index, obj){
-		if(index > 1 && condition != "all"){
-			return;
-		}
-	    $(this).removeClass("hidden_box");
-	});
-	var currentitems = parseInt($("#currentitems").text());
-	var totalitems = parseInt($("#totalitems").text());
-	currentitems += 2;
-	if(currentitems> totalitems) {
-		currentitems = totalitems;
-		$("#showmoreresult").hide();
-	}
-	$("#currentitems1").text(currentitems1);
-	
-	var currentitems1 = parseInt($("#currentitems1").text());
-	var totalitems1 = parseInt($("#totalitems1").text());
-	currentitems1 += 2;
-	if(currentitems1> totalitems1) {
-		currentitems1 = totalitems1;
-		$("#showmoreresult").hide();
-	}
-	$("#currentitems1").text(currentitems1);
 }

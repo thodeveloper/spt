@@ -12,6 +12,9 @@ class FfcartAccountreviewModuleFrontController extends ModuleFrontController
      */
     public function initContent()
     {
+    	if($this->context->customer->logged == TRUE){
+    		Tools::redirect($this->context->link->getModuleLink('ffcart', 'billing'));
+    	}
 		// build cart data
 		$cart_data = CommonUtils::buildCart();
 		if(empty($cart_data)){

@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-15 10:03:39
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-28 23:44:40
          compiled from "E:\wamp\www\spt\spt\spt\modules\dashproducts\views\templates\hook\dashboard_zone_two.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:165415416570bb95425-24320782%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:750054283af8844507-50621707%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '165415416570bb95425-24320782',
+  'nocache_hash' => '750054283af8844507-50621707',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5416570bc4f313_56297354',
+  'unifunc' => 'content_54283af89b8374_82814711',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5416570bc4f313_56297354')) {function content_5416570bc4f313_56297354($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_54283af89b8374_82814711')) {function content_54283af89b8374_82814711($_smarty_tpl) {?>
 
 <section id="dashproducts" class="panel widget <?php if ($_smarty_tpl->tpl_vars['allow_push']->value) {?> allow_push<?php }?>">
 	<header class="panel-heading">

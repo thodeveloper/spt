@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 00:19:25
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 13:28:32
          compiled from "E:\wamp\www\spt\spt\spt\modules\account\views\templates\front\\recharge.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:124754171f9d02d728-48672022%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:92645423b610da2f00-27099288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '124754171f9d02d728-48672022',
+  'nocache_hash' => '92645423b610da2f00-27099288',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_54171f9d055679_00784255',
+  'unifunc' => 'content_5423b610de4cb1_79347370',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54171f9d055679_00784255')) {function content_54171f9d055679_00784255($_smarty_tpl) {?><div id="window_recharge" style="display: none;">
+<?php if ($_valid && !is_callable('content_5423b610de4cb1_79347370')) {function content_5423b610de4cb1_79347370($_smarty_tpl) {?><div id="window_recharge" style="display: none;">
 	<form name="register_account" id="register_account">
 		<div class="div_pop">
 			<p class="error" id="recharge_error"> </p>

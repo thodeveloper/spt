@@ -37,10 +37,10 @@ $_MODULE['<{bankwire}prestashop>payment_return_984482eb9ff11e6310fef641d2268a2a'
 $_MODULE['<{bankwire}prestashop>payment_return_19c419a8a4f1cd621853376a930a2e24'] = 'E-mail đã được gửi đến bạn những thông tin này.';
 $_MODULE['<{bankwire}prestashop>payment_return_b9a1cae09e5754424e33764777cfcaa0'] = 'Thứ tự của bạn sẽ được gửi ngay sau khi chúng tôi nhận được thanh toán của bạn.';
 $_MODULE['<{bankwire}prestashop>payment_return_ca7e41a658753c87973936d7ce2429a8'] = 'Đối với bất kỳ câu hỏi hay cho biết thêm chi tiết, xin vui lòng liên hệ với chúng tôi';
-$_MODULE['<{bankwire}prestashop>payment_return_dfe239de8c0b2453a8e8f7657a191d5d'] = 'Customer support';
 $_MODULE['<{bankwire}prestashop>payment_return_d15feee53d81ea16269e54d4784fa123'] = 'Chúng tôi nhận thấy một vấn đề với đơn đặt hàng. Nếu bạn nghĩ rằng đây là lỗi, bạn có thể liên hệ với chúng tôi';
 $_MODULE['<{bankwire}prestashop>payment_5e1695822fc5af98f6b749ea3cbc9b4c'] = 'Thanh toán bằng tài khoản';
 $_MODULE['<{bankwire}prestashop>payment_execution_99227bacb2b4dfa29ce1701ac265a923'] = 'Thanh toán bằng tài khoản';
+$_MODULE['<{bankwire}prestashop>payment_return_dfe239de8c0b2453a8e8f7657a191d5d'] = 'Customer support';
 
 
 return $_MODULE;

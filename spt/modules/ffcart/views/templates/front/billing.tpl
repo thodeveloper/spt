@@ -3,14 +3,14 @@
 <div class="div_step">
 	<div class="step_content">
 		<div class="line steping4">
-			<span class="step step1">1</span>
+			<a href="{$link->getModuleLink('ffcart', 'basket')}"><span class="step step1">1</span></a>
 			<span class="step step2 active">2</span>
 			<span class="step step3 ">3</span>
 			<span class="step step4 ">4</span>
-			<span class="text_step text_step1">Cart</span>
-			<span class="text_step text_step2">Billing & Payment</span>
-			<span class="text_step text_step3">Place Your Oder</span>
-			<span class="text_step text_step4">Thank You</span>
+			<span class="text_step text_step1">{l s='Giỏ hàng'}</span>
+			<span class="text_step text_step2">{l s='Hoá đơn và thanh toán'}</span>
+			<span class="text_step text_step3">{l s='Đặt hàng'}</span>
+			<span class="text_step text_step4">{l s='Cảm ơn'}</span>
 		</div>
 	</div>
 </div>
@@ -25,16 +25,16 @@
 							<input type="hidden" name="id_carrier" id="id_carrier" value="{$carriers->id}">
 							{if $customer->logged == false}
 							<div class="header">
-								<h5>{l s='New Customer'}</h5>
+								<h5>{l s='Khách hàng mới'}</h5>
 								<input type="hidden" name="is_new_customer" value="1">
 							</div>
 							<div class="div_pop">
 								<div class="div_form">
 						            <p class="form">
-										<span class="textline"><i>*</i>{l s='Group'}</span>
+										<span class="textline"><i>*</i>{l s='Nhóm'}</span>
 										<select name="group_id" id="group_id" class="xsm">
-						                    <option value="1">{l s='Customer'}</option>
-						                    <option value="2">{l s='Reseller'}</option>
+						                    <option value="1">{l s='Khách hàng'}</option>
+						                    <option value="2">{l s='Nhà bán lẻ'}</option>
 						                </select>
 						                <span class="notice error" id="id_gender_error"> </span>
 						            </p>
@@ -48,21 +48,21 @@
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i>{l s='Password'}</span>
+										<span class="textline"><i>*</i>{l s='Mật khẩu'}</span>
 										<input type="password" name="passwd" id="passwd" class="xsm" />
 										<span class="notice error" id="passwd_error"> </span>
 									</p>
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i>{l s='First name'}</span>
+										<span class="textline"><i>*</i>{l s='Tên'}</span>
 										<input type="text" id="customer_firstname" name="customer_firstname" class="xsm" />
 										<span class="notice error" id="customer_firstname_error"> </span>
 									</p>
 								</div>
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i>{l s='Last name'}</span>
+										<span class="textline"><i>*</i>{l s='Họ'}</span>
 										<input type="text" id="customer_lastname" name="customer_lastname" class="xsm" />
 										<span class="notice error" id="customer_lastname_error"> </span>
 									</p>
@@ -70,18 +70,18 @@
 							</div>
 							{/if}
 							<div class="header">
-								<h5>{l s='Billing information'}</h5>
+								<h5>{l s='Thông tin thanh toán'}</h5>
 							</div>
 							<div class="div_pop">
 								{if $customer->logged == true}
 								<div class="div_form">
 									<p class="form">
-										<span class="textline"><i>*</i>{l s='Addresses list'}</span>
+										<span class="textline"><i>*</i>{l s='Danh sách địa chỉ'}</span>
 										<select name="address_list" id="address_list" class="xsm">
 											{foreach from=$addresses item=address}
 											<option value="{$address->id}">{$address->alias|escape:'html':'UTF-8'}</option>
 											{/foreach}
-										</select> <a class="txt_color1" href="{$link->getModuleLink('ffcart', 'addresses')|escape:'quotes':'UTF-8'}">{l s='Add new address'}</a>
+										</select> <a class="txt_color1" href="{$link->getModuleLink('ffcart', 'addresses')|escape:'quotes':'UTF-8'}">{l s='Thêm địa chỉ mới'}</a>
 										{foreach from=$addresses item=address}
 										<p class="showAddress" id="show_address_{$address->id}" style="margin-left: 212px;{if !$address@first}display:none;{/if}">
 											{$address->lastname} {$address->firstname}<br />
@@ -95,7 +95,7 @@
 													{break}
 												{/if}
 											{/foreach} <br />
-											<span><a class="txt_color1" href="{$link->getModuleLink('ffcart', 'addresses', ['id_address' => $address->id], true)|escape:'quotes':'UTF-8'}">{l s='Edit billing information'}</a></span>
+											<span><a class="txt_color1" href="{$link->getModuleLink('ffcart', 'addresses', ['id_address' => $address->id], true)|escape:'quotes':'UTF-8'}">{l s='Sửa địa chỉ thanh toán'}</a></span>
 										</p>
 										{/foreach}
 									</p>
@@ -187,6 +187,14 @@
 										<input type="radio" name="payment_method" value="2" />
 									</p>
 								</div>
+								{if $cart_data['recharge_fee'] lte 0}
+								<div class="div_form">
+									<p class="form">
+										<span class="textline">{l s='Cash'}</span>
+										<input type="radio" name="payment_method" value="3" />
+									</p>
+								</div>
+								{/if}
 							</div>
 							<div class="header">
 								<div class="div_form">

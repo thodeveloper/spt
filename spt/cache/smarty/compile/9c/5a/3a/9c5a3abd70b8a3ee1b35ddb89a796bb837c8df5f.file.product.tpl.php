@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-15 15:33:00
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 10:32:16
          compiled from "E:\wamp\www\spt\spt\spt\modules\ffproduct\views\templates\front\product.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1732754165281296dd2-31618621%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1158754238cc0c17956-00060734%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9c5a3abd70b8a3ee1b35ddb89a796bb837c8df5f' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\ffproduct\\views\\templates\\front\\product.tpl',
-      1 => 1410769964,
+      1 => 1410985445,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1732754165281296dd2-31618621',
+  'nocache_hash' => '1158754238cc0c17956-00060734',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_541652812d3a22_66485765',
   'variables' => 
   array (
     'link' => 0,
@@ -33,16 +31,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'attribute' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_54238cc1154e61_44888325',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_541652812d3a22_66485765')) {function content_541652812d3a22_66485765($_smarty_tpl) {?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('cartUrl'=>addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','basket',array(),true))),$_smarty_tpl);?>
+<?php if ($_valid && !is_callable('content_54238cc1154e61_44888325')) {function content_54238cc1154e61_44888325($_smarty_tpl) {?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('cartUrl'=>addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','basket',array(),true))),$_smarty_tpl);?>
 
-<div class="div_sub_menu">
-	<div class="sub_menu">
-    	<a>Produce</a>
-        <span class="line"></span>
-        <a>Web Hosting</a>
-    </div>
-</div>
 <div class="body">
 	<div class="article">
     	<div class="div_img">

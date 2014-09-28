@@ -18,6 +18,7 @@ $_MODULE['<{dashgoals}prestashop>dashgoals_82331503174acbae012b2004f6431fa5'] = 
 $_MODULE['<{dashgoals}prestashop>dashgoals_11ff9f68afb6b8b5b8eda218d7c83a65'] = 'Bán hàng';
 $_MODULE['<{dashgoals}prestashop>config_11ff9f68afb6b8b5b8eda218d7c83a65'] = 'Bán hàng';
 $_MODULE['<{dashgoals}prestashop>config_c9cc8cce247e49bae79f15173ce97354'] = 'Lưu';
+$_MODULE['<{dashgoals}prestashop>dashboard_zone_two_f1206f9fadc5ce41694f69129aecac26'] = 'Cấu hình';
 $_MODULE['<{dashgoals}prestashop>dashboard_zone_two_11ff9f68afb6b8b5b8eda218d7c83a65'] = 'Bán hàng';
 
 

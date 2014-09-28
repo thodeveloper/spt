@@ -857,12 +857,15 @@ class CartCore extends ObjectModel
 		$id_product_attribute = (int)$id_product_attribute;
 		$product = new Product($id_product, false, Configuration::get('PS_LANG_DEFAULT'), $shop->id);
 
+		/*
+		 * TODO: Thanh edited
 		if ($id_product_attribute)
 		{
 			$combination = new Combination((int)$id_product_attribute);
 			if ($combination->id_product != $id_product)
 				return false;
-		}
+		}*/
+		
 
 		/* If we have a product combination, the minimal quantity is set with the one of this combination */
 		if (!empty($id_product_attribute))
@@ -906,9 +909,12 @@ class CartCore extends ObjectModel
 					$new_qty = (int)$result['quantity'] + (int)$quantity;
 					$qty = '+ '.(int)$quantity;
 
+					//TODO: Thanh edited
+					/*
 					if (!Product::isAvailableWhenOutOfStock((int)$result2['out_of_stock']))
 						if ($new_qty > $product_qty)
-							return false;
+							return false;*/
+					//TODO: end Thanh edited
 				}
 				else if ($operator == 'down')
 				{
@@ -3380,7 +3386,9 @@ class CartCore extends ObjectModel
 		if (!Customer::customerHasAddress(Context::getContext()->customer->id, $new_id_address_delivery))
 			return false;
 
+		// TODO: Thanh edited
 		// Checking the product do not exist with the new address
+		
 		$sql = new DbQuery();
 		$sql->select('count(*)');
 		$sql->from('cart_product', 'c');
@@ -3392,7 +3400,7 @@ class CartCore extends ObjectModel
 
 		if ($result > 0)
 			return false;
-
+		
 		// Duplicating cart_product line
 		$sql = 'INSERT INTO '._DB_PREFIX_.'cart_product
 			(`id_cart`, `id_product`, `id_shop`, `id_product_attribute`, `quantity`, `date_add`, `id_address_delivery`)

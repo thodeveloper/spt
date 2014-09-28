@@ -1,11 +1,4 @@
 {addJsDef cartUrl=$link->getModuleLink('ffcart', 'basket', array(), true)|addslashes}
-<div class="div_sub_menu">
-	<div class="sub_menu">
-    	<a>Produce</a>
-        <span class="line"></span>
-        <a>Web Hosting</a>
-    </div>
-</div>
 <div class="body">
 	<div class="article">
     	<div class="div_img">

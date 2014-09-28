@@ -1,30 +1,30 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 00:19:24
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-28 23:57:19
          compiled from "E:\wamp\www\spt\spt\spt\modules\account\views\templates\front\main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1830254171f9cea0fb5-53324807%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:321155423b610c97063-39349087%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'aae25ed469a53c1a4b6fd00e339c69d248dfa7e1' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\account\\views\\templates\\front\\main.tpl',
-      1 => 1410627071,
+      1 => 1411923425,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1830254171f9cea0fb5-53324807',
+  'nocache_hash' => '321155423b610c97063-39349087',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5423b610d870d0_73427768',
   'variables' => 
   array (
     'link' => 0,
     'customer' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_54171f9d010e76_71315589',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54171f9d010e76_71315589')) {function content_54171f9d010e76_71315589($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_path']->value)."/recharge.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5423b610d870d0_73427768')) {function content_5423b610d870d0_73427768($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['template_path']->value)."/recharge.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('cartUrl'=>addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','basket',array(),true))),$_smarty_tpl);?>
 
@@ -38,7 +38,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  <?php echo $_smarty_tpl->tpl_vars['customer']->value->firstname;?>
 </span>
             <span>Registered email: <?php echo $_smarty_tpl->tpl_vars['customer']->value->email;?>
- | PIN: <a class="txt_color2">***</a></span>
+</span>
             <ul>
             	<li class="first"><a class="txt_color2">Contact Support</a></li>
           	</ul>

@@ -3,9 +3,10 @@
 global $_MODULE;
 $_MODULE = array();
 
-$_MODULE['<{homefeatured}prestashop>homefeatured_8f31eb2413dea86c661532d4cf973d2f'] = 'Không hợp lệ số sản phẩm';
 $_MODULE['<{homefeatured}prestashop>homefeatured_6af91e35dff67a43ace060d1d57d5d1a'] = 'Cập nhật cấu hình';
 $_MODULE['<{homefeatured}prestashop>homefeatured_f4f70727dc34561dfde1a3c529b6205c'] = 'Tùy chỉnh';
+$_MODULE['<{homefeatured}prestashop>homefeatured_93cba07454f06a4a960172bbd6e2a435'] = 'Có';
+$_MODULE['<{homefeatured}prestashop>homefeatured_bafd7322c6e97d25b6299b5d6fe8920b'] = 'Không';
 $_MODULE['<{homefeatured}prestashop>homefeatured_c9cc8cce247e49bae79f15173ce97354'] = 'Lưu';
 $_MODULE['<{homefeatured}prestashop>homefeatured_ca7d973c26c57b69e0857e7a0332d545'] = 'Sản phẩm đặc trưng';
 $_MODULE['<{homefeatured}prestashop>homefeatured_03c2e7e41ffc181a4e84080b4710e81e'] = 'Mới';

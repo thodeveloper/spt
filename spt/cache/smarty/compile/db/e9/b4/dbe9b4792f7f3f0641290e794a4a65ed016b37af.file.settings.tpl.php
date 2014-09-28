@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 01:46:27
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 13:28:32
          compiled from "E:\wamp\www\spt\spt\spt\modules\account\views\templates\front\\settings.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:409154171f9d10ffb2-53055565%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:213405423b610eb6314-84552009%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '409154171f9d10ffb2-53055565',
+  'nocache_hash' => '213405423b610eb6314-84552009',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_54171f9d1149a6_97445415',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5423b610ec7262_62319032',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54171f9d1149a6_97445415')) {function content_54171f9d1149a6_97445415($_smarty_tpl) {?><div class="k-content child_panel child_panel3">
+<?php if ($_valid && !is_callable('content_5423b610ec7262_62319032')) {function content_5423b610ec7262_62319032($_smarty_tpl) {?><div class="k-content child_panel child_panel3">
 	<p class="note">
 		<i class="fa fa-exclamation-triangle"></i><span>Warning</span><i>*</i><span>Required letter</span>
 	</p>

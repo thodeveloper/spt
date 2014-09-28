@@ -1,2 +1,2 @@
 <?xml version="1.0"?>
-<modules_list><modules type="untrusted"><module name="account"/><module name="bannermanager"/><module name="blockreinsurance"/><module name="dns"/><module name="domain"/><module name="ffcart"/><module name="ffnews"/><module name="ffproduct"/><module name="smartblog"/><module name="whmcs"/></modules></modules_list>
+<modules_list><modules type="untrusted"><module name="account"/><module name="blockreinsurance"/><module name="dns"/><module name="domain"/><module name="ffcart"/><module name="ffnews"/><module name="ffproduct"/><module name="smartblog"/><module name="whmcs"/></modules></modules_list>

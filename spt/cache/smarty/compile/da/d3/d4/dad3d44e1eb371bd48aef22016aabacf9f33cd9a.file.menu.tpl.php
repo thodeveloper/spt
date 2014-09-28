@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 03:11:45
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 02:40:45
          compiled from "E:\wamp\www\spt\spt\spt\themes\firefly\modules\popup\menu.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1690541652814cd730-59522337%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:441054231e3d02a545-91502402%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,12 +11,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1690541652814cd730-59522337',
+  'nocache_hash' => '441054231e3d02a545-91502402',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5416528152bda1_03205351',
   'variables' => 
   array (
     'base_dir' => 0,
@@ -30,8 +28,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'sub_category' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_54231e3d09dd07_33478540',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5416528152bda1_03205351')) {function content_5416528152bda1_03205351($_smarty_tpl) {?><div class="div_headermenu">
+<?php if ($_valid && !is_callable('content_54231e3d09dd07_33478540')) {function content_54231e3d09dd07_33478540($_smarty_tpl) {?><div class="div_headermenu">
 	<div class="article">
     	<a href="<?php echo $_smarty_tpl->tpl_vars['base_dir']->value;?>
 " title="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['shop_name']->value, ENT_QUOTES, 'UTF-8', true);?>

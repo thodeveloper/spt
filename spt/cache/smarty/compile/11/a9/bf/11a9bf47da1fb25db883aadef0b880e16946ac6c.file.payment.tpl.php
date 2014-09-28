@@ -1,40 +1,45 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 14:12:34
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-28 23:13:15
          compiled from "E:\wamp\www\spt\spt\spt\modules\ffcart\views\templates\front\payment.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1059454171e1a037684-10706277%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1584542321912e8631-99132733%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '11a9bf47da1fb25db883aadef0b880e16946ac6c' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\ffcart\\views\\templates\\front\\payment.tpl',
-      1 => 1410851547,
+      1 => 1411920792,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1059454171e1a037684-10706277',
+  'nocache_hash' => '1584542321912e8631-99132733',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_54171e1a1afa96_68114567',
+  'unifunc' => 'content_542321914bc0f7_48431657',
   'variables' => 
   array (
+    'link' => 0,
+    'error_message' => 0,
     'cart_data' => 0,
     'product_id' => 0,
     'cart' => 0,
+    'payment' => 0,
     'address' => 0,
     'countries' => 0,
     'v' => 0,
-    'payment' => 0,
-    'link' => 0,
+    'client_info' => 0,
+    'customer' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54171e1a1afa96_68114567')) {function content_54171e1a1afa96_68114567($_smarty_tpl) {?><div class="div_step">
+<?php if ($_valid && !is_callable('content_542321914bc0f7_48431657')) {function content_542321914bc0f7_48431657($_smarty_tpl) {?><div class="div_step">
 	<div class="step_content">
 		<div class="line steping4">
-			<span class="step step1">1</span>
-			<span class="step step2">2</span>
+			<a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','basket');?>
+"><span class="step step1">1</span></a>
+			<a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','billing');?>
+"><span class="step step2">2</span></a>
 			<span class="step step3 active">3</span>
 			<span class="step step4 ">4</span>
 			<span class="text_step text_step1">Cart</span>
@@ -47,6 +52,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="body body_news body_checkout body_cart_fix">
 	<div class="article">
 		<div class="col_l left">
+			<div style="margin-top: 30px;color: red"><?php if (isset($_smarty_tpl->tpl_vars['error_message']->value)) {?><?php echo $_smarty_tpl->tpl_vars['error_message']->value;?>
+<?php }?></div>
 			<div class="box" style="margin-top: 30px;">
 				<?php if (isset($_smarty_tpl->tpl_vars['cart_data']->value)) {?>
 				<table cellpadding="0" cellspacing="0">
@@ -69,7 +76,11 @@ $_smarty_tpl->tpl_vars['cart']->_loop = true;
 ?>
 						<tr id="cart_item_<?php echo $_smarty_tpl->tpl_vars['product_id']->value;?>
 ">
-							<td>
+							<td style="text-align:center;">
+								<?php if (!empty($_smarty_tpl->tpl_vars['cart']->value['cover_image'])) {?>
+								<img src="<?php echo $_smarty_tpl->tpl_vars['cart']->value['cover_image'];?>
+" width="50px" height="50px" />
+								<?php }?>
 								<input type="hidden" name="product_id" value="<?php echo $_smarty_tpl->tpl_vars['product_id']->value;?>
 " />
 							</td>
@@ -81,17 +92,17 @@ $_smarty_tpl->tpl_vars['cart']->_loop = true;
 								<?php if ($_smarty_tpl->tpl_vars['cart']->value["type"]=='domain') {?>
 									<?php if ($_smarty_tpl->tpl_vars['cart']->value["reference"]=='.vn') {?>
 									<p>
-										*Plus VNNIC .VN fee of VND<?php echo @constant('_VNNIC_DOTVN_FEE_');?>
+										*Plus VNNIC .VN fee of VND<?php echo number_format(@constant('_VNNIC_DOTVN_FEE_'),0,'','');?>
 
 									</p>
 									<?php } elseif ($_smarty_tpl->tpl_vars['cart']->value["reference"]=='.com.vn') {?>
 									<p>
-										*Plus VNNIC .COM.VN fee of VND<?php echo @constant('_VNNIC_DOTCOMDOTVN_FEE_');?>
+										*Plus VNNIC .COM.VN fee of VND<?php echo number_format(@constant('_VNNIC_DOTCOMDOTVN_FEE_'),0,'','');?>
 
 									</p>
 									<?php } else { ?>
 									<p>
-										*Plus ICANN fee of VND<?php echo @constant('_ICAN_FEE_');?>
+										*Plus ICANN fee of VND<?php echo number_format(@constant('_ICAN_FEE_'),0,'','');?>
 /yr
 									</p>
 									<?php }?>
@@ -130,64 +141,90 @@ $_smarty_tpl->tpl_vars['cart']->_loop = true;
 			<div class="div_tab" style="width: auto !important;">
                 <div class="k-content child_panel child_panel3">
 					<div class="box_setting">
-						<div class="header">
-							<h5><?php echo smartyTranslate(array('s'=>'Billing information'),$_smarty_tpl);?>
+						<form id="frm_submit_payment" action="<?php echo preg_replace("%(?<!\\\\)'%", "\'",$_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','payment',array('payment'=>$_smarty_tpl->tpl_vars['payment']->value),true));?>
+" method="post">
+							<div class="header">
+								<h5><?php echo smartyTranslate(array('s'=>'Billing information'),$_smarty_tpl);?>
 </h5>
-						</div>
-						<div class="div_pop">
-							<div class="div_form">
-								<p class="form">
-									<p class="showAddress" id="show_address_<?php echo $_smarty_tpl->tpl_vars['address']->value->id;?>
+							</div>
+							<div class="div_pop">
+								<div class="div_form">
+									<p class="form">
+										<p class="showAddress" id="show_address_<?php echo $_smarty_tpl->tpl_vars['address']->value->id;?>
 " style="margin-left: 100px;">
-										<?php echo $_smarty_tpl->tpl_vars['address']->value->lastname;?>
+											<?php echo $_smarty_tpl->tpl_vars['address']->value->lastname;?>
  <?php echo $_smarty_tpl->tpl_vars['address']->value->firstname;?>
 <br />
-										<?php echo $_smarty_tpl->tpl_vars['address']->value->address1;?>
+											<?php echo $_smarty_tpl->tpl_vars['address']->value->address1;?>
  <br />
-										<?php if (!empty($_smarty_tpl->tpl_vars['address']->value->phone)) {?><?php echo $_smarty_tpl->tpl_vars['address']->value->phone;?>
+											<?php if (!empty($_smarty_tpl->tpl_vars['address']->value->phone)) {?><?php echo $_smarty_tpl->tpl_vars['address']->value->phone;?>
  <br /><?php }?>
-										<?php if (!empty($_smarty_tpl->tpl_vars['address']->value->phone_mobile)) {?><?php echo $_smarty_tpl->tpl_vars['address']->value->phone_mobile;?>
+											<?php if (!empty($_smarty_tpl->tpl_vars['address']->value->phone_mobile)) {?><?php echo $_smarty_tpl->tpl_vars['address']->value->phone_mobile;?>
  <br /><?php }?>
-										<?php echo $_smarty_tpl->tpl_vars['address']->value->city;?>
+											<?php echo $_smarty_tpl->tpl_vars['address']->value->city;?>
  <br />
-										<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+											<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['countries']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
 $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
-											<?php if ($_smarty_tpl->tpl_vars['v']->value['id_country']==$_smarty_tpl->tpl_vars['address']->value->id_country) {?>
-												<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['v']->value['name'], ENT_QUOTES, 'UTF-8', true);?>
+												<?php if ($_smarty_tpl->tpl_vars['v']->value['id_country']==$_smarty_tpl->tpl_vars['address']->value->id_country) {?>
+													<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['v']->value['name'], ENT_QUOTES, 'UTF-8', true);?>
 
-												<?php break 1?>
-											<?php }?>
-										<?php } ?> <br />
+													<?php break 1?>
+												<?php }?>
+											<?php } ?> <br />
+										</p>
 									</p>
-								</p>
+								</div>
 							</div>
-						</div>
-						<div class="header">
-							<h5><?php echo smartyTranslate(array('s'=>'Payment information'),$_smarty_tpl);?>
+							<?php if (!empty($_smarty_tpl->tpl_vars['client_info']->value)&&$_smarty_tpl->tpl_vars['customer']->value->id_default_group==@constant('__RESELLER_GROUP_ID__')) {?>
+							<div class="header">
+								<h5><?php echo smartyTranslate(array('s'=>'Client information'),$_smarty_tpl);?>
 </h5>
-						</div>
-						<div class="div_pop">
-							<div class="div_form">
-								<p class="form">
-									<span class="textline"><?php echo smartyTranslate(array('s'=>'Credit Card'),$_smarty_tpl);?>
-</span>
-									<input disabled="disabled" type="radio" name="payment_method" value="1" <?php if ($_smarty_tpl->tpl_vars['payment']->value==1) {?>checked="checked"<?php }?> />
-								</p>
 							</div>
-							<div class="div_form">
-								<p class="form">
-									<span class="textline"><?php echo smartyTranslate(array('s'=>'Bank Wire Transfer'),$_smarty_tpl);?>
+							<div class="div_pop">
+								<div class="div_form">
+									<p class="form">
+										<span class="textline"><?php echo $_smarty_tpl->tpl_vars['client_info']->value->lastname;?>
+ <?php echo $_smarty_tpl->tpl_vars['client_info']->value->firstname;?>
 </span>
-									<input disabled="disabled" type="radio" name="payment_method" value="2" <?php if ($_smarty_tpl->tpl_vars['payment']->value==2) {?>checked="checked"<?php }?> />
-								</p>
+										<span class="textline"><?php echo $_smarty_tpl->tpl_vars['client_info']->value->email;?>
+</span>
+									</p>
+								</div>
 							</div>
-						</div>
-						<div class="header">
-							<form id="frm_submit_payment" action="<?php echo preg_replace("%(?<!\\\\)'%", "\'",$_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','payment',array('payment'=>$_smarty_tpl->tpl_vars['payment']->value),true));?>
-" method="post">
+							<?php }?>
+							<div class="header">
+								<h5><?php echo smartyTranslate(array('s'=>'Payment information'),$_smarty_tpl);?>
+</h5>
+							</div>
+							<div class="div_pop">
+								<div class="div_form">
+									<p class="form">
+										<span class="textline"><?php echo smartyTranslate(array('s'=>'Credit Card'),$_smarty_tpl);?>
+</span>
+										<input disabled="disabled" type="radio" name="payment_method" value="1" <?php if ($_smarty_tpl->tpl_vars['payment']->value==1) {?>checked="checked"<?php }?> />
+									</p>
+								</div>
+								<div class="div_form">
+									<p class="form">
+										<span class="textline"><?php echo smartyTranslate(array('s'=>'Bank Wire Transfer'),$_smarty_tpl);?>
+</span>
+										<input disabled="disabled" type="radio" name="payment_method" value="2" <?php if ($_smarty_tpl->tpl_vars['payment']->value==2) {?>checked="checked"<?php }?> />
+									</p>
+								</div>
+								<?php if ($_smarty_tpl->tpl_vars['cart_data']->value['recharge_fee']<=0) {?>
+								<div class="div_form">
+									<p class="form">
+										<span class="textline"><?php echo smartyTranslate(array('s'=>'Cash'),$_smarty_tpl);?>
+</span>
+										<input disabled="disabled" type="radio" name="payment_method" value="2" <?php if ($_smarty_tpl->tpl_vars['payment']->value==3) {?>checked="checked"<?php }?> />
+									</p>
+								</div>
+								<?php }?>
+							</div>
+							<div class="header">
 								<input type="hidden" name="submitPayment" value="1" />
 								<div class="div_form">
 									<p class="form">
@@ -196,8 +233,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 										<span class="notice"></span>
 									</p>
 								</div>
-							</form>
-						</div>
+							</div>
+						</form>
 					</div>
 				</div>
 	    	</div>
@@ -207,6 +244,11 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 			<div class="box">
 				<p>
 					<span class="left">Order Summary</span>
+				</p>
+				<p>
+					<span class="left">Taxes(10%):</span>
+					<span class="right"><strong>VND<span id="tax_fee"><?php echo number_format($_smarty_tpl->tpl_vars['cart_data']->value['cart_tax'],0,",",".");?>
+</span></strong></span>
 				</p>
 				<p>
 					<span class="left">ICANN Fees*</span>

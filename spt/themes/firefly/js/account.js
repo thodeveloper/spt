@@ -35,10 +35,13 @@ $(document).ready(function() {
 		        total: "total",
 		        model: {
                     fields: {
+                    	id_product: { type: "number" },
                         product_name: { type: "string" },
                         terms: { type: "number" },
                         cash: { type: "number" },
                         date_add: { type: "date" },
+                        expired_date: { type: "date" },
+                        auto_renew: { type: "number" }
                     }
                 }
 		   },
@@ -57,17 +60,46 @@ $(document).ready(function() {
 		},
 		{
 			field: "terms",
-			title: "Years"
+			title: "Years",
+			width: 70,
+			cellsalign: 'right'
 		},
 		{
 			field: "cash",
 			title: "Total",
-			format: '{0:0}'
+			width: 100,
+			format: '{0:0}',
+			cellsalign: 'right'
 		},
 		{
 			field: "date_add",
 			title: "Purchased Date",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
+		},
+		{
+			field: "expired_date",
+			title: "Expired Date",
+			format: '{0:dd/MM/yyyy hh:mm tt}'
+		},
+		{
+			field: "auto_renew", 
+			title: "Auto-renew",
+			width: 120,
+			template: "<input type='checkbox' #= (auto_renew == 1) ? checked='checked' : '' # />" 
+		},
+		{
+			command: {
+				text: "Renew", 
+				name: "id_product",
+		        click: function(e) {
+		          // e.target is the DOM element representing the button
+		          var tr = $(e.target).closest("tr"); // get the current table row (tr)
+		          // get the data bound to the current table row
+		          var data = this.dataItem(tr);
+		          accountAddToCart(data.id_product, data.terms, data.product_name);
+		        }
+			},
+			width: 100
 		}]
 	});
 	$("#grid_hosting").kendoGrid({
@@ -88,10 +120,13 @@ $(document).ready(function() {
 		        total: "total",
 		        model: {
                     fields: {
+                        id_product: { type: "number" },
                         product_name: { type: "string" },
                         terms: { type: "number" },
                         cash: { type: "number" },
                         date_add: { type: "date" },
+                        expired_date: { type: "date" },
+                        auto_renew: { type: "number" }
                     }
                 }
 		   },
@@ -110,17 +145,44 @@ $(document).ready(function() {
 		},
 		{
 			field: "terms",
-			title: "Months"
+			title: "Months",
+			width: 80,
 		},
 		{
 			field: "cash",
 			title: "Total",
+			width: 100,
 			format: '{0:0}'
 		},
 		{
 			field: "date_add",
 			title: "Purchased Date",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
+		},
+		{
+			field: "expired_date",
+			title: "Expired Date",
+			format: '{0:dd/MM/yyyy hh:mm tt}'
+		},
+		{
+			field: "auto_renew", 
+			title: "Auto-renew",
+			width: 120,
+			template: "<input type='checkbox' #= (auto_renew == 1) ? checked='checked' : '' # />" 
+		},
+		{
+			command: {
+				text: "Renew", 
+				name: "id_product",
+		        click: function(e) {
+		          // e.target is the DOM element representing the button
+		          var tr = $(e.target).closest("tr"); // get the current table row (tr)
+		          // get the data bound to the current table row
+		          var data = this.dataItem(tr);
+		          accountAddToCart(data.id_product, data.terms, '');
+		        }
+			},
+			width: 100
 		}]
 	});
 	$("#grid_vps").kendoGrid({
@@ -141,10 +203,13 @@ $(document).ready(function() {
 		        total: "total",
 		        model: {
                     fields: {
+                        id_product: { type: "number" },
                         product_name: { type: "string" },
                         terms: { type: "number" },
                         cash: { type: "number" },
                         date_add: { type: "date" },
+                        expired_date: { type: "date" },
+                        auto_renew: { type: "number" }
                     }
                 }
 		   },
@@ -163,17 +228,44 @@ $(document).ready(function() {
 		},
 		{
 			field: "terms",
-			title: "Months"
+			title: "Months",
+			width: 80,
 		},
 		{
 			field: "cash",
 			title: "Total",
+			width: 100,
 			format: '{0:0}'
 		},
 		{
 			field: "date_add",
 			title: "Purchased Date",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
+		},
+		{
+			field: "expired_date",
+			title: "Expired Date",
+			format: '{0:dd/MM/yyyy hh:mm tt}'
+		},
+		{
+			field: "auto_renew", 
+			title: "Auto-renew",
+			width: 120,
+			template: "<input type='checkbox' #= (auto_renew == 1) ? checked='checked' : '' # />" 
+		},
+		{
+			command: {
+				text: "Renew", 
+				name: "id_product",
+		        click: function(e) {
+		          // e.target is the DOM element representing the button
+		          var tr = $(e.target).closest("tr"); // get the current table row (tr)
+		          // get the data bound to the current table row
+		          var data = this.dataItem(tr);
+		          accountAddToCart(data.id_product, data.terms, '');
+		        }
+			},
+			width: 100
 		}]
 	});
 	$("#grid_email").kendoGrid({
@@ -194,10 +286,13 @@ $(document).ready(function() {
 		        total: "total",
 		        model: {
                     fields: {
+                        id_product: { type: "number" },
                         product_name: { type: "string" },
                         terms: { type: "number" },
                         cash: { type: "number" },
                         date_add: { type: "date" },
+                        expired_date: { type: "date" },
+                        auto_renew: { type: "number" }
                     }
                 }
 		   },
@@ -216,17 +311,44 @@ $(document).ready(function() {
 		},
 		{
 			field: "terms",
-			title: "Months"
+			title: "Months",
+			width: 80,
 		},
 		{
 			field: "cash",
 			title: "Total",
+			width: 100,
 			format: '{0:0}'
 		},
 		{
 			field: "date_add",
 			title: "Purchased Date",
 			format: '{0:dd/MM/yyyy hh:mm tt}'
+		},
+		{
+			field: "expired_date",
+			title: "Expired Date",
+			format: '{0:dd/MM/yyyy hh:mm tt}'
+		},
+		{
+			field: "auto_renew", 
+			title: "Auto-renew",
+			width: 120,
+			template: "<input type='checkbox' #= (auto_renew == 1) ? checked='checked' : '' # />" 
+		},
+		{
+			command: {
+				text: "Renew", 
+				name: "id_product",
+		        click: function(e) {
+		          // e.target is the DOM element representing the button
+		          var tr = $(e.target).closest("tr"); // get the current table row (tr)
+		          // get the data bound to the current table row
+		          var data = this.dataItem(tr);
+		          accountAddToCart(data.id_product, data.terms, '');
+		        }
+			},
+			width: 100
 		}]
 	});
 	$("#grid1").kendoGrid({
@@ -366,8 +488,15 @@ $(document).ready(function() {
 
 $(document).on('click', '#recharge_addtocart', function(e){
 	e.preventDefault();
+	if(!confirm("This action will delete all current items in your cart. Continue to process?")){
+		return;
+	}
 	var product_id = $("#recharge_product_id").val();
 	var quantity = 1;
+	accountAddToCart(product_id, quantity, '__recharge__');
+});
+
+function accountAddToCart(product_id, quantity, domain_name){
 	$.ajax({
 		type: 'POST',
 		headers: { "cache-control": "no-cache" },
@@ -375,7 +504,7 @@ $(document).on('click', '#recharge_addtocart', function(e){
 		async: true,
 		cache: false,
 		dataType : "json",
-		data: 'controller=cart&add=1&ajax=true&qty=' + ((quantity && quantity != null) ? quantity : '1') + '&id_product=' + product_id + '&token=' + static_token,
+		data: 'controller=cart&add=1&ajax=true&qty=' + ((quantity && quantity != null) ? quantity : '1') + '&id_product=' + product_id + '&txt_search=' + domain_name + '&token=' + static_token,
 		success: function(jsonData,textStatus,jqXHR)
 		{
 			if (!jsonData.hasError)
@@ -391,4 +520,4 @@ $(document).on('click', '#recharge_addtocart', function(e){
 			alert(error);
 		}
 	});
-});
+}

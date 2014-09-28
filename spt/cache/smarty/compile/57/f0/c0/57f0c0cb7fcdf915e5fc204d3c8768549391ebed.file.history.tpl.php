@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 00:19:25
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 13:28:32
          compiled from "E:\wamp\www\spt\spt\spt\modules\account\views\templates\front\\history.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1534954171f9d0a2e99-39856648%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:200145423b610e26db6-63996709%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1534954171f9d0a2e99-39856648',
+  'nocache_hash' => '200145423b610e26db6-63996709',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_54171f9d0d8c22_25904427',
+  'unifunc' => 'content_5423b610e6fc52_78750898',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54171f9d0d8c22_25904427')) {function content_54171f9d0d8c22_25904427($_smarty_tpl) {?><div class="k-content child_panel child_panel1 child_panel2">
+<?php if ($_valid && !is_callable('content_5423b610e6fc52_78750898')) {function content_5423b610e6fc52_78750898($_smarty_tpl) {?><div class="k-content child_panel child_panel1 child_panel2">
 	<div class="box_rechange">
 		<span id="undo_recharge" class="btn_gr">+ RECHARGE</span>
 	</div>

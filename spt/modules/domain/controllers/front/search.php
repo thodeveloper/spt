@@ -20,92 +20,64 @@ class DomainSearchModuleFrontController extends ModuleFrontController {
 	}
 
 	public function postProcess() {
+		$this->__processSearchedDomain();
+		$domain_info = CommonUtils::extractTLD();
+		$this->__processRecommendationsList($domain_info);
+	}
+
+	private function __processSearchedDomain(){
 		// assign vars
-		$domain_str 		= Tools::getValue("txt_search");
-		//if no data, go back to home page
-		if(empty($domain_str) == TRUE){
+		$key_word = Tools::getValue("txt_search");
+		if(empty($key_word)){
 			Tools::redirect('index.php');
 		}
-		
-		$postfields = array(
-			"action" => "domainwhois",
-			"domain" => $domain_str
-		);
-		$domain_results 	= CommonUtils::whmcs($postfields);
-		$domain_parts 		= $this->__extractTLD($domain_str);
-		$domain_name 		= "";
-		$domain_tld 		= "";
-		if(count($domain_parts) == 2){
-			$domain_name = $domain_parts[0];
-			$domain_tld = $domain_parts[1];
-			$this->context->cookie->__set("domain_name", $domain_name);
-		}
-		$products 			= CommonUtils::getProductsByCategoryId();
-		$searchedDomainInfo = $this->__isAvailableDomain($products, $domain_results, $domain_tld);
-		global $smarty; 
-    	$smarty->assign(array(
-			'domain_results' => $domain_results,
-			'full_domain' => $domain_str,
-			'domain_name' =>$domain_name,
-			'domain_tld' => $domain_tld,
-			'products' => $products,
-			'searchedDomainInfo' => $searchedDomainInfo,
+		$this->context->smarty->assign(array(
+			'isSearchedDomainAvailable' => CommonUtils::isAvailableDomain($key_word),
+			'searchKeyWord' => $key_word
 		));
 	}
-	
-	/**
-	 * check and get searched domain info 
-	 */
-	private function __isAvailableDomain(&$products, $domain_results, $domain_tld){
-		// init val
+
+	private function __processRecommendationsList($domain_info){
+		// load product list based on domain category
+		$product_list = Product::getProducts($this->context->language->id, 0, 0, 'id_product', 'DESC', __DOMAIN_CATEGORY_ID__, true);
+		if( empty($product_list) ){
+			return;
+		}
+		
 		$result = array();
-		$result["available"] = FALSE;
-		$result["counter"] = 0;
-		// if not exists
-		if( isset($domain_results["result"]) == FALSE || 
-			empty($products) == TRUE || 
-			empty($domain_tld) == TRUE ||
-			$domain_results["result"] == "error" || 
-			$domain_results["status"] == "unavailable") 
-		{
-			return $result;
-		}
-		// if exists
-		if($domain_results["result"] == "success" || $domain_results["status"] == "available") {
-			$result["available"] = TRUE;
-		}
-		// if exists
-		foreach ($products as $product) {
-			if($product->reference == $domain_tld){
-				$result["counter"] = 1;
-				$result["onsale"] = $product->on_sale;
-				$result["wholesale_price"] = trim($product->wholesale_price);
-				$result["price"] = trim($product->price);
-				$result["product_id"] = $product->id;
-				return $result;
+		// get products
+		foreach ($product_list as $_product) {
+			// ignore searched domain in the recommendation list
+			if( $_product['name'] == $domain_info['domain_tld'] ){
+				$this->context->smarty->assign(array(
+					'searchedDomainInfo' => array(
+						'id_product' => $_product['id_product'],
+						'onsale' => $_product['on_sale'],
+						'name' => $domain_info['domain_name'],
+						'reference' => $_product['name'],
+						'price' => $_product['price'],
+						'wholesale_price' => $_product['wholesale_price']
+					)
+				));
+				continue;
 			}
+			// check whether recommendation domain exists or not, if not, ignore that one
+			$full_domain = $domain_info['domain_name'].$_product['name'];
+			if( !CommonUtils::isAvailableDomain($full_domain)){
+				continue;
+			}
+			// build product details
+			$result[$_product['id_product']] = array(
+				'id_product' => $_product['id_product'],
+				'onsale' => $_product['on_sale'],
+				'name' => $domain_info['domain_name'],
+				'reference' => $_product['name'],
+				'price' => $_product['price'],
+				'wholesale_price' => $_product['wholesale_price']
+			);
 		}
-		
-		// if not exists
-		$result["available"] = FALSE;
-		return $result;
-	}
-	
-	/**
-	 * get domain pure name and its tld 
-	 */
-	private function __extractTLD( $domain )
-	{
-		$result = array();
-	    $productTLD = '';
-	    $tempstr = explode(".", $domain);
-		$result[] = $tempstr[0]; 
-	    unset($tempstr[0]);
-	    foreach($tempstr as $value){
-	        $productTLD = $productTLD.".".$value;
-	    }    
-		$result[] = $productTLD;
-		
-	    return $result;
+		$this->context->smarty->assign(array(
+			'recommendations' => $result
+		));
 	}
 }

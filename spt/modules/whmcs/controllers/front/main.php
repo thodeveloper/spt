@@ -12,7 +12,9 @@ class WhmcsMainModuleFrontController extends ModuleFrontController
      */
     public function initContent()
     {
-    	
+    	if( Tools::isSubmit("vpc_SecureHash")) {
+    		
+    	}
     }
 	
 	public function postProcess() {
@@ -74,7 +76,8 @@ class WhmcsMainModuleFrontController extends ModuleFrontController
 			"postcode" => Tools::getValue("postcode"),
 			"country" => "VN",
 			"phonenumber" => $phone,
-			"password2" => Tools::getValue("passwd")
+			"password2" => Tools::getValue("passwd"),
+			"currency" => 2
 		);
 		$results = CommonUtils::whmcs($postfields);
 		if( $results["result"] == 'success' ){

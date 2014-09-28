@@ -1,3 +1,8 @@
+$(document).on('click', '#btn_submit_promotion', function(e){
+	e.preventDefault();
+	$("#frm_submit_promotion").submit();
+});
+
 function __calculatePrice(){
 	var total = 0;
 	var ican_fee = 0;
@@ -35,9 +40,8 @@ function __calculatePrice(){
     $("#cart_grandtotal").html($.number( grand_total, 0, ',', '.' ));
 }
 
-function addToCart(product_id, domain_name){
+function addToCart(product_id){
 	var quantity = Number($("#suggestion_terms_"+product_id).val());
-	var gift_message = 'domain='+product_id+':'+domain_name;
 	$.ajax({
 		type: 'POST',
 		headers: { "cache-control": "no-cache" },
@@ -45,7 +49,7 @@ function addToCart(product_id, domain_name){
 		async: true,
 		cache: false,
 		dataType : "json",
-		data: 'controller=cart&add=1&ajax=true&qty=' + ((quantity && quantity != null) ? quantity : '1') + '&id_product=' + product_id +'&gift_message='+gift_message+ '&token=' + static_token,
+		data: 'controller=cart&add=1&ajax=true&qty=' + ((quantity && quantity != null) ? quantity : '1') + '&id_product=' + product_id + '&token=' + static_token,
 		success: function(jsonData,textStatus,jqXHR)
 		{
 			if (!jsonData.hasError)
@@ -124,5 +128,24 @@ function removeCartItem(product_id){
 			}
 		},
 		error: function() {alert('ERROR: unable to delete the product');}
+	});
+}
+
+function updateClient() {
+	$.ajax({
+		type: 'POST',
+		headers: { "cache-control": "no-cache" },
+		url: module_link,
+		async: true,
+		cache: false,
+		dataType : "json",
+		data: 'ajax=true&add_client=1&client_id=' + $('#client_list').val(),
+		success: function(jsonData)	{
+			if (jsonData.hasError)
+			{
+				alert(jsonData.errors);
+			}
+		},
+		error: function() {alert('ERROR: unable to add this client');}
 	});
 }

@@ -6,7 +6,7 @@
     	<div class="div_box_acc">
         	<h3>My Account</h3>
             <span class="name">{$customer->lastname} {$customer->firstname}</span>
-            <span>Registered email: {$customer->email} | PIN: <a class="txt_color2">***</a></span>
+            <span>Registered email: {$customer->email}</span>
             <ul>
             	<li class="first"><a class="txt_color2">Contact Support</a></li>
           	</ul>

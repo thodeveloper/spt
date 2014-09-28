@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-16 14:06:35
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-29 00:10:52
          compiled from "E:\wamp\www\spt\spt\spt\modules\ffcart\views\templates\front\billing.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1414854171e10aea129-63359822%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:184025423218ad277d7-82492734%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ba85f328b9b405abc1241df5253a955e401ad69c' => 
     array (
       0 => 'E:\\wamp\\www\\spt\\spt\\spt\\modules\\ffcart\\views\\templates\\front\\billing.tpl',
-      1 => 1410851192,
+      1 => 1411923509,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1414854171e10aea129-63359822',
+  'nocache_hash' => '184025423218ad277d7-82492734',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_54171e10dde1e7_98901365',
+  'unifunc' => 'content_5423218b108759_66287125',
   'variables' => 
   array (
     'link' => 0,
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54171e10dde1e7_98901365')) {function content_54171e10dde1e7_98901365($_smarty_tpl) {?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('orderOpcUrl'=>preg_replace("%(?<!\\\\)'%", "\'",$_smarty_tpl->tpl_vars['link']->value->getPageLink("order-opc",true))),$_smarty_tpl);?>
+<?php if ($_valid && !is_callable('content_5423218b108759_66287125')) {function content_5423218b108759_66287125($_smarty_tpl) {?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('orderOpcUrl'=>preg_replace("%(?<!\\\\)'%", "\'",$_smarty_tpl->tpl_vars['link']->value->getPageLink("order-opc",true))),$_smarty_tpl);?>
 
 <?php ob_start();?><?php echo addslashes($_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','payment',array(),true));?>
 <?php $_tmp1=ob_get_clean();?><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['addJsDef'][0][0]->addJsDef(array('orderPaymentUrl'=>preg_replace("%(?<!\\\\)'%", "\'",$_tmp1)),$_smarty_tpl);?>
@@ -40,14 +40,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="div_step">
 	<div class="step_content">
 		<div class="line steping4">
-			<span class="step step1">1</span>
+			<a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getModuleLink('ffcart','basket');?>
+"><span class="step step1">1</span></a>
 			<span class="step step2 active">2</span>
 			<span class="step step3 ">3</span>
 			<span class="step step4 ">4</span>
-			<span class="text_step text_step1">Cart</span>
-			<span class="text_step text_step2">Billing & Payment</span>
-			<span class="text_step text_step3">Place Your Oder</span>
-			<span class="text_step text_step4">Thank You</span>
+			<span class="text_step text_step1"><?php echo smartyTranslate(array('s'=>'Giỏ hàng'),$_smarty_tpl);?>
+</span>
+			<span class="text_step text_step2"><?php echo smartyTranslate(array('s'=>'Hoá đơn và thanh toán'),$_smarty_tpl);?>
+</span>
+			<span class="text_step text_step3"><?php echo smartyTranslate(array('s'=>'Đặt hàng'),$_smarty_tpl);?>
+</span>
+			<span class="text_step text_step4"><?php echo smartyTranslate(array('s'=>'Cảm ơn'),$_smarty_tpl);?>
+</span>
 		</div>
 	</div>
 </div>
@@ -295,6 +300,15 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 										<input type="radio" name="payment_method" value="2" />
 									</p>
 								</div>
+								<?php if ($_smarty_tpl->tpl_vars['cart_data']->value['recharge_fee']<=0) {?>
+								<div class="div_form">
+									<p class="form">
+										<span class="textline"><?php echo smartyTranslate(array('s'=>'Cash'),$_smarty_tpl);?>
+</span>
+										<input type="radio" name="payment_method" value="3" />
+									</p>
+								</div>
+								<?php }?>
 							</div>
 							<div class="header">
 								<div class="div_form">

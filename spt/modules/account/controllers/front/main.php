@@ -12,11 +12,10 @@ class AccountMainModuleFrontController extends ModuleFrontController
      */
     public function initContent()
     {
-    	//echo "<pre>";
-		//print_r($this->context->customer);die;
     	if($this->context->customer->logged != TRUE){
     		Tools::redirect('index.php');
     	}
+		
     	global $smarty; 
     	$smarty->assign(array(
 			'template_path' => $this->getTemplatePath(""),
@@ -39,7 +38,7 @@ class AccountMainModuleFrontController extends ModuleFrontController
 			die;
 		}
 		if(Tools::isSubmit("isClient")){
-			$client_array = $this->__loadClientList();
+			$client_array = CommonUtils::loadClientList();
 			if(empty($client_array)){
 				$client_array = null;
 			}
@@ -88,7 +87,7 @@ class AccountMainModuleFrontController extends ModuleFrontController
 	private function __loadPurchasedHistory($type){
 		$customer = $this->context->customer;
 		
-		$sql = 'SELECT id, product_name, terms, cash, date_add, date_upd FROM ' . _DB_PREFIX_ . 'purchased_history WHERE id_customer='.$customer->id.
+		$sql = 'SELECT id, product_name, id_product, terms, cash, auto_renew, expired_date, date_add, date_upd FROM ' . _DB_PREFIX_ . 'purchased_history WHERE id_customer='.$customer->id.
 			   ' AND type=\''.$type.'\' AND id_shop='.$customer->id_shop.' AND id_shop_group='.$customer->id_shop_group;
 		if (!$result = Db::getInstance() -> executeS($sql))
 			return false;
@@ -126,18 +125,8 @@ class AccountMainModuleFrontController extends ModuleFrontController
 		$customer = $this->context->customer;
 		
 		$sql = 'SELECT id, spent, charged, remain, date_upd FROM ' . _DB_PREFIX_ . 'charge_history WHERE id_customer='.$customer->id.
-			   ' AND id_shop='.$customer->id_shop.' AND id_shop_group='.$customer->id_shop_group;
-		if (!$result = Db::getInstance() -> executeS($sql))
-			return false;
-		return $result;
-	}
-	
-	private function __loadClientList(){
-		$customer = $this->context->customer;
-		
-		$sql = 'SELECT id_customer, email, firstname, lastname, date_upd FROM ' . _DB_PREFIX_ . 
-				'customer WHERE note=\'reseller_id='.$customer->id.'\' ORDER BY date_upd DESC';
-				
+			   ' AND id_shop='.$customer->id_shop.' AND id_shop_group='.$customer->id_shop_group.
+			   ' ORDER BY date_upd DESC';
 		if (!$result = Db::getInstance() -> executeS($sql))
 			return false;
 		return $result;

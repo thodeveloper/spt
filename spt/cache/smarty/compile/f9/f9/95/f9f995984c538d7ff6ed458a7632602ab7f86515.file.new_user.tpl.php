@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-15 09:44:17
+<?php /* Smarty version Smarty-3.1.19, created on 2014-09-25 02:40:45
          compiled from "E:\wamp\www\spt\spt\spt\themes\firefly\modules\popup\new_user.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:27595541652815494f2-27985197%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1277954231e3d0b7253-17309710%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '27595541652815494f2-27985197',
+  'nocache_hash' => '1277954231e3d0b7253-17309710',
   'function' => 
   array (
   ),
@@ -33,9 +33,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_541652816caba1_76392410',
+  'unifunc' => 'content_54231e3d20cff3_22304003',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_541652816caba1_76392410')) {function content_541652816caba1_76392410($_smarty_tpl) {?><div id="window_user" style="display: none;">
+<?php if ($_valid && !is_callable('content_54231e3d20cff3_22304003')) {function content_54231e3d20cff3_22304003($_smarty_tpl) {?><div id="window_user" style="display: none;">
 	<form name="register_account" id="register_account">
 	<input type="hidden" id="group_id" name="group_id" value="1" />
 	<input type="hidden" name="is_new_customer" value="1">

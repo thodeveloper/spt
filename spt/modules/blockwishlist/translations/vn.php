@@ -10,6 +10,7 @@ $_MODULE['<{blockwishlist}prestashop>blockwishlist_be53a0541a6d36f6ecb879fa2c584
 $_MODULE['<{blockwishlist}prestashop>blockwishlist-ajax_f2a6c498fb90ee345d997f888fce3b18'] = 'Xóa';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist-ajax_4b7d496eedb665d0b5f589f2f874e7cb'] = 'Chi tiết sản phẩm';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist-ajax_09dc02ecbb078868a3a86dded030076d'] = 'Không có sản phẩm';
+$_MODULE['<{blockwishlist}prestashop>blockwishlist-extra_ec211f7c20af43e742bf2570c3cb84f9'] = 'Cộng';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_f2a6c498fb90ee345d997f888fce3b18'] = 'Xóa';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_4b7d496eedb665d0b5f589f2f874e7cb'] = 'Chi tiết sản phẩm';
 $_MODULE['<{blockwishlist}prestashop>blockwishlist_09dc02ecbb078868a3a86dded030076d'] = 'Không có sản phẩm';
@@ -27,6 +28,7 @@ $_MODULE['<{blockwishlist}prestashop>mywishlist_d95cf4ab2cbf1dfb63f066b50558b07d
 $_MODULE['<{blockwishlist}prestashop>mywishlist_49ee3087348e8d44e1feda1917443987'] = 'Tên';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_c9cc8cce247e49bae79f15173ce97354'] = 'Lưu';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_03ab340b3f99e03cff9e84314ead38c0'] = 'SL';
+$_MODULE['<{blockwishlist}prestashop>mywishlist_7a1920d61156abc05a60135aefe8bc67'] = 'Mặc định';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_f2a6c498fb90ee345d997f888fce3b18'] = 'Xóa';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_4351cfebe4b61d8aa5efa1d020710005'] = 'Xem';
 $_MODULE['<{blockwishlist}prestashop>mywishlist_0b3db27bc15f682e92ff250ebb167d4b'] = 'Quay lại tài khoản của bạn';
